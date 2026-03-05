@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How It Works — Athenura</title>
+  <link rel="stylesheet" href="../css/how-it-works.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════ -->
+  <section class="hero-section">
+
+    <!-- Right Compass Bubble Graphic -->
+    <div class="hero-graphic">
+      <div class="hero-graphic-bubble"></div>
+      <div class="hero-graphic-lines">
+        <svg viewBox="0 0 400 400">
+          <line x1="200" y1="60"  x2="310" y2="130"/>
+          <line x1="310" y1="130" x2="340" y2="250"/>
+          <line x1="340" y1="250" x2="260" y2="330"/>
+          <line x1="200" y1="60"  x2="90"  y2="130"/>
+          <line x1="90"  y1="130" x2="60"  y2="250"/>
+          <line x1="200" y1="60"  x2="200" y2="200"/>
+          <line x1="310" y1="130" x2="200" y2="200"/>
+          <line x1="90"  y1="130" x2="200" y2="200"/>
+          <line x1="340" y1="250" x2="200" y2="200"/>
+          <line x1="60"  y1="250" x2="200" y2="200"/>
+          <line x1="260" y1="330" x2="200" y2="200"/>
+        </svg>
+      </div>
+      <div class="hero-graphic-dot" style="top:15%;left:48%;"></div>
+      <div class="hero-graphic-dot" style="top:31%;right:10%;"></div>
+      <div class="hero-graphic-dot" style="top:31%;left:10%;"></div>
+      <div class="hero-graphic-dot" style="bottom:26%;right:14%;"></div>
+      <div class="hero-graphic-dot" style="bottom:26%;left:17%;"></div>
+      <div class="hero-graphic-dot" style="bottom:16%;left:43%;"></div>
+     <div class="hero-graphic-inner">
+  <svg viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="80" stroke-opacity="0.32"/>
+    <circle cx="100" cy="100" r="55" stroke-opacity="0.22"/>
+    <!-- Tick marks -->
+    <line x1="100" y1="20"  x2="100" y2="45"  stroke-opacity="0.42"/>
+    <line x1="100" y1="155" x2="100" y2="180" stroke-opacity="0.42"/>
+    <line x1="20"  y1="100" x2="45"  y2="100" stroke-opacity="0.42"/>
+    <line x1="155" y1="100" x2="180" y2="100" stroke-opacity="0.42"/>
+    <line x1="43"  y1="43"  x2="60"  y2="60"  stroke-opacity="0.28"/>
+    <line x1="140" y1="140" x2="157" y2="157" stroke-opacity="0.28"/>
+    <line x1="157" y1="43"  x2="140" y2="60"  stroke-opacity="0.28"/>
+    <line x1="43"  y1="157" x2="60"  y2="140" stroke-opacity="0.28"/>
+    <!-- Compass Star - center pe -->
+    <polygon points="100,82 104,97 100,100 96,97"  fill="rgba(14,100,100,0.35)" stroke="none"/>
+    <polygon points="118,100 103,104 100,100 103,96" fill="rgba(14,100,100,0.20)" stroke="none"/>
+    <polygon points="100,118 96,103 100,100 104,103" fill="rgba(14,100,100,0.35)" stroke="none"/>
+    <polygon points="82,100 97,96 100,100 97,104"  fill="rgba(14,100,100,0.20)" stroke="none"/>
+    <!-- Growth Arrow - bottom-left se top-right tak -->
+    <polyline points="48,148 65,128 82,136 105,110 125,88 148,58"
+      stroke="rgba(14,130,130,0.75)" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+   <!-- Arrow head - angle match kiya line ke saath -->
+<polyline points="135,48 153,52 149,70"
+  fill="none" stroke="rgba(14,130,130,0.75)" stroke-width="2.8"
+  stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+      <div class="hero-graphic-bubble-2"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="hero-content" data-reveal>
+      <span class="hero-pill">PROCESS OVERVIEW</span>
+      <h1 class="hero-title">
+  Your Path to <span class="hero-title-accent" id="heroAccent">Exceptional Growth</span>
+</h1>
+      <p class="hero-desc">
+        Athenura bridges the gap between top-tier talent and world-class
+        opportunities. Our structured process ensures we find the perfect match
+        for your unique skills and career goals.
+      </p>
+      <div class="hero-btns">
+        <button class="hero-btn-primary">
+          Start Your Application
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+       <button class="hero-btn-secondary" onclick="smoothNavigate('../components/project.html#internships')">
+  View Open Roles
+</button>
+      </div>
+    </div>
+
+    <!-- Bottom: Skyline + Flow Diagram -->
+    <div class="hero-bottom-decor">
+
+      <!-- City Skyline -->
+<div class="hero-skyline-wrap">
+  <svg class="skyline-svg" viewBox="0 0 1440 220"
+       preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="skyFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="rgba(14,140,130,0.28)"/>
+        <stop offset="100%" stop-color="rgba(14,140,130,0.06)"/>
+      </linearGradient>
+    </defs>
+    <g fill="url(#skyFade)" stroke="rgba(14,140,130,0.30)" stroke-width="0.9">
+      <!-- Building 1 -->
+      <rect x="20"  y="120" width="18" height="100"/>
+      <rect x="16"  y="116" width="26" height="6"/>
+      <!-- Building 2 -->
+      <rect x="55"  y="100" width="24" height="120"/>
+      <rect x="51"  y="96"  width="32" height="6"/>
+      <rect x="60"  y="110" width="5"  height="7"/>
+      <rect x="69"  y="110" width="5"  height="7"/>
+      <rect x="60"  y="122" width="5"  height="7"/>
+      <rect x="69"  y="122" width="5"  height="7"/>
+      <!-- Building 3 - tall slim -->
+      <rect x="96"  y="70"  width="16" height="150"/>
+      <rect x="92"  y="66"  width="24" height="6"/>
+      <rect x="100" y="82"  width="4"  height="6"/>
+      <rect x="106" y="82"  width="4"  height="6"/>
+      <rect x="100" y="94"  width="4"  height="6"/>
+      <rect x="106" y="94"  width="4"  height="6"/>
+      <rect x="100" y="106" width="4"  height="6"/>
+      <rect x="106" y="106" width="4"  height="6"/>
+      <!-- Building 4 -->
+      <rect x="124" y="90"  width="30" height="130"/>
+      <rect x="120" y="86"  width="38" height="6"/>
+      <rect x="128" y="100" width="6"  height="8"/>
+      <rect x="140" y="100" width="6"  height="8"/>
+      <rect x="128" y="114" width="6"  height="8"/>
+      <rect x="140" y="114" width="6"  height="8"/>
+      <!-- Building 5 - wide -->
+      <rect x="168" y="108" width="40" height="112"/>
+      <rect x="164" y="104" width="48" height="6"/>
+      <rect x="172" y="118" width="7"  height="9"/>
+      <rect x="184" y="118" width="7"  height="9"/>
+      <rect x="196" y="118" width="7"  height="9"/>
+      <rect x="172" y="133" width="7"  height="9"/>
+      <rect x="184" y="133" width="7"  height="9"/>
+      <rect x="196" y="133" width="7"  height="9"/>
+      <!-- Building 6 - very tall -->
+      <rect x="222" y="55"  width="22" height="165"/>
+      <rect x="218" y="51"  width="30" height="6"/>
+      <rect x="226" y="68"  width="5"  height="8"/>
+      <rect x="234" y="68"  width="5"  height="8"/>
+      <rect x="226" y="82"  width="5"  height="8"/>
+      <rect x="234" y="82"  width="5"  height="8"/>
+      <rect x="226" y="96"  width="5"  height="8"/>
+      <rect x="234" y="96"  width="5"  height="8"/>
+      <rect x="226" y="110" width="5"  height="8"/>
+      <rect x="234" y="110" width="5"  height="8"/>
+      <line x1="233" y1="51" x2="233" y2="34" stroke="rgba(14,140,130,0.45)" stroke-width="1.5"/>
+      <!-- Building 7 -->
+      <rect x="258" y="88"  width="28" height="132"/>
+      <rect x="254" y="84"  width="36" height="6"/>
+      <rect x="262" y="98"  width="6"  height="8"/>
+      <rect x="274" y="98"  width="6"  height="8"/>
+      <rect x="262" y="112" width="6"  height="8"/>
+      <rect x="274" y="112" width="6"  height="8"/>
+      <!-- Building 8 - stepped -->
+      <rect x="300" y="115" width="50" height="105"/>
+      <rect x="306" y="95"  width="38" height="22"/>
+      <rect x="312" y="78"  width="26" height="19"/>
+      <rect x="304" y="125" width="7"  height="9"/>
+      <rect x="316" y="125" width="7"  height="9"/>
+      <rect x="328" y="125" width="7"  height="9"/>
+      <rect x="340" y="125" width="7"  height="9"/>
+      <!-- Building 9 -->
+      <rect x="364" y="75"  width="32" height="145"/>
+      <rect x="360" y="71"  width="40" height="6"/>
+      <rect x="368" y="88"  width="6"  height="9"/>
+      <rect x="380" y="88"  width="6"  height="9"/>
+      <rect x="368" y="103" width="6"  height="9"/>
+      <rect x="380" y="103" width="6"  height="9"/>
+      <rect x="368" y="118" width="6"  height="9"/>
+      <rect x="380" y="118" width="6"  height="9"/>
+      <line x1="380" y1="71" x2="380" y2="52" stroke="rgba(14,140,130,0.48)" stroke-width="1.5"/>
+      <!-- Building 10 - twin -->
+      <rect x="412" y="92"  width="22" height="128"/>
+      <rect x="408" y="88"  width="30" height="6"/>
+      <rect x="444" y="92"  width="22" height="128"/>
+      <rect x="440" y="88"  width="30" height="6"/>
+      <rect x="416" y="104" width="5"  height="7"/>
+      <rect x="448" y="104" width="5"  height="7"/>
+      <rect x="416" y="116" width="5"  height="7"/>
+      <rect x="448" y="116" width="5"  height="7"/>
+      <line x1="423" y1="88" x2="423" y2="68" stroke="rgba(14,140,130,0.50)" stroke-width="1.5"/>
+      <line x1="455" y1="88" x2="455" y2="68" stroke="rgba(14,140,130,0.50)" stroke-width="1.5"/>
+      <rect x="428" y="116" width="8"  height="4"/>
+      <!-- Building 11 -->
+      <rect x="482" y="60"  width="28" height="160"/>
+      <rect x="478" y="56"  width="36" height="6"/>
+      <rect x="486" y="74"  width="5"  height="8"/>
+      <rect x="496" y="74"  width="5"  height="8"/>
+      <rect x="486" y="88"  width="5"  height="8"/>
+      <rect x="496" y="88"  width="5"  height="8"/>
+      <rect x="486" y="102" width="5"  height="8"/>
+      <rect x="496" y="102" width="5"  height="8"/>
+      <rect x="486" y="116" width="5"  height="8"/>
+      <rect x="496" y="116" width="5"  height="8"/>
+      <line x1="496" y1="56" x2="496" y2="36" stroke="rgba(14,140,130,0.52)" stroke-width="1.8"/>
+      <!-- Building 12 - wide office -->
+      <rect x="524" y="80"  width="48" height="140"/>
+      <rect x="520" y="76"  width="56" height="6"/>
+      <rect x="528" y="92"  width="8"  height="10"/>
+      <rect x="542" y="92"  width="8"  height="10"/>
+      <rect x="556" y="92"  width="8"  height="10"/>
+      <rect x="528" y="108" width="8"  height="10"/>
+      <rect x="542" y="108" width="8"  height="10"/>
+      <rect x="556" y="108" width="8"  height="10"/>
+      <rect x="528" y="124" width="8"  height="10"/>
+      <rect x="542" y="124" width="8"  height="10"/>
+      <rect x="556" y="124" width="8"  height="10"/>
+      <!-- Fading right buildings -->
+      <rect x="586"  y="95"  width="30" height="125" opacity="0.88"/>
+      <rect x="630"  y="85"  width="22" height="135" opacity="0.75"/>
+      <rect x="666"  y="100" width="36" height="120" opacity="0.62"/>
+      <rect x="716"  y="90"  width="26" height="130" opacity="0.50"/>
+      <rect x="756"  y="108" width="32" height="112" opacity="0.38"/>
+      <rect x="802"  y="95"  width="20" height="125" opacity="0.28"/>
+      <rect x="836"  y="112" width="28" height="108" opacity="0.20"/>
+      <rect x="878"  y="105" width="18" height="115" opacity="0.14"/>
+      <rect x="910"  y="118" width="24" height="102" opacity="0.09"/>
+      <rect x="948"  y="125" width="32" height="95"  opacity="0.05"/>
+      <rect x="994"  y="132" width="20" height="88"  opacity="0.03"/>
+    </g>
+  </svg>
+</div>
+
+      <!-- Flow Diagram -->
+      <div class="hero-flow">
+        <svg class="flow-svg" viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg">
+          <!-- Connector path -->
+          <path d="M 88 60 L 180 60 Q 216 60 216 96 L 216 100 Q 216 122 252 122 L 352 122 Q 388 122 388 86 L 388 60 Q 388 24 424 24 L 440 24"
+            fill="none" stroke="rgba(14,140,130,0.36)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="440" y1="24" x2="440" y2="65"
+            stroke="rgba(14,140,130,0.36)" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- Branch top arrow -->
+          <path d="M 440 24 L 530 24"
+            fill="none" stroke="rgba(14,140,130,0.36)" stroke-width="1.8" stroke-linecap="round"/>
+          <polyline points="525,19 532,24 525,29"
+            fill="none" stroke="rgba(14,140,130,0.50)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Branch bottom arrow -->
+          <path d="M 440 65 L 530 90"
+            fill="none" stroke="rgba(14,140,130,0.36)" stroke-width="1.8" stroke-linecap="round"/>
+          <polyline points="525,86 533,91 527,97"
+            fill="none" stroke="rgba(14,140,130,0.50)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Curved arrow bottom right -->
+          <path d="M 576 96 Q 608 96 608 64 L 608 46"
+            fill="none" stroke="rgba(14,140,130,0.28)" stroke-width="1.5"
+            stroke-linecap="round" stroke-dasharray="4,3"/>
+          <polyline points="604,50 608,44 612,50"
+            fill="none" stroke="rgba(14,140,130,0.42)" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+          <!-- Icon 1: ID Card -->
+          <g transform="translate(24,36)" stroke="rgba(14,110,110,0.66)" stroke-width="1.6" fill="none">
+            <rect x="0" y="0" width="56" height="42" rx="6"/>
+            <circle cx="16" cy="17" r="7.5"/>
+            <line x1="30" y1="10" x2="48" y2="10"/>
+            <line x1="30" y1="19" x2="48" y2="19"/>
+            <line x1="30" y1="28" x2="42" y2="28"/>
+          </g>
+
+          <!-- Icon 2: Person + Gear -->
+          <g transform="translate(264,94)" stroke="rgba(14,110,110,0.66)" stroke-width="1.5" fill="none">
+            <circle cx="11" cy="7" r="6"/>
+            <path d="M0 30 Q0 19 11 19 Q22 19 22 30"/>
+            <circle cx="23" cy="20" r="7.5"/>
+            <circle cx="23" cy="20" r="3.5"/>
+            <line x1="23" y1="12.5" x2="23" y2="10"/>
+            <line x1="23" y1="27.5" x2="23" y2="30"/>
+            <line x1="15.5" y1="20" x2="13"  y2="20"/>
+            <line x1="30.5" y1="20" x2="33"  y2="20"/>
+            <line x1="18"   y1="14.5" x2="16.2" y2="12.7"/>
+            <line x1="28"   y1="25.5" x2="29.8" y2="27.3"/>
+            <line x1="28"   y1="14.5" x2="29.8" y2="12.7"/>
+            <line x1="18"   y1="25.5" x2="16.2" y2="27.3"/>
+          </g>
+
+          <!-- Icon 3: Gear -->
+          <g transform="translate(354,32)" stroke="rgba(14,110,110,0.66)" stroke-width="1.5" fill="none">
+            <circle cx="22" cy="22" r="9"/>
+            <circle cx="22" cy="22" r="4"/>
+            <line x1="22" y1="8"  x2="22" y2="4"/>
+            <line x1="22" y1="36" x2="22" y2="40"/>
+            <line x1="8"  y1="22" x2="4"  y2="22"/>
+            <line x1="36" y1="22" x2="40" y2="22"/>
+            <line x1="11.5" y1="11.5" x2="8.7"  y2="8.7"/>
+            <line x1="32.5" y1="32.5" x2="35.3" y2="35.3"/>
+            <line x1="32.5" y1="11.5" x2="35.3" y2="8.7"/>
+            <line x1="11.5" y1="32.5" x2="8.7"  y2="35.3"/>
+          </g>
+
+          <!-- Icon 4: Handshake -->
+          <g transform="translate(528,68)" stroke="rgba(14,110,110,0.66)" stroke-width="1.5" fill="none">
+            <path d="M 0 24 L 12 14 L 20 19 L 30 12 L 42 24"/>
+            <path d="M 12 14 L 16 7 L 26 9 L 20 19"/>
+            <path d="M 0 24 Q 21 40 42 24"/>
+          </g>
+
+          <!-- Icon 5: Growth Hand -->
+          <g transform="translate(530,4)" stroke="rgba(14,110,110,0.66)" stroke-width="1.5" fill="none">
+            <polyline points="0,28 10,16 20,21 36,4"/>
+            <polyline points="30,2 38,4 36,12"/>
+            <path d="M 4 36 Q 4 44 12 44 L 32 44 Q 40 44 40 36 L 40 28 L 36 28"/>
+            <line x1="36" y1="20" x2="36" y2="28"/>
+            <line x1="28" y1="22" x2="28" y2="30" opacity="0.6"/>
+            <line x1="20" y1="24" x2="20" y2="30" opacity="0.6"/>
+          </g>
+
+          <!-- Icon 6: Chart Bars -->
+          <g transform="translate(587,10)" stroke="rgba(14,110,110,0.66)" stroke-width="1.5" fill="none">
+            <rect x="0"  y="24" width="9"  height="18" rx="1.5"/>
+            <rect x="13" y="15" width="9"  height="27" rx="1.5"/>
+            <rect x="26" y="6"  width="9"  height="36" rx="1.5"/>
+            <path d="M 2 20 Q 14 4 38 2" stroke-width="1.7"/>
+            <polyline points="33,0 40,2 36,8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+
+    </div><!-- end hero-bottom-decor -->
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       TIMELINE SECTION
+  ══════════════════════════════════════ -->
+  <div class="hiw-section">
+    <div class="hiw-inner">
+      <div class="hiw-timeline">
+
+        <!-- Stage 01 -->
+        <div class="hiw-stage hiw-stage-left" data-reveal>
+          <div class="hiw-stage-content">
+            <span class="hiw-stage-label">STAGE 01</span>
+            <h3 class="hiw-stage-title">Application Submission</h3>
+            <p class="hiw-stage-desc">Kick off your journey by sharing your professional story. We look beyond just a resume, seeking individuals with a passion for excellence and a drive to innovate.</p>
+            <ul class="hiw-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+                Detailed profile creation
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+                Portfolio and case study upload
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+                Preference matching survey
+              </li>
+            </ul>
+          </div>
+          <div class="hiw-timeline-center">
+            <div class="hiw-line"></div>
+            <div class="hiw-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="hiw-line"></div>
+          </div>
+          <div class="hiw-stage-img">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Application" loading="lazy"/>
+          </div>
+        </div>
+
+        <!-- Stage 02 -->
+        <div class="hiw-stage hiw-stage-right" data-reveal>
+          <div class="hiw-stage-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Screening" loading="lazy"/>
+          </div>
+          <div class="hiw-timeline-center">
+            <div class="hiw-line"></div>
+            <div class="hiw-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            </div>
+            <div class="hiw-line"></div>
+          </div>
+          <div class="hiw-stage-content">
+            <span class="hiw-stage-label">STAGE 02</span>
+            <h3 class="hiw-stage-title">Initial Screening</h3>
+            <p class="hiw-stage-desc">Our AI-driven review process combined with expert human touch evaluates your fit against current and future high-impact projects in our ecosystem.</p>
+            <div class="hiw-info-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <div>
+                <span class="hiw-info-title">Est. Time: 2–3 Business Days</span>
+                <span class="hiw-info-sub">Fast-tracked review for candidates with high-demand specialized skills.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 03 -->
+        <div class="hiw-stage hiw-stage-left" data-reveal>
+          <div class="hiw-stage-content">
+            <span class="hiw-stage-label">STAGE 03</span>
+            <h3 class="hiw-stage-title">Technical Assessment</h3>
+            <p class="hiw-stage-desc">Show, don't just tell. Engage in role-specific evaluations designed to challenge your technical prowess and problem-solving capabilities.</p>
+            <div class="hiw-tags">
+              <span class="hiw-tag">LIVE CODING</span>
+              <span class="hiw-tag">SYSTEM DESIGN</span>
+              <span class="hiw-tag">PRODUCT THINKING</span>
+            </div>
+          </div>
+          <div class="hiw-timeline-center">
+            <div class="hiw-line"></div>
+            <div class="hiw-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="hiw-line"></div>
+          </div>
+          <div class="hiw-stage-img">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&q=80" alt="Assessment" loading="lazy"/>
+          </div>
+        </div>
+
+        <!-- Stage 04 -->
+        <div class="hiw-stage hiw-stage-right" data-reveal>
+          <div class="hiw-stage-img">
+            <img src="https://i.pinimg.com/736x/0a/64/07/0a6407a276d04c53d9f3815491c06bbe.jpg" alt="Interview" loading="lazy"/>
+          </div>
+          <div class="hiw-timeline-center">
+            <div class="hiw-line"></div>
+            <div class="hiw-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="hiw-line"></div>
+          </div>
+          <div class="hiw-stage-content">
+            <span class="hiw-stage-label">STAGE 04</span>
+            <h3 class="hiw-stage-title">Interview Loop</h3>
+            <p class="hiw-stage-desc">Meet the team you'll be working with. Our interview process is a two-way street — ask questions, learn about our culture, and share your perspective.</p>
+            <div class="hiw-two-cards">
+              <div class="hiw-mini-card">
+                <span class="hiw-mini-title">Culture Fit</span>
+                <span class="hiw-mini-sub">Alignment with our core values.</span>
+              </div>
+              <div class="hiw-mini-card">
+                <span class="hiw-mini-title">Technical Deep-Dive</span>
+                <span class="hiw-mini-sub">Probing the limits of your expertise.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 05 -->
+        <div class="hiw-stage hiw-stage-left" data-reveal>
+          <div class="hiw-stage-content">
+            <span class="hiw-stage-label">STAGE 05</span>
+            <h3 class="hiw-stage-title">Onboarding &amp; Integration</h3>
+            <p class="hiw-stage-desc">Once accepted, we handle the complexities of system integration and setup, ensuring you have everything needed to hit the ground running.</p>
+            <ul class="hiw-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Hardware &amp; Tooling Provided
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Community Mentor Assignment
+              </li>
+            </ul>
+          </div>
+          <div class="hiw-timeline-center">
+            <div class="hiw-line"></div>
+            <div class="hiw-dot hiw-dot-final">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="hiw-line hiw-line-end"></div>
+          </div>
+          <div class="hiw-stage-img">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Onboarding" loading="lazy"/>
+          </div>
+        </div>
+
+      </div><!-- end timeline -->
+
+      <!-- FAQ -->
+      <div class="hiw-faq-section" data-reveal>
+        <h2 class="hiw-faq-title">Common Questions</h2>
+        <p class="hiw-faq-desc">Everything you need to know about the Athenura journey.</p>
+        <div class="hiw-faq-list">
+          <div class="hiw-faq-item active" data-reveal>
+            <button class="hiw-faq-q" onclick="toggleFaq(this)">
+              How long does the entire process take?
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="hiw-faq-a">
+              <p>Typically, the journey from application to onboarding takes between 2 to 4 weeks, depending on role complexity and your availability for assessments.</p>
+            </div>
+          </div>
+          <div class="hiw-faq-item" data-reveal>
+            <button class="hiw-faq-q" onclick="toggleFaq(this)">
+              What kind of technical assessments should I expect?
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="hiw-faq-a">
+              <p>Assessments are role-specific — developers face live coding and system design challenges, designers get portfolio reviews, and product managers tackle case studies.</p>
+            </div>
+          </div>
+          <div class="hiw-faq-item" data-reveal>
+            <button class="hiw-faq-q" onclick="toggleFaq(this)">
+              Can I apply for multiple roles simultaneously?
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="hiw-faq-a">
+              <p>Yes! You can apply for up to 3 roles at a time. Our team will evaluate your profile holistically and recommend the best fit based on your skills and preferences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="hiw-cta" data-reveal>
+        <div class="hiw-cta-ring hiw-cta-ring-1"></div>
+        <div class="hiw-cta-ring hiw-cta-ring-2"></div>
+        <h2 class="hiw-cta-title">Ready to make your mark?</h2>
+        <p class="hiw-cta-desc">Join the elite circle of talent at Athenura and work on projects that redefine industries.</p>
+        <div class="hiw-cta-btns">
+          <button class="hiw-cta-primary">START APPLICATION</button>
+          <button class="hiw-cta-secondary">Contact Recruitment</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    /* FAQ Toggle */
+    function toggleFaq(btn) {
+      const item = btn.closest('.hiw-faq-item');
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.hiw-faq-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    }
+
+    /* Scroll Reveal */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('revealed'), 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+    /* Dot Pulse */
+    const dotObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelector('.hiw-dot')?.classList.add('dot-active');
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.hiw-stage').forEach(el => dotObserver.observe(el));
+
+    /* Line Fill */
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.hiw-line').forEach((line, i) => {
+            setTimeout(() => line.classList.add('line-active'), i * 200);
+          });
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.hiw-stage').forEach(el => lineObserver.observe(el));
+
+    /* Letter Wave on Hero Title */
+    window.addEventListener('load', () => {
+      const el = document.getElementById('heroAccent');
+      if (!el) return;
+      const text = 'Exceptional Growth';
+      let html = '';
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i] === ' ' ? '&nbsp;' : text[i];
+        html += `<span class="letter" style="animation-delay:${0.6 + i * 0.05}s">${ch}</span>`;
+      }
+      el.innerHTML = html;
+    });
+    
+    function smoothNavigate(url) {
+    document.body.style.transition = 'opacity 0.9s ease';
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = url;
+    }, 600);
+  }
+
+  </script>
+
+</body>
+</html>
