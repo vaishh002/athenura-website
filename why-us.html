@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Athenura</title>
+  <link rel="stylesheet" href="css/why-us.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+      </a>
+      <div class="nav-right">
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#internships">Internship</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="why-us.html" class="active">Why Us</a>
+        </nav>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+
+      <div class="hero-left">
+        <span class="hero-badge">INTERNSHIP EXCELLENCE</span>
+        <h1>Elevate Your Career<br>with <span>Athenura</span></h1>
+        <p>Join a world-class program designed to bridge the gap between academia and industry through rigorous training and scientific evaluation.</p>
+        <div class="hero-btns">
+          <button class="hero-btn-primary">
+            View Openings
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <button class="hero-btn-secondary">Explore Curriculum</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80" alt="Office" class="hero-img"/>
+          <div class="hero-img-overlay"></div>
+          <div class="hero-float-card">
+            <div class="hero-float-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="hero-float-text">
+              <span class="hero-float-num">98%</span>
+              <span class="hero-float-label">Placement Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY INTERN -->
+  <section class="why-intern">
+
+    <div class="wi-header">
+      <h2>Why Intern <span>at Athenura?</span></h2>
+      <p>We provide a structured environment where learning meets real-world application, ensuring you graduate our program as a high-value professional.</p>
+    </div>
+
+    <div class="wi-cards">
+      <div class="wi-card" data-delay="0">
+        <div class="wi-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3>Industry-Aligned Training</h3>
+        <p>Master modern tech stacks and real-world project workflows mentored by industry veterans. No simulation—just real impact.</p>
+      </div>
+      <div class="wi-card" data-delay="1">
+        <div class="wi-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </div>
+        <h3>Performance Reviews</h3>
+        <p>Benefit from bi-weekly feedback loops designed to accelerate your professional growth and identify areas for rapid improvement.</p>
+      </div>
+      <div class="wi-card" data-delay="2">
+        <div class="wi-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+          </svg>
+        </div>
+        <h3>Scientific Evaluation</h3>
+        <p>Transparent metrics measuring both technical proficiency and essential soft skills using our proprietary data-driven framework.</p>
+      </div>
+    </div>
+
+    <!-- Curriculum -->
+    <div class="wi-curriculum">
+      <div class="wi-curr-images">
+        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80" alt="Laptop workspace" class="wi-img-back"/>
+        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=80" alt="Plant" class="wi-img-front"/>
+      </div>
+      <div class="wi-curr-content">
+        <h2>Industry-Aligned <span>Curriculum</span></h2>
+        <p>Our training modules are constantly updated to match the evolving demands of the global tech landscape. You won't just learn "how to code"—you'll learn how to build production-grade systems.</p>
+        <ul class="wi-checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><strong>Real-world Projects</strong><span>Work on actual client deliverables, not just simulations.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><strong>Modern Tech Stacks</strong><span>Get hands-on experience with the tools used by top-tier companies.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div><strong>Mentorship</strong><span>One-on-one guidance from seniors with over 10 years of experience.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Eval -->
+    <div class="wi-eval">
+      <div class="wi-eval-header">
+        <h2>Scientific Evaluation Framework</h2>
+        <p>We use data-driven metrics to track your journey from novice to industry-ready professional.</p>
+      </div>
+      <div class="wi-eval-steps">
+        <div class="wi-step" data-delay="0">
+          <span class="wi-step-num">01</span>
+          <h4>Technical Baseline</h4>
+          <p>Initial assessment of core competencies and logic.</p>
+        </div>
+        <div class="wi-step-divider"></div>
+        <div class="wi-step" data-delay="1">
+          <span class="wi-step-num">02</span>
+          <h4>Bi-Weekly Sprint</h4>
+          <p>Continuous delivery of tasks with peer review.</p>
+        </div>
+        <div class="wi-step-divider"></div>
+        <div class="wi-step" data-delay="2">
+          <span class="wi-step-num">03</span>
+          <h4>Soft Skill Metrics</h4>
+          <p>Tracking communication, agility, and leadership traits.</p>
+        </div>
+        <div class="wi-step-divider"></div>
+        <div class="wi-step" data-delay="3">
+          <span class="wi-step-num">04</span>
+          <h4>Final Certification</h4>
+          <p>Grading based on cumulative growth and project success.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="wi-voices">
+      <div class="wi-voices-header">
+        <div>
+          <h2>Voices of <span>Success</span></h2>
+          <p>Hear from those who started their careers with us.</p>
+        </div>
+        <div class="wi-nav-btns">
+          <button class="wi-nav-btn" id="wiPrev" onclick="wiSlide(-1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="wi-nav-btn" id="wiNext" onclick="wiSlide(1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="wi-testimonials-wrap">
+        <div class="wi-testimonials" id="wiTestimonials">
+          <div class="wi-tcard">
+            <div class="wi-tcard-top"><div class="wi-stars">★★★★★</div><span class="wi-quote">99</span></div>
+            <p>"The evaluation system was eye-opening. I received feedback on things I didn't even know I was missing, like architectural documentation."</p>
+            <div class="wi-profile">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Chen"/>
+              <div><strong>Sarah Chen</strong><span>Frontend Intern '23</span></div>
+            </div>
+          </div>
+          <div class="wi-tcard">
+            <div class="wi-tcard-top"><div class="wi-stars">★★★★★</div><span class="wi-quote">99</span></div>
+            <p>"Training here is no joke. You are pushed to your limits, but the mentorship from the seniors is what makes it achievable and worth it."</p>
+            <div class="wi-profile">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Thorne"/>
+              <div><strong>Marcus Thorne</strong><span>Backend Intern '23</span></div>
+            </div>
+          </div>
+          <div class="wi-tcard">
+            <div class="wi-tcard-top"><div class="wi-stars">★★★★★</div><span class="wi-quote">99</span></div>
+            <p>"Bi-weekly reviews helped me pivot my career path early. I realized I was better suited for UI/UX than development, and they supported me."</p>
+            <div class="wi-profile">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Elena Rodriguez"/>
+              <div><strong>Elena Rodriguez</strong><span>UX Design Intern '23</span></div>
+            </div>
+          </div>
+          <div class="wi-tcard">
+            <div class="wi-tcard-top"><div class="wi-stars">★★★★★</div><span class="wi-quote">99</span></div>
+            <p>"I joined with zero industry experience. Within 3 months I had a portfolio that got me 4 interview calls. That speaks for itself."</p>
+            <div class="wi-profile">
+              <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Arjun Mehta"/>
+              <div><strong>Arjun Mehta</strong><span>Full Stack Intern '24</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alumni -->
+    <div class="wi-alumni">
+      <span>OUR ALUMNI NOW WORK AT</span>
+      <div class="wi-companies">
+        <span>GOOGLE</span>
+        <span>AMAZON</span>
+        <span>META</span>
+        <span>NETFLIX</span>
+        <span>MICROSOFT</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="wi-cta">
+      <div class="wi-cta-rocket">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.2">
+          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/>
+          <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/>
+          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/>
+        </svg>
+      </div>
+      <h2>Ready to start your journey?</h2>
+      <p>Applications for our Fall 2026 cohort are now open. Secure your spot in the most rigorous internship program in the industry.</p>
+      <div class="wi-cta-btns">
+        <button class="wi-cta-primary">Apply Now</button>
+        <button class="wi-cta-secondary">Contact Admissions</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="athenura-footer">
+    <div class="footer-container">
+      <div class="footer-col branding">
+        <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
+        <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
+        <h4 class="follow-us-text">Follow Us</h4>
+        <div class="social-links">
+          <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+          <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Internship Program</a></li>
+          <li><a href="internship-policy.html">Internship Policy</a></li>
+          <li><a href="certifications.html">Certification & Benefits</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Custom Software Development</a></li>
+          <li><a href="#">Web Application Development</a></li>
+          <li><a href="#">Website Maintenance</a></li>
+          <li><a href="#">Software Testing & QA</a></li>
+          <li><a href="#">Business Automation Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <div class="info-row">
+          <div class="white-circle email-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+          <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
+        </div>
+        <div class="info-row">
+          <div class="white-circle phone-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
+          <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
+        <p class="address">Sector 62, Noida, Uttar Pradesh</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="bottom-content">
+        <p>© 2026 Athenura. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+
+    // Testimonial slider
+    let wiCurrent = 0;
+    const wiCards = document.querySelectorAll('.wi-tcard');
+    const wiTotal = wiCards.length;
+
+    function wiSlide(dir) {
+      wiCurrent = (wiCurrent + dir + wiTotal) % wiTotal;
+      const wrap = document.getElementById('wiTestimonials');
+      const visible = window.innerWidth > 900 ? 3 : window.innerWidth > 600 ? 2 : 1;
+      const offset = wiCurrent * (100 / visible);
+      wrap.style.transform = `translateX(-${offset}%)`;
+    }
+
+    // Scroll reveal
+    const wiObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('wi-visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.wi-card, .wi-step, .wi-tcard, .wi-curr-images, .wi-curr-content').forEach(el => wiObserver.observe(el));
+  </script>
+
+</body>
+</html>

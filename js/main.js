@@ -213,3 +213,276 @@ function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
   document.getElementById('hamburger').classList.toggle('active');
 }
+
+
+// policy js 
+
+
+// ============================================================
+//  ATHENURA — MAIN JS
+//  1. Hamburger menu toggle
+//  2. Live search bar (searches all policy text content)
+//  3. Download PDF
+// ============================================================
+
+
+/* ── 1. HAMBURGER MENU ── */
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  const hamburger = document.getElementById('hamburger');
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+}
+
+
+/* ── 2. SEARCH BAR ── */
+const searchInput = document.querySelector('.search');
+const navRight = document.querySelector('.nav-right');
+
+// Map section names to their actual IDs in your HTML
+const searchTargets = [
+  { label: 'Introduction',     id: 'introduction' },
+  { label: 'Code of Conduct',  id: 'code of conduct' },
+  { label: 'Attendance',       id: 'attendance' },
+  { label: 'Confidentiality',  id: 'confidentiality' },
+  { label: 'Evaluation',       id: 'evaluation' },
+];
+
+// Build dropdown suggestion box
+const suggestionBox = document.createElement('div');
+suggestionBox.id = 'search-suggestions';
+Object.assign(suggestionBox.style, {
+  position:     'absolute',
+  top:          'calc(100% + 8px)',
+  left:         '0',
+  right:        '0',
+  background:   '#fff',
+  border:       '1px solid #d1d5db',
+  borderRadius: '12px',
+  boxShadow:    '0 8px 30px rgba(0,0,0,0.12)',
+  zIndex:       '99999',
+  overflow:     'hidden',
+  display:      'none',
+  minWidth:     '220px',
+});
+
+if (navRight) {
+  navRight.style.position = 'relative';
+  navRight.appendChild(suggestionBox);
+}
+
+// Remove all previous highlights
+function clearHighlights() {
+  document.querySelectorAll('mark.sh').forEach(m => {
+    const parent = m.parentNode;
+    if (parent) {
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    }
+  });
+}
+
+// Highlight matching words inside a section
+function highlightSection(sectionEl, query) {
+  if (!query || !sectionEl) return;
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  const walker = document.createTreeWalker(sectionEl, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => {
+      const tag = n.parentNode.nodeName;
+      return (tag !== 'SCRIPT' && tag !== 'STYLE' && tag !== 'MARK')
+        ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    }
+  });
+  const nodes = [];
+  let n;
+  while ((n = walker.nextNode())) nodes.push(n);
+  nodes.forEach(textNode => {
+    regex.lastIndex = 0;
+    if (!regex.test(textNode.textContent)) return;
+    regex.lastIndex = 0;
+    const wrap = document.createElement('span');
+    wrap.innerHTML = textNode.textContent.replace(
+      regex,
+      '<mark class="sh" style="background:#b2f5ea;color:#0f766e;border-radius:3px;padding:0 2px;font-weight:600;">$1</mark>'
+    );
+    textNode.replaceWith(wrap);
+  });
+}
+
+// Get section element by ID — handles IDs with spaces
+function getSectionById(id) {
+  return document.getElementById(id);
+}
+
+// Render suggestion dropdown
+function renderSuggestions(query) {
+  suggestionBox.innerHTML = '';
+
+  if (!query) {
+    suggestionBox.style.display = 'none';
+    clearHighlights();
+    return;
+  }
+
+  const q = query.toLowerCase();
+
+  const matches = searchTargets.filter(t => {
+    if (t.label.toLowerCase().includes(q)) return true;
+    const el = getSectionById(t.id);
+    return el && el.textContent.toLowerCase().includes(q);
+  });
+
+  if (!matches.length) {
+    const noResult = document.createElement('div');
+    noResult.textContent = 'No results found';
+    noResult.style.cssText = 'padding:14px 16px;font-size:14px;color:#9ca3af;text-align:center;';
+    suggestionBox.appendChild(noResult);
+    suggestionBox.style.display = 'block';
+    clearHighlights();
+    return;
+  }
+
+  // Header
+  const header = document.createElement('div');
+  header.textContent = `${matches.length} section${matches.length > 1 ? 's' : ''} found`;
+  header.style.cssText = 'padding:10px 16px 6px;font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;border-bottom:1px solid #f3f4f6;';
+  suggestionBox.appendChild(header);
+
+  matches.forEach((match, i) => {
+    const item = document.createElement('div');
+    item.style.cssText = `
+      padding: 12px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #1f2937;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: ${i < matches.length - 1 ? '1px solid #f9fafb' : 'none'};
+      transition: background 0.15s;
+    `;
+
+    const dot = document.createElement('span');
+    dot.style.cssText = 'width:8px;height:8px;border-radius:50%;background:#2c8c8c;flex-shrink:0;display:inline-block;';
+    item.appendChild(dot);
+
+    const labelSpan = document.createElement('span');
+    const regex = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    labelSpan.innerHTML = match.label.replace(regex, '<strong style="color:#0f766e;">$1</strong>');
+    item.appendChild(labelSpan);
+
+    const arrow = document.createElement('span');
+    arrow.textContent = '→';
+    arrow.style.cssText = 'margin-left:auto;color:#9ca3af;font-size:16px;';
+    item.appendChild(arrow);
+
+    item.addEventListener('mouseenter', () => item.style.background = '#f0fdf9');
+    item.addEventListener('mouseleave', () => item.style.background = '');
+
+    item.addEventListener('click', () => {
+      const target = getSectionById(match.id);
+      if (target) {
+        clearHighlights();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => highlightSection(target, query), 400);
+      }
+      suggestionBox.style.display = 'none';
+      searchInput.value = match.label;
+    });
+
+    suggestionBox.appendChild(item);
+  });
+
+  suggestionBox.style.display = 'block';
+}
+
+if (searchInput) {
+  searchInput.addEventListener('input', function () {
+    renderSuggestions(this.value.trim());
+  });
+
+  searchInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      const q = this.value.trim().toLowerCase();
+      const match = searchTargets.find(t => {
+        if (t.label.toLowerCase().includes(q)) return true;
+        const el = getSectionById(t.id);
+        return el && el.textContent.toLowerCase().includes(q);
+      });
+      if (match) {
+        const target = getSectionById(match.id);
+        if (target) {
+          clearHighlights();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(() => highlightSection(target, this.value.trim()), 400);
+        }
+        suggestionBox.style.display = 'none';
+      }
+    }
+    if (e.key === 'Escape') {
+      suggestionBox.style.display = 'none';
+      clearHighlights();
+      this.value = '';
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (navRight && !navRight.contains(e.target)) {
+      suggestionBox.style.display = 'none';
+    }
+  });
+
+  searchInput.addEventListener('focus', function () {
+    if (this.value.trim()) renderSuggestions(this.value.trim());
+  });
+}
+
+
+/* ── 3. DOWNLOAD PDF ── */
+const downloadBtn = document.querySelector('.download');
+
+if (downloadBtn) {
+  downloadBtn.addEventListener('click', function () {
+    const originalTitle = document.title;
+    document.title = 'Athenura-Internship-Policy';
+    window.print();
+    setTimeout(() => { document.title = originalTitle; }, 1500);
+  });
+}
+
+
+/* ── PRINT STYLES — clean PDF layout ── */
+const printStyle = document.createElement('style');
+printStyle.innerHTML = `
+  @media print {
+    .navbar,
+    .sidebar,
+    #search-suggestions,
+    .hamburger,
+    .download {
+      display: none !important;
+    }
+    .container {
+      padding: 0 !important;
+      gap: 0 !important;
+      display: block !important;
+    }
+    .content {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .policy-wrapper {
+      padding: 10px 20px !important;
+    }
+    .policy-block,
+    .policy-section,
+    .big-card {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    body { background: white !important; }
+    .hero img { max-height: 280px; object-fit: cover; }
+    .athenura-footer { break-before: page; }
+  }
+`;
+document.head.appendChild(printStyle);

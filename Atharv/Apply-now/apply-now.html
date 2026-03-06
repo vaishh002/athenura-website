@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athenura | Apply for Internship</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="apply-now.css">
+</head>
+
+<body>
+
+    <main>
+        <section id="internship" class="internship">
+            <div class="container">
+                <form id="internship-form" class="application-form" action="" method="POST">
+                    <div class="header">
+                        <div class="logo">
+                            <img src="athenura-logo.png" alt="Athenura Logo">
+                        </div>
+                        <h2 class="section-title"><span class="join">Join</span> Athenura</h2>
+                        <p class="form-intro">
+                            Fill out all required fields to submit your application.
+                            For help: <a href="mailto:hr.athenura@gmail.com">hr.athenura@gmail.com</a>
+                        </p>
+                    </div>
+                    <fieldset>
+                        <legend>
+                            <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                            </span>
+                            Personal Details
+                        </legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full Name *</label>
+                                <input type="text" id="fullname" name="full_name" autocomplete="name"
+                                    placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number *</label>
+                                <input type="tel" id="mobile" name="mobile_number" autocomplete="tel"
+                                    placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" autocomplete="email"
+                                    placeholder="Your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth *</label>
+                                <input type="date" id="dob" name="dob" placeholder="dd-mm-yyyy"
+                                    pattern="\d{2}-\d{2}-\d{4}" max="2008-12-31" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9.5L12 3l9 6.5"></path>
+                                    <path d="M9 22V12h6v10"></path>
+                                </svg>
+                            </span>
+                            Address Details
+                        </legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <select id="state" name="state" required>
+                                    <option value="" disabled selected>Select your state / UT</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Ladakh">Ladakh</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" placeholder="Your city" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fulladdress">Full Address *</label>
+                            <textarea id="fulladdress" name="full_address" placeholder="Your full address" rows="2"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pin Code *</label>
+                            <input type="text" id="pincode" name="pin_code" placeholder="6-digit pin code"
+                                pattern="[0-9]{6}" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
+                                    <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"></path>
+                                </svg>
+                            </span>
+                            Educational Details
+                        </legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="college">College/University Name *</label>
+                                <input type="text" id="college" name="college_name"
+                                    placeholder="Your college or university name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Course Name *</label>
+                                <input type="text" id="course" name="course_name" placeholder="Your course name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="education_level">Education Level *</label>
+                            <select id="education_level" name="education_level" required>
+                                <option value="" disabled selected>Select Education Level</option>
+                                <option value="High School">High School</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Undergraduate">Undergraduate (Bachelor's)</option>
+                                <option value="Postgraduate">Postgraduate (Master's)</option>
+                                <option value="diploma">Diploma</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tpo_name">TPO Name</label>
+                                <input type="text" id="tpo_name" name="tpo_name"
+                                    placeholder="Training & Placement Officer Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="tpo_email">TPO Email</label>
+                                <input type="email" id="tpo_email" name="tpo_email" placeholder="tpo@college.edu">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tpo_contact">TPO Contact Number</label>
+                            <input type="tel" id="tpo_contact" name="tpo_contact" placeholder="10-digit contact number"
+                                pattern="[0-9]{10}">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            <span class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                                    <path d="M16 7V5a4 4 0 0 0-8 0v2"></path>
+                                </svg>
+                            </span>
+                            Internship Details
+                        </legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="domain">Domain *</label>
+                                <select id="domain" name="domain" required>
+                                    <option value="" disabled selected>Select Domain</option>
+                                    <option value="Data Science">Data Science</option>
+                                    <option value="Human Resources">Human Resources</option>
+                                    <option value="Social Media Management">Social Media Management</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option value="Digital Marketing">Digital Marketing</option>
+                                    <option value="Video Editing">Video Editing</option>
+                                    <option value="Full Stack Development">Full Stack Development</option>
+                                    <option value="Mern Stack Development">Mern Stack Development</option>
+                                    <option value="Content Writing">Content Writing</option>
+                                    <option value="Content Creator">Content Creator</option>
+                                    <option value="UI/UX Designing">UI/UX Designing</option>
+                                    <option value="Front-end Developer">Front-end Developer</option>
+                                    <option value="Back-end Developer">Back-end Developer</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact_method">Preferred Contact Method *</label>
+                                <select id="contact_method" name="contact_method" required>
+                                    <option value="" disabled selected>Select Contact Method</option>
+                                    <option value="phone">Phone Call</option>
+                                    <option value="WhatsApp">WhatsApp Messages</option>
+                                    <option value="Both">Both (Phone Call & WhatsApp Messages)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cv_url">CV/Resume URL *</label>
+                            <input type="url" id="cv_url" name="cv_url"
+                                placeholder="Link to your CV/Resume (Google Drive, Dropbox, etc.)" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="duration">Duration *</label>
+                                <select id="duration" name="duration" required>
+                                    <option value="" disabled selected>Select Duration</option>
+                                    <option value="3months">3 months</option>
+                                    <option value="4months">4 months</option>
+                                    <option value="6months">6 months</option>
+                                    <option value="8months">8 months</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Previous Internship Experience *</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="prev_experience" value="yes" id="exp-yes" required>
+                                        Yes
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="prev_experience" value="no" id="exp-no" required> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-submit">Submit Application</button>
+                </form>
+
+                <div id="form-response" class="form-response"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="apply-now.js"></script>
+</body>
+
+
+</html>
