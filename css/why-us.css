@@ -276,6 +276,7 @@ body {
 .wi-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
 .wi-card p { color: #64748b; font-size: 0.9rem; line-height: 1.7; }
 
+/* ===== CURRICULUM ===== */
 .wi-curriculum { display: flex; align-items: center; gap: 80px; padding: 90px 60px; background: #fff; }
 .wi-curr-images { position: relative; flex-shrink: 0; width: 420px; height: 340px; opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .wi-curr-images.wi-visible { opacity: 1; transform: translateX(0); }
@@ -292,6 +293,7 @@ body {
 .wi-checklist li strong { display: block; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 3px; }
 .wi-checklist li span { color: #64748b; font-size: 0.85rem; line-height: 1.5; }
 
+/* ===== EVAL ===== */
 .wi-eval { background: #0d1b2a; padding: 90px 60px; }
 .wi-eval-header { text-align: center; margin-bottom: 60px; }
 .wi-eval-header h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 12px; }
@@ -309,36 +311,63 @@ body {
 .wi-step p { color: rgba(255,255,255,0.5); font-size: 0.82rem; line-height: 1.55; }
 .wi-step-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.12); align-self: center; flex-shrink: 0; }
 
-.wi-voices { padding: 90px 60px; background: #f8fafb; overflow: hidden; }
-.wi-voices-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
-.wi-voices-header h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
-.wi-voices-header h2 span { color: var(--teal); }
-.wi-voices-header p { color: #64748b; font-size: 0.9rem; }
-.wi-nav-btns { display: flex; gap: 10px; }
-.wi-nav-btn { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #cbd5e1; background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s; }
-.wi-nav-btn svg { width: 16px; height: 16px; stroke: #64748b; }
-.wi-nav-btn:hover { background: var(--teal); border-color: var(--teal); }
-.wi-nav-btn:hover svg { stroke: #fff; }
-.wi-testimonials-wrap { overflow: hidden; }
-.wi-testimonials { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1); }
-.wi-tcard { min-width: calc(33.33% - 16px); background: #fff; border-radius: var(--radius); padding: 30px; border: 1px solid var(--border); box-shadow: 0 4px 16px rgba(0,0,0,0.04); opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s; flex-shrink: 0; }
-.wi-tcard.wi-visible { opacity: 1; transform: translateY(0); }
-.wi-tcard:hover { box-shadow: 0 12px 32px rgba(14,165,164,0.10); transform: translateY(-4px); }
-.wi-tcard-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.wi-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; }
-.wi-quote { font-size: 3rem; font-weight: 800; color: #e2e8f0; line-height: 1; }
-.wi-tcard > p { color: #475569; font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
-.wi-profile { display: flex; align-items: center; gap: 12px; }
-.wi-profile img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-.wi-profile strong { display: block; color: var(--text-primary); font-size: 0.9rem; }
-.wi-profile span { color: #64748b; font-size: 0.78rem; }
+/* ===== VOICES — COMPACT GRID ===== */
+.wi-voices { padding: 60px 60px 50px; background: #f8fafb; }
 
+.wi-voices-header { text-align: center; margin-bottom: 36px; }
+.wi-voices-header h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.wi-voices-header h2 span { color: var(--teal); }
+.wi-voices-header p { color: #64748b; font-size: 0.88rem; }
+
+.wi-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.wi-tcard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s;
+}
+.wi-tcard.wi-visible { opacity: 1; transform: translateY(0); }
+.wi-tcard:hover { box-shadow: 0 8px 28px rgba(14,165,164,0.13); transform: translateY(-4px); }
+
+.wi-tcard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.wi-stars { color: #f59e0b; font-size: 0.72rem; letter-spacing: 1.5px; }
+.wi-quote { font-size: 1.8rem; color: #e2e8f0; line-height: 1; font-family: Georgia, serif; }
+
+.wi-tcard > p {
+  color: #475569;
+  font-size: 0.83rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.wi-profile { display: flex; align-items: center; gap: 10px; }
+.wi-profile img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.wi-profile strong { display: block; color: var(--text-primary); font-size: 0.83rem; font-weight: 600; }
+.wi-profile span { color: #94a3b8; font-size: 0.73rem; }
+
+/* ===== ALUMNI ===== */
 .wi-alumni { text-align: center; padding: 50px 40px; background: #f8fafb; border-top: 1px solid var(--border); }
 .wi-alumni > span { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: #94a3b8; margin-bottom: 28px; }
 .wi-companies { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
 .wi-companies span { font-size: 1.1rem; font-weight: 700; color: #94a3b8; letter-spacing: 0.05em; transition: color 0.25s; cursor: default; }
 .wi-companies span:hover { color: var(--teal); }
 
+/* ===== CTA ===== */
 .wi-cta { background: var(--teal); border-radius: 24px; margin: 0 60px 80px; padding: 70px 60px; text-align: center; position: relative; overflow: hidden; }
 .wi-cta::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; }
 .wi-cta-rocket { position: absolute; right: 60px; top: 50%; transform: translateY(-50%); }
@@ -388,6 +417,10 @@ body {
 .legal-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .wi-testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 1024px) {
   .hero { padding: 0 40px; }
   .hero-img-wrap { width: 420px; height: 360px; }
@@ -400,8 +433,7 @@ body {
   .wi-eval-steps { flex-wrap: wrap; gap: 16px; justify-content: center; }
   .wi-step { min-width: 200px; max-width: 100%; }
   .wi-step-divider { display: none; }
-  .wi-voices { padding: 70px 40px; }
-  .wi-tcard { min-width: calc(50% - 12px); }
+  .wi-voices { padding: 60px 40px 50px; }
   .wi-cta { margin: 0 40px 70px; padding: 60px 40px; }
   .footer-container { grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr 1.4fr; gap: 36px; padding: 0 40px 50px; }
   .bottom-content { padding: 18px 40px; }
@@ -429,9 +461,8 @@ body {
   .wi-eval { padding: 60px 24px; }
   .wi-eval-steps { flex-direction: column; align-items: stretch; }
   .wi-step { max-width: 100%; }
-  .wi-voices { padding: 60px 24px; }
-  .wi-voices-header { flex-direction: column; gap: 20px; }
-  .wi-tcard { min-width: 100%; }
+  .wi-voices { padding: 50px 24px 40px; }
+  .wi-testimonials-grid { grid-template-columns: 1fr; }
   .wi-alumni { padding: 40px 24px; }
   .wi-companies { gap: 24px; }
   .wi-cta { margin: 0 20px 60px; padding: 50px 24px; }
@@ -453,7 +484,7 @@ body {
   .wi-cards { padding: 0 16px 40px; }
   .wi-curriculum { padding: 50px 16px; }
   .wi-eval { padding: 50px 16px; }
-  .wi-voices { padding: 50px 16px; }
+  .wi-voices { padding: 40px 16px 36px; }
   .wi-cta { margin: 0 16px 50px; padding: 40px 20px; }
   .footer-container { grid-template-columns: 1fr; gap: 32px; padding: 0 20px 40px; }
   .footer-col h3 { font-size: 17px; margin-bottom: 18px; }
@@ -465,5 +496,3 @@ body {
   .legal-links { gap: 16px; }
   .legal-links a { font-size: 13px; }
 }
-
-
