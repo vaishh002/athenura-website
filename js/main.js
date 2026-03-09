@@ -486,3 +486,4 @@ printStyle.innerHTML = `
   }
 `;
 document.head.appendChild(printStyle);
+

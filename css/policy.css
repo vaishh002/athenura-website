@@ -803,6 +803,7 @@ section {
 
 .social-icon:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
 
+
 /* ── LINK LISTS (Company & Services) ── */
 .footer-col ul {
   list-style: none;
@@ -820,10 +821,10 @@ section {
   font-size: 15px;
   font-weight: 400;
   display: inline-block;
-  transition: all 0.25s
+ transition: all 0.25s
 }
-
 .footer-col ul li a:hover { color: #d6f1f3; transform: translateX(4px); text-decoration: underline; }
+
 
 
 /* ── CONTACT COLUMN ── */
@@ -929,7 +930,6 @@ section {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 14px;
-  /* NO hover effect */
 }
 
 /* ══════════════════════════════════════════
