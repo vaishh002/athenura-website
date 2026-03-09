@@ -169,7 +169,7 @@ function toggleMenu() {
         <ul class="m-module-list">${modulesHTML}</ul>
       </div>
       <div class="m-tags">${tagsHTML}</div>
-      <button class="m-apply" style="background:${ic}">Apply Now &#8594;</button>
+      <button class="m-apply" style="background:${ic}" onclick="window.location.href='apply-now.html'">Apply Now &#8594;</button>
     `;
 
     document.getElementById('modalBackdrop').classList.add('active');
