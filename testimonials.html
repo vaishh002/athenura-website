@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
+<title>Athenura — Internship Programs</title>
+<link rel="stylesheet" href="css/main.css">
+<!-- <link rel="stylesheet" href="css/home.css"> -->
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+    </a>
+    <div class="nav-right">
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html#internship">Internship</a>
+        <a href="about.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+    </div>
+  </div>
+</header>
+
+<!-- MODAL BACKDROP -->
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <button class="modal-close" onclick="closeModal()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <div id="modalInner"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-grad"></div>
+  <div class="hero-dots"></div>
+
+  <div class="hero-text">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Registration Open for Fall 2026
+    </div>
+
+    <h1 class="hero-title">
+      Launch Your Career <br>
+      <span class="hero-accent">with Industry</span><br>
+      <span class="hero-accent">Exposure</span>
+    </h1>
+
+    <p class="hero-desc">
+      Bridge the gap between campus and corporate with structured internship programs, dedicated mentorship, and live industry-grade projects.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">50k+</span>
+        <span class="stat-label">Interns Trained</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">100+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Partner Colleges</span>
+      </div>
+    </div>
+
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="window.location.href='apply-now.html'">Apply Now &rarr;</button>
+      <button class="btn-secondary" onclick="window.location.href='program.html#internships'">Explore Programs</button>
+    </div>
+
+    <div class="hero-trust">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Verified Companies</span>
+      </div>
+      <div class="trust-dot"></div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <span>Certificate on Completion</span>
+      </div>
+      <div class="trust-dot"></div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Flexible Duration</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-img-frame">
+      <img src="https://i.pinimg.com/736x/75/08/e3/7508e3990857d8ab2c6b83d89bf7eda1.jpg" alt="Internship" class="hero-img"/>
+      <div class="hero-img-shimmer"></div>
+      <div class="hero-img-glow"></div>
+    </div>
+
+    <div class="htag htag-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      HTML / CSS
+    </div>
+    <div class="htag htag-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      Data Science
+    </div>
+    <div class="htag htag-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      UI / UX
+    </div>
+    <div class="htag htag-4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      Marketing
+    </div>
+
+    <!-- Python -->
+    <div class="lang-icon lang-py" title="Python">
+      <svg viewBox="0 0 128 128">
+        <linearGradient id="pyA" x1="70.252" y1="1237.476" x2="170.659" y2="1098.827" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/>
+        </linearGradient>
+        <linearGradient id="pyB" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/>
+        </linearGradient>
+        <path fill="url(#pyA)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69 0-2.604 2.073-4.721 4.633-4.721z"/>
+        <path fill="url(#pyB)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/>
+      </svg>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="lang-icon lang-js" title="JavaScript">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#F7DF1E"/>
+        <path d="M67.1 75.8c1.2 2 2.9 3.5 5.8 3.5 2.4 0 4-.9 4-2.9 0-2-.8-2.7-4.5-4.3l-1.5-.7c-5.7-2.4-9.5-5.5-9.5-12 0-6 4.5-10.5 11.5-10.5 5 0 8.6 1.7 11.2 6.3l-6.1 3.9c-1.4-2.4-2.8-3.3-5.1-3.3s-3.7 1.3-3.7 3c0 2.1.9 2.9 4.4 4.3l1.5.7c6.7 2.9 10.5 5.8 10.5 12.4 0 7.1-5.6 11.1-13.1 11.1-7.3 0-12-3.5-14.3-8l6.4-3.5zm-26 .6c.9 1.5 1.7 2.8 3.5 2.8 1.8 0 2.9-.7 2.9-3.3V49.1h7.9V76c0 5.5-3.2 8-7.9 8-4.2 0-6.7-2.2-7.9-4.8l1.5-.8z" fill="#000"/>
+      </svg>
+    </div>
+
+    <!-- C++ -->
+    <div class="lang-icon lang-cpp" title="C++">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#00599C"/>
+        <path fill="#fff" d="M64 8C33.6 8 8 33.6 8 64s25.6 56 56 56 56-25.6 56-56S94.4 8 64 8zm-7.5 79c-12.1 0-21.9-9.8-21.9-21.9S44.4 43.2 56.5 43.2c6.9 0 13.2 3.2 17.4 8.2l-7.2 7.2C64.5 55.7 60.6 54 56.5 54c-6.1 0-11 5-11 11s4.9 11 11 11c4.1 0 7.8-1.7 10.4-4.5l7.2 7.2C70 83.8 63.4 87 56.5 87zm42-23h-5v5h-5v-5h-5v-5h5v-5h5v5h5v5zm16 0h-5v5h-5v-5h-5v-5h5v-5h5v5h5v5z"/>
+      </svg>
+    </div>
+
+    <!-- React -->
+    <div class="lang-icon lang-react" title="React">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#20232a"/>
+        <circle cx="64" cy="64" r="11.4" fill="#61DAFB"/>
+        <g fill="none" stroke="#61DAFB" stroke-width="5">
+          <ellipse cx="64" cy="64" rx="51" ry="19.5"/>
+          <ellipse cx="64" cy="64" rx="51" ry="19.5" transform="rotate(60 64 64)"/>
+          <ellipse cx="64" cy="64" rx="51" ry="19.5" transform="rotate(120 64 64)"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Node.js -->
+    <div class="lang-icon lang-node" title="Node.js">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#fff"/>
+        <path fill="#83CD29" d="M64 8.3L11.3 39.2v61.6L64 131.7l52.7-30.9V39.2z"/>
+        <path fill="#fff" d="M64 21.7l39.5 23v46L64 113.7 24.5 90.7v-46z"/>
+        <path fill="#83CD29" d="M64 40.8v46.4L90.5 72V57.2z"/>
+        <path fill="#404137" d="M64 40.8L37.5 57.2V72L64 87.2z"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     WHY INTERN WITH US
+═══════════════════════════════════════════ -->
+<section class="why">
+  <h2>Why Intern <span>with Us?</span></h2>
+  <p class="subtitle">Experience a professional work environment that prioritizes your growth and skill development.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
+      </div>
+      <h3>Real-Time Projects</h3>
+      <p>Ditch the dummy assignments. Work on live industry tasks that actually make an impact.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg>
+      </div>
+      <h3>Remote Work</h3>
+      <p>Enjoy the flexibility of a work-from-home environment designed for global collaboration.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+      </div>
+      <h3>Expert Mentorship</h3>
+      <p>Weekly 1-on-1 sessions with industry experts to guide your career path.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 3v18"/><path d="M3 12h18"/><path d="M9 3v18"/></svg>
+      </div>
+      <h3>Weekly Modules</h3>
+      <p>Structured learning curriculum that keeps you on track with the latest technology.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/></svg>
+      </div>
+      <h3>Certification</h3>
+      <p>Gain industry-recognized certificates and an experience letter upon completion.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+      </div>
+      <h3>Work Culture</h3>
+      <p>Join a community of enthusiasts. We value collaboration and creativity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT — redesigned
+═══════════════════════════════════════════ -->
+<section class="about">
+  <div class="about-container">
+
+    <!-- LEFT -->
+    <div class="about-left">
+      <div class="about-eyebrow">
+        <span class="about-eyebrow-dot"></span>
+        Who We Are
+      </div>
+      <h2>Building the Future of<br><span>Intern Talent</span></h2>
+      <p>We are a forward-thinking digital agency that connects ambitious students with live industry projects, expert mentors, and structured programs — turning potential into careers.</p>
+
+      <div class="about-stat-row">
+        <div class="about-stat-item">
+          <span class="about-stat-num">50k+</span>
+          <span class="about-stat-label">Interns Trained</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">100+</span>
+          <span class="about-stat-label">Live Projects</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">50+</span>
+          <span class="about-stat-label">Colleges</span>
+        </div>
+      </div>
+
+      <a href="about.html" class="about-cta-link">
+        Learn more about us
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="about-right">
+      <div class="about-box">
+        <div class="about-heading">
+          <div class="about-icon-wrap">
+            <svg class="about-icon" viewBox="0 0 24 24"><path d="M12 5c5 0 9 7 9 7s-4 7-9 7-9-7-9-7 4-7 9-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Vision & Mission</h3>
+        </div>
+        <p>To become the global standard for entry-level digital talent — giving every ambitious student equal access to world-class industry exposure and career pathways.</p>
+      </div>
+
+      <div class="about-box">
+        <div class="about-heading">
+          <div class="about-icon-wrap">
+            <svg class="about-icon" viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6z"/><path d="M6 3l6 18 6-18"/></svg>
+          </div>
+          <h3>Core Values</h3>
+        </div>
+        <ul>
+          <li>Quality over Quantity</li>
+          <li>Radical Transparency</li>
+          <li>Customer Obsession</li>
+          <li>Continuous Growth</li>
+        </ul>
+      </div>
+
+      <div class="about-box">
+        <div class="about-heading">
+          <div class="about-icon-wrap">
+            <svg class="about-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Who We Serve</h3>
+        </div>
+        <p>Students from 50+ colleges across India looking for real experience, structured learning, and a certificate that actually opens doors.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CHOOSE YOUR TRACK
+═══════════════════════════════════════════ -->
+<section class="domain-section">
+  <div class="section-header">
+    <h2 class="section-title">Choose Your <span>Track</span></h2>
+    <p class="section-subtitle">Specialized programs tailored for your career goals.</p>
+  </div>
+
+  <div class="card-grid">
+    <!-- CARD 1 : WEB DEVELOPMENT -->
+    <article class="card"
+      data-cat="tech" data-dur="3" data-mode="remote" data-diff="beginner"
+      data-popular=""
+      style="--delay:0s; --ic:#0ea5a4; --icbg:rgba(14,165,164,0.10)"
+      data-title="Web Development"
+      data-badge="Tech" data-badge-class="tech"
+      data-duration-label="1–3 Months" data-mode-label="Remote" data-diff-label="Beginner"
+      data-desc="Build real websites, dashboards, and responsive applications using modern tools and frameworks. Work on live projects with industry mentors."
+      data-modules="HTML, CSS, JavaScript Fundamentals|Frontend Framework Basics|Backend Integration Concepts|Database Handling|Git & Version Control|Website Deployment"
+      data-tags="HTML/CSS|JavaScript|Git|Deployment">
+      <div class="card-inner-clip">
+        <div class="card-banner" style="background:linear-gradient(135deg,rgba(14,165,164,0.16),rgba(14,165,164,0.04))">
+          <div class="card-icon-box" style="color:#0ea5a4;border-color:rgba(14,165,164,0.25)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="badge-pill" style="color:#0a7070;background:rgba(14,165,164,0.12);border-color:rgba(14,165,164,0.25)">WEB DEV</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Web Development</h3>
+          <p class="card-desc">Build real websites, dashboards, and responsive applications using modern tools and frameworks.</p>
+          <div class="card-info-row">
+            <div class="card-meta-left">
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>1–3 Months</span>
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+            </div>
+            <div class="card-meta-right">
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+              <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+            <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2 : DIGITAL MARKETING -->
+    <article class="card"
+      data-cat="marketing" data-dur="3" data-mode="remote" data-diff="beginner"
+      style="--delay:.09s; --ic:#f472b6; --icbg:rgba(244,114,182,0.10)"
+      data-title="Digital Marketing"
+      data-badge="Marketing" data-badge-class="marketing"
+      data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+      data-desc="Drive brand growth through data-driven campaigns, SEO strategies, and performance analytics on real client projects."
+      data-modules="Search Engine Optimization (SEO)|Social Media Marketing|Content Strategy|Lead Generation|Google Tools & Analytics|Campaign Planning"
+      data-tags="SEO|Analytics|Campaign Mgmt">
+      <div class="card-inner-clip">
+        <div class="card-banner" style="background:linear-gradient(135deg,rgba(244,114,182,0.18),rgba(244,114,182,0.04))">
+          <div class="card-icon-box" style="color:#f472b6;border-color:rgba(244,114,182,0.25)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <span class="badge-pill" style="color:#c2410c;background:rgba(251,146,60,0.12);border-color:rgba(251,146,60,0.25)">MARKETING</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Digital Marketing</h3>
+          <p class="card-desc">Drive brand growth through data-driven campaigns, SEO strategies, and performance analytics.</p>
+          <div class="card-info-row">
+            <div class="card-meta-left">
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+            </div>
+            <div class="card-meta-right">
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+              <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+            <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 3 : GRAPHIC DESIGN -->
+    <article class="card"
+      data-cat="design" data-dur="3" data-mode="remote" data-diff="beginner"
+      style="--delay:.18s; --ic:#c084fc; --icbg:rgba(192,132,252,0.10)"
+      data-title="Graphic Design"
+      data-badge="Design" data-badge-class="design"
+      data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+      data-desc="Shape the visual identity of a brand by creating compelling designs for social media, campaigns, and branding kits using Photoshop, Illustrator, Canva and Figma."
+      data-modules="Social Media Creatives|Branding Kits|Posters & Banners|UI Mockups|Marketing Visuals"
+      data-tags="Photoshop|Illustrator|Canva|Figma">
+      <div class="card-inner-clip">
+        <div class="card-banner" style="background:linear-gradient(135deg,rgba(192,132,252,0.18),rgba(192,132,252,0.04))">
+          <div class="card-icon-box" style="color:#9333ea;border-color:rgba(192,132,252,0.28)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <span class="badge-pill" style="color:#7e22ce;background:rgba(192,132,252,0.12);border-color:rgba(192,132,252,0.28)">DESIGN</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Graphic Design</h3>
+          <p class="card-desc">Shape the visual identity of a brand by creating compelling designs for social media and campaigns.</p>
+          <div class="card-info-row">
+            <div class="card-meta-left">
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+            </div>
+            <div class="card-meta-right">
+              <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+              <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+            <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="explore-wrap">
+    <p class="explore-count">Showing 3 of <strong>12 programs</strong></p>
+    <a class="explore-cta" href="program.html">
+      <span>Explore All Programs</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHAT SETS US APART
+═══════════════════════════════════════════ -->
+<section class="apart-section">
+  <div class="container">
+    <div class="apart-image">
+      <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?cs=srgb&dl=pexels-fauxels-3184360.jpg&fm=jpg" alt="Professional work environment"/>
+    </div>
+    <div class="apart-content">
+      <h2>What Sets <span>Us Apart?</span></h2>
+      <div class="feature">
+        <span class="apart-icon">✔</span>
+        <div><h4>Industry-Aligned Training</h4><p>Our curriculum is updated monthly based on current market demands.</p></div>
+      </div>
+      <div class="feature">
+        <span class="apart-icon">✔</span>
+        <div><h4>Rigorous Performance Reviews</h4><p>Bi-weekly feedback loops to help you identify and fix skill gaps.</p></div>
+      </div>
+      <div class="feature">
+        <span class="apart-icon">✔</span>
+        <div><h4>Sophisticated Evaluation System</h4><p>Transparent point-based scoring for your final certification level.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ROADMAP
+═══════════════════════════════════════════ -->
+<section class="roadmap">
+  <h2>The Roadmap to <span>Success</span></h2>
+  <p class="subtitle">Your journey from applicant to certified professional.</p>
+  <div class="timeline">
+    <div class="step"><div class="circle">1</div><h4>Apply</h4><p>Submit your profile and domain choice.</p></div>
+    <div class="step"><div class="circle">2</div><h4>Screening</h4><p>Technical test & personality assessment.</p></div>
+    <div class="step"><div class="circle">3</div><h4>Onboarding</h4><p>Welcome kit and environment setup.</p></div>
+    <div class="step"><div class="circle">4</div><h4>Tasks</h4><p>Execution of domain-specific tasks.</p></div>
+    <div class="step"><div class="circle">5</div><h4>Mentorship</h4><p>Project refinement with experts.</p></div>
+    <div class="step active"><div class="circle">6</div><h4>Certified</h4><p>Final LOR and Experience Letter.</p></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     INTERNS CRAFT
+═══════════════════════════════════════════ -->
+<section class="intern-craft">
+  <h2>Our <span>Interns' Craft</span></h2>
+  <p>Peek into the high-quality outputs delivered by our cohorts.</p>
+  <div class="craft-container">
+    <div class="craft-card bg-gray"><img src="assets/images/craft1.jpeg" alt="Dashboard View"></div>
+    <div class="craft-card bg-blue"><img src="assets/images/craft2.jpeg" alt="Web Design"></div>
+    <div class="craft-card bg-peach"><img src="assets/images/craft3.jpeg" alt="Mobile UI"></div>
+    <div class="craft-card bg-green"><img src="assets/images/craft4.jpeg" alt="3D Render"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CREDENTIALS / CERTIFICATE
+═══════════════════════════════════════════ -->
+<section class="credentials-section">
+  <div class="credentials-container">
+    <div class="credentials-left">
+      <h2>Certified <span>Professional Credentials</span></h2>
+      <p>Every successful intern receives a comprehensive documentation package that validates their hard work and expertise.</p>
+      <ul class="credentials-list">
+        <li>
+          <span class="circle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          Completion Certificate
+        </li>
+        <li>
+          <span class="circle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          Letter of Recommendation (LOR)
+        </li>
+        <li>
+          <span class="circle-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          Official Experience Letter
+        </li>
+      </ul>
+    </div>
+    <div class="credentials-right">
+      <div class="tilt-card">
+        <div class="inner-card">
+          <img src="assets/images/certificate .jpeg" alt="Certificate">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS (Slider — now placed AFTER credentials)
+═══════════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <h2>Our <span>Testimonials</span></h2>
+    <p class="testimonials-subtitle">Hear what our interns say about their experience with Athenura.</p>
+  </div>
+
+  <div class="testimonials-slider-wrap">
+    <button class="tslider-btn tslider-prev" id="tPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+
+    <div class="testimonials-track-outer">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The real-time project at Athenura was the highlight of my resume. It helped me land my dream job at a top tech firm. The mentors were incredibly supportive throughout."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Jenkins">
+            <div><h4>Sarah Jenkins</h4><span>Web Dev Intern, '23</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The mentorship was exceptional. My mentor didn't just teach me code, they taught me the logic behind professional systems. I grew more in 3 months than in 2 years of college."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Chen">
+            <div><h4>Marcus Chen</h4><span>Data Science Intern, '24</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star half">
+              <defs><linearGradient id="halfGrad"><stop offset="50%" stop-color="#ff8c42"/><stop offset="50%" stop-color="#d1d5db"/></linearGradient></defs>
+              <path fill="url(#halfGrad)" d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"Remote flexibility combined with structured modules made it easy to balance with my university classes. I'd recommend Athenura to every student looking for real experience."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Aisha Khan">
+            <div><h4>Aisha Khan</h4><span>HR Intern, '23</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"Working on live client projects gave me confidence I never had. Athenura's structured feedback helped me understand where I stand professionally and how to improve."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Rohan Verma">
+            <div><h4>Rohan Verma</h4><span>UI/UX Intern, '24</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The certificate I received from Athenura carries real weight. Every interviewer I spoke with recognized the quality of their program. This was the best decision of my career."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Priya Nair">
+            <div><h4>Priya Nair</h4><span>Digital Marketing Intern, '25</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="tslider-btn tslider-next" id="tNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <!-- Dots -->
+  <div class="testimonials-dots" id="testimonialsDots"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PARTNERSHIPS (Infinite Scroll)
+═══════════════════════════════════════════ -->
+<section class="partnerships">
+  <div class="partnerships-inner">
+    <h2>Partnerships for <span>Institutions</span></h2>
+    <p class="partnerships-subtitle">Collaborating with colleges and universities across India to empower students with industry exposure.</p>
+
+    <div class="partner-cards-grid">
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+        <h4>University MOUs</h4>
+        <p>Formal agreements with 50+ universities enabling structured internship pipelines.</p>
+      </div>
+      <div class="p-card">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 20h8" stroke="currentColor" stroke-width="2"/><path d="M15 8a3 3 0 010 4" stroke="currentColor" stroke-width="2"/><path d="M17 6a6 6 0 010 8" stroke="currentColor" stroke-width="2"/></svg>
+        <h4>Campus Webinars</h4>
+        <p>Live webinars and workshops bringing industry experts directly to your students.</p>
+      </div>
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+        <h4>Bulk Enrollment</h4>
+        <p>Dedicated portals for batch onboarding and tracking of large student cohorts.</p>
+      </div>
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+        <h4>Workshops & Bootcamps</h4>
+        <p>Intensive hands-on bootcamps on trending tech stacks, designed for college students.</p>
+      </div>
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h4>TPO Collaboration</h4>
+        <p>Dedicated support for Training & Placement Officers to drive placement outcomes.</p>
+      </div>
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <h4>Scholarship Programs</h4>
+        <p>Merit-based fee waivers and scholarships for deserving students from partner institutions.</p>
+      </div>
+    </div>
+
+    <p class="tpo-text">Training Placement Officer (TPO)? <a href="#">Connect with us for collaboration →</a></p>
+  </div>
+
+  <!-- INFINITE LOGO SCROLL -->
+  <div class="partner-logos-section">
+    <p class="logos-label">Trusted by students from leading institutions</p>
+    <div class="logos-track-outer">
+      <div class="logos-track" id="logosTrack">
+        <!-- Original logos -->
+        <div class="logo-item">IIT Delhi</div>
+        <div class="logo-item">NIT Trichy</div>
+        <div class="logo-item">BITS Pilani</div>
+        <div class="logo-item">VIT Vellore</div>
+        <div class="logo-item">Amity University</div>
+        <div class="logo-item">SRM Institute</div>
+        <div class="logo-item">Manipal University</div>
+        <div class="logo-item">Symbiosis Pune</div>
+        <div class="logo-item">KIIT Bhubaneswar</div>
+        <div class="logo-item">Lovely Professional</div>
+        <div class="logo-item">Chandigarh Univ.</div>
+        <div class="logo-item">NMIMS Mumbai</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="logo-item">IIT Delhi</div>
+        <div class="logo-item">NIT Trichy</div>
+        <div class="logo-item">BITS Pilani</div>
+        <div class="logo-item">VIT Vellore</div>
+        <div class="logo-item">Amity University</div>
+        <div class="logo-item">SRM Institute</div>
+        <div class="logo-item">Manipal University</div>
+        <div class="logo-item">Symbiosis Pune</div>
+        <div class="logo-item">KIIT Bhubaneswar</div>
+        <div class="logo-item">Lovely Professional</div>
+        <div class="logo-item">Chandigarh Univ.</div>
+        <div class="logo-item">NMIMS Mumbai</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA
+═══════════════════════════════════════════ -->
+<section class="cta-section">
+  <p class="cta-text">Launch Your Digital Career Now</p>
+  <a href="apply-now.html" class="cta-btn">Apply Now</a>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="athenura-footer">
+  <div class="footer-container">
+    <div class="footer-col branding">
+      <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
+      <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
+      <h4 class="follow-us-text">Follow Us</h4>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/athenura.in" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        <a href="https://x.com/athenura_in" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html#about">About Us</a></li>
+        <li><a href="program.html">Internship Program</a></li>
+        <li><a href="internship-policy.html">Internship Policy</a></li>
+        <li><a href="certifications.html">Certification & Benefits</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Custom Software Development</a></li>
+        <li><a href="#">Web Application Development</a></li>
+        <li><a href="#">Website Maintenance</a></li>
+        <li><a href="#">Software Testing & QA</a></li>
+        <li><a href="#">Business Automation Solutions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <div class="info-row">
+        <div class="white-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+        <div class="info-text"><span>EMAIL</span><strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f8979e9e919b919994b8998c909d968d8a99d69196">[email&#160;protected]</a></strong></div>
+      </div>
+      <div class="info-row">
+        <div class="white-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
+        <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
+      <p class="address">Sector 62, Noida, Uttar Pradesh</p>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <div class="bottom-content">
+      <p>© 2026 Athenura. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        
