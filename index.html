@@ -6,222 +6,8 @@
 <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
-<title>athenura-websites</title>
+<title>Athenura — Internship Programs</title>
 <link rel="stylesheet" href="css/main.css">
-
-<style>
-  :root {
-    --bg: #f0fafa;
-    --surface: #ffffff;
-    --border: rgba(14, 165, 164, 0.13);
-    --border-hover: rgba(14, 165, 164, 0.35);
-    --text-primary: #062a2a;
-    --text-secondary: #2d5a5a;
-    --text-muted: #5a8888;
-    --accent: #0ea5a4;
-    --radius: 20px;
-    --radius-sm: 12px;
-    --font-display: 'Clash Display', sans-serif;
-    --font-body: 'Outfit', sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text-primary); font-family: var(--font-body); min-height: 100vh; }
-
-  .hero {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    background: #0b1a2e;
-  }
-  .hero-bg-img {
-    position: absolute; inset: 0;
-    background-image: url('https://i.pinimg.com/736x/6c/98/d6/6c98d6336452bd591c8b0acc064543bc.jpg');
-    background-size: cover; background-position: center;
-    z-index: 0; transform: scale(1.03); transition: transform 10s ease;
-  }
-  .hero:hover .hero-bg-img { transform: scale(1.07); }
-  .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: 1; }
-  .hero-overlay-grad {
-    position: absolute; inset: 0; z-index: 2;
-    background: linear-gradient(100deg, rgba(13,207,206,0.18) 0%, rgba(13,207,206,0.08) 38%, transparent 100%);
-  }
-  .hero-dots {
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px);
-    background-size: 28px 28px; pointer-events: none; z-index: 3;
-  }
-  .hero-text {
-    position: relative; z-index: 10;
-    padding: 90px 44px 90px 72px;
-    width: 50%; flex-shrink: 0;
-    display: flex; flex-direction: column; justify-content: center;
-  }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.20);
-    border-radius: 100px; padding: 7px 18px;
-    font-size: 0.82rem; font-weight: 600; color: #6ee7e7;
-    margin-bottom: 26px; width: fit-content; backdrop-filter: blur(10px);
-    opacity: 0; transform: translateY(28px);
-    animation: heroFadeUp 0.75s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
-  }
-  .hero-badge-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 1.8s infinite; }
-  .hero-title {
-    font-size: clamp(2.8rem, 4.5vw, 5.2rem); font-weight: 700;
-    line-height: 1.08; color: #fff; margin-bottom: 18px; letter-spacing: -0.02em;
-    opacity: 0; transform: translateY(28px);
-    animation: heroFadeUp 0.75s cubic-bezier(0.22,1,0.36,1) 0.30s forwards;
-  }
-  .hero-accent {
-    background: linear-gradient(135deg, #0dcfce, #38bdf8) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-  }
-  .hero-desc {
-    font-size: 0.98rem; color: rgba(255,255,255,0.75); line-height: 1.85;
-    max-width: 480px; margin-bottom: 28px;
-    opacity: 0; transform: translateY(28px);
-    animation: heroFadeUp 0.75s cubic-bezier(0.22,1,0.36,1) 0.45s forwards;
-  }
-  .hero-stats {
-    display: flex; align-items: center; gap: 28px; margin-bottom: 32px;
-    opacity: 0; transform: translateY(28px);
-    animation: heroFadeUp 0.75s cubic-bezier(0.22,1,0.36,1) 0.55s forwards;
-  }
-  .stat { display: flex; flex-direction: column; gap: 3px; }
-  .stat-num { font-size: 1.8rem; font-weight: 700; color: #11e7e7; }
-  .stat-label { font-size: 0.78rem; color: #fff; font-weight: 500; }
-  .stat-divider { width: 1px; height: 38px; background: rgba(255,255,255,0.16); flex-shrink: 0; }
-  .hero-btns {
-    display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px;
-    opacity: 0; transform: translateY(28px);
-    animation: heroFadeUp 0.75s cubic-bezier(0.22,1,0.36,1) 0.65s forwards;
-  }
-  .btn-primary {
-    padding: 14px 32px; background: #0ea5a4; color: #fff; border: none;
-    border-radius: 12px; font-size: 0.95rem; font-weight: 600; cursor: pointer;
-    transition: all 0.25s; box-shadow: 0 4px 22px rgba(14,165,164,0.48);
-  }
-  .btn-primary:hover { background: #0b9090; transform: translateY(-2px); }
-  .btn-secondary {
-    padding: 14px 32px; background: transparent; color: #fff;
-    border: 1.5px solid rgba(255,255,255,0.38); border-radius: 12px;
-    font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.25s;
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); }
-  .hero-trust {
-    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-    opacity: 0; transform: translateY(28px);
-    animation: heroFadeUp 0.75s cubic-bezier(0.22,1,0.36,1) 0.78s forwards;
-  }
-  .trust-item { display: inline-flex; align-items: center; gap: 6px; font-size: 0.76rem; color: #fff; font-weight: 500; }
-  .trust-item svg { width: 14px; height: 14px; stroke: #0dcfce; flex-shrink: 0; }
-  .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.25); flex-shrink: 0; }
-  .hero-right {
-    position: relative; width: 50%; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 5; flex-shrink: 0;
-  }
-  .hero-img-frame {
-    position: relative; width: 420px; height: 295px; border-radius: 22px; overflow: hidden;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.45), 0 0 0 3px rgba(255,255,255,0.12), 0 0 0 5px rgba(14,165,164,0.18);
-    z-index: 4; opacity: 0;
-    animation: heroSlideLeft 0.85s cubic-bezier(0.22,1,0.36,1) 0.35s forwards;
-  }
-  .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
-  .hero-img-frame:hover .hero-img { transform: scale(1.05); }
-  .hero-img-shimmer {
-    position: absolute; inset: 0;
-    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
-    background-size: 200% 100%;
-    animation: shimmer 2s ease 0.6s 1 forwards; pointer-events: none;
-  }
-  .hero-img-glow {
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(14,165,164,0.08) 0%, transparent 60%);
-    pointer-events: none; border-radius: 22px;
-  }
-  .htag {
-    position: absolute; display: inline-flex; align-items: center; gap: 9px;
-    background: rgba(255,255,255,0.12); backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.24); border-radius: 100px;
-    padding: 11px 20px; font-size: 0.84rem; font-weight: 600; color: #fff;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.28); white-space: nowrap;
-    transition: all 0.3s; cursor: default; z-index: 6; opacity: 0;
-  }
-  .htag:hover { background: rgba(14,165,164,0.28); transform: translateY(-3px) scale(1.05) !important; }
-  .htag svg { width: 15px; height: 15px; stroke: #6ee7e7; flex-shrink: 0; }
-  .htag-1 { top: 12%; left: 4%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.60s forwards, floatY 3.8s ease-in-out 1.2s infinite; }
-  .htag-2 { bottom: 16%; left: 3%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.70s forwards, floatY 4.2s ease-in-out 0.8s infinite; }
-  .htag-3 { top: 10%; right: 3%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.65s forwards, floatY 3.5s ease-in-out 1.6s infinite; }
-  .htag-4 { bottom: 22%; right: 2%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.75s forwards, floatY 4.5s ease-in-out 1.0s infinite; }
-  .lang-icon {
-    position: absolute; width: 52px; height: 52px; border-radius: 16px;
-    background: rgba(255,255,255,0.13); backdrop-filter: blur(14px);
-    border: 1.5px solid rgba(255,255,255,0.22);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.32); display: grid; place-items: center;
-    padding: 8px; z-index: 5; cursor: default; opacity: 0;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .lang-icon:hover { transform: translateY(-7px) scale(1.18) !important; }
-  .lang-icon svg { width: 100%; height: 100%; border-radius: 8px; }
-  .lang-py    { top: 28%; left: 5%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.80s forwards, floatOrbit1 5s ease-in-out 1.5s infinite; }
-  .lang-js    { top: 4%; left: 40%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.88s forwards, floatOrbit2 4.5s ease-in-out 1.0s infinite; }
-  .lang-cpp   { bottom: 25%; left: 8%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 0.95s forwards, floatOrbit3 5.5s ease-in-out 0.6s infinite; }
-  .lang-react { top: 4%; right: 12%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 1.02s forwards, floatOrbit4 4.8s ease-in-out 1.2s infinite; }
-  .lang-node  { bottom: 10%; right: 20%; animation: heroPopIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 1.08s forwards, floatOrbit2 5.2s ease-in-out 0.8s infinite; }
-
-  @keyframes heroFadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes heroSlideLeft { from { opacity:0; transform:translateX(50px) scale(0.96); } to { opacity:1; transform:translateX(0) scale(1); } }
-  @keyframes heroPopIn { from { opacity:0; transform:scale(0.70) translateY(12px); } to { opacity:1; transform:scale(1) translateY(0); } }
-  @keyframes heroBgZoom { from { transform:scale(1.10); opacity:0.6; } to { transform:scale(1.03); opacity:1; } }
-  @keyframes heroFadeIn { from { opacity:0; } to { opacity:1; } }
-  @keyframes shimmer { 0% { background-position:200% 0; opacity:1; } 100% { background-position:-200% 0; opacity:0; } }
-  @keyframes floatY { 0%,100% { transform:translateY(0px); } 50% { transform:translateY(-10px); } }
-  @keyframes floatOrbit1 { 0%,100% { transform:translate(0,0); } 33% { transform:translate(4px,-8px); } 66% { transform:translate(-3px,-5px); } }
-  @keyframes floatOrbit2 { 0%,100% { transform:translate(0,0); } 33% { transform:translate(-5px,-7px); } 66% { transform:translate(3px,-10px); } }
-  @keyframes floatOrbit3 { 0%,100% { transform:translate(0,0); } 33% { transform:translate(6px,-6px); } 66% { transform:translate(-2px,-9px); } }
-  @keyframes floatOrbit4 { 0%,100% { transform:translate(0,0); } 33% { transform:translate(-4px,-10px); } 66% { transform:translate(5px,-5px); } }
-  @keyframes pulse { 0%,100% { box-shadow:0 0 0 0 rgba(34,197,94,0.5); } 50% { box-shadow:0 0 0 6px rgba(34,197,94,0); } }
-
-  .hero-bg-img { animation: heroBgZoom 1.4s cubic-bezier(0.22,1,0.36,1) forwards; }
-  .hero-overlay, .hero-overlay-grad, .hero-dots { animation: heroFadeIn 0.8s ease forwards; }
-
-  @media (max-width: 1100px) {
-    .hero-text { width: 54%; padding: 60px 30px 60px 44px; }
-    .hero-right { width: 46%; }
-    .hero-img-frame { width: 340px; height: 240px; }
-    .lang-icon { width: 44px; height: 44px; }
-  }
-  @media (max-width: 768px) {
-    .hero { flex-direction: column; min-height: 100vh; }
-    .hero-text { width: 100%; padding: 70px 24px 40px; text-align: center; align-items: center; }
-    .hero-badge { margin-left: auto; margin-right: auto; }
-    .hero-stats { justify-content: center; }
-    .hero-btns { justify-content: center; }
-    .hero-trust { justify-content: center; flex-wrap: wrap; gap: 10px 14px; }
-    .trust-dot { display: none; }
-    .hero-right { width: 100%; min-height: 520px; padding: 30px 0 80px; }
-    .hero-img-frame { width: 290px; height: 205px; }
-    .htag-2 { display: none; }
-  }
-  @media (max-width: 480px) {
-    .hero-text { padding: 60px 20px 30px; text-align: center; align-items: center; }
-    .hero-title { font-size: 2.3rem; }
-    .hero-btns { flex-direction: column; align-items: center; }
-    .btn-primary, .btn-secondary { width: 100%; max-width: 280px; }
-    .hero-right { width: 100%; min-height: 500px; padding: 20px 0 80px; }
-    .hero-img-frame { width: 250px; height: 178px; }
-    .lang-icon { width: 38px; height: 38px; border-radius: 11px; }
-  }
-</style>
 </head>
 
 <body>
@@ -237,7 +23,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="program.html#internship">Internship</a>
         <a href="about.html#about">About</a>
         <a href="index.html#projects">Projects</a>
@@ -261,14 +47,15 @@
   <div id="modalInner"></div>
 </div>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
 <div class="hero">
   <div class="hero-bg-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay-grad"></div>
   <div class="hero-dots"></div>
 
-  <!-- LEFT TEXT -->
   <div class="hero-text">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
@@ -303,40 +90,28 @@
     </div>
 
     <div class="hero-btns">
-      <button class="btn-primary" onclick="window.location.href='apply-now.html'">
-        Apply Now &rarr;
-      </button>
-      <button class="btn-secondary" onclick="window.location.href='program.html#internships'">
-        Explore Programs
-      </button>
+      <button class="btn-primary" onclick="window.location.href='apply-now.html'">Apply Now &rarr;</button>
+      <button class="btn-secondary" onclick="window.location.href='program.html#internships'">Explore Programs</button>
     </div>
 
     <div class="hero-trust">
       <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <span>Verified Companies</span>
       </div>
       <div class="trust-dot"></div>
       <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
         <span>Certificate on Completion</span>
       </div>
       <div class="trust-dot"></div>
       <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <polyline points="12 6 12 12 16 14"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span>Flexible Duration</span>
       </div>
     </div>
   </div>
 
-  <!-- RIGHT SIDE -->
   <div class="hero-right">
     <div class="hero-img-frame">
       <img src="https://i.pinimg.com/736x/75/08/e3/7508e3990857d8ab2c6b83d89bf7eda1.jpg" alt="Internship" class="hero-img"/>
@@ -345,27 +120,19 @@
     </div>
 
     <div class="htag htag-1">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       HTML / CSS
     </div>
     <div class="htag htag-2">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
       Data Science
     </div>
     <div class="htag htag-3">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       UI / UX
     </div>
     <div class="htag htag-4">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
       Marketing
     </div>
 
@@ -424,16 +191,17 @@
     </div>
   </div>
 </div>
-<!-- END HERO -->
 
-<!-- KEY HIGHLIGHTS -->
+<!-- ═══════════════════════════════════════════
+     WHY INTERN WITH US
+═══════════════════════════════════════════ -->
 <section class="why">
   <h2>Why Intern <span>with Us?</span></h2>
   <p class="subtitle">Experience a professional work environment that prioritizes your growth and skill development.</p>
   <div class="why-grid">
     <div class="why-card">
       <div class="icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
       </div>
       <h3>Real-Time Projects</h3>
       <p>Ditch the dummy assignments. Work on live industry tasks that actually make an impact.</p>
@@ -454,14 +222,14 @@
     </div>
     <div class="why-card">
       <div class="icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3v18"/><path d="M3 12h18"/><path d="M9 3v18"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 3v18"/><path d="M3 12h18"/><path d="M9 3v18"/></svg>
       </div>
       <h3>Weekly Modules</h3>
       <p>Structured learning curriculum that keeps you on track with the latest technology.</p>
     </div>
     <div class="why-card">
       <div class="icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/></svg>
       </div>
       <h3>Certification</h3>
       <p>Gain industry-recognized certificates and an experience letter upon completion.</p>
@@ -476,35 +244,86 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
 <section class="about">
   <div class="about-container">
+
+    <!-- LEFT -->
     <div class="about-left">
-      <h2>About Athenura</h2>
-      <p>We are a forward-thinking digital solutions agency specializing in bespoke software development and strategic marketing.</p>
-    </div>
-    <div class="about-box">
-      <div class="about-heading">
-        <svg class="about-icon" viewBox="0 0 24 24"><path d="M12 5c5 0 9 7 9 7s-4 7-9 7-9-7-9-7 4-7 9-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-        <h3>Vision & Mission</h3>
+      <div class="about-eyebrow">
+        <span class="about-eyebrow-dot"></span>
+        Who We Are
       </div>
-      <p>To become the global standard for entry-level digital talent by providing unmatched practical exposure and career pathways.</p>
-    </div>
-    <div class="about-box">
-      <div class="about-heading">
-        <svg class="about-icon" viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6z"></path><path d="M6 3l6 18 6-18"></path></svg>
-        <h3>Core Values</h3>
+      <h2>Building the Future of<br><span>Intern Talent</span></h2>
+      <p>We are a forward-thinking digital agency that connects ambitious students with live industry projects, expert mentors, and structured programs — turning potential into careers.</p>
+
+      <div class="about-stat-row">
+        <div class="about-stat-item">
+          <span class="about-stat-num">50k+</span>
+          <span class="about-stat-label">Interns Trained</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">100+</span>
+          <span class="about-stat-label">Live Projects</span>
+        </div>
+        <div class="about-stat-item">
+          <span class="about-stat-num">50+</span>
+          <span class="about-stat-label">Colleges</span>
+        </div>
       </div>
-      <ul>
-        <li>Quality over Quantity</li>
-        <li>Radical Transparency</li>
-        <li>Customer Obsession</li>
-      </ul>
+
+      <a href="about.html" class="about-cta-link">
+        Learn more about us
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
+
+    <!-- RIGHT -->
+    <div class="about-right">
+      <div class="about-box">
+        <div class="about-heading">
+          <div class="about-icon-wrap">
+            <svg class="about-icon" viewBox="0 0 24 24"><path d="M12 5c5 0 9 7 9 7s-4 7-9 7-9-7-9-7 4-7 9-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Vision & Mission</h3>
+        </div>
+        <p>To become the global standard for entry-level digital talent — giving every ambitious student equal access to world-class industry exposure and career pathways.</p>
+      </div>
+
+      <div class="about-box">
+        <div class="about-heading">
+          <div class="about-icon-wrap">
+            <svg class="about-icon" viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6z"/><path d="M6 3l6 18 6-18"/></svg>
+          </div>
+          <h3>Core Values</h3>
+        </div>
+        <ul>
+          <li>Quality over Quantity</li>
+          <li>Radical Transparency</li>
+          <li>Customer Obsession</li>
+          <li>Continuous Growth</li>
+        </ul>
+      </div>
+
+      <div class="about-box">
+        <div class="about-heading">
+          <div class="about-icon-wrap">
+            <svg class="about-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Who We Serve</h3>
+        </div>
+        <p>Students from 50+ colleges across India looking for real experience, structured learning, and a certificate that actually opens doors.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- CHOOSE YOUR TRACK -->
+<!-- ═══════════════════════════════════════════
+     CHOOSE YOUR TRACK
+═══════════════════════════════════════════ -->
 <section class="domain-section">
   <div class="section-header">
     <h2 class="section-title">Choose Your <span>Track</span></h2>
@@ -637,7 +456,9 @@
   </div>
 </section>
 
-<!-- APART SECTION -->
+<!-- ═══════════════════════════════════════════
+     WHAT SETS US APART
+═══════════════════════════════════════════ -->
 <section class="apart-section">
   <div class="container">
     <div class="apart-image">
@@ -661,7 +482,9 @@
   </div>
 </section>
 
-<!-- ROADMAP -->
+<!-- ═══════════════════════════════════════════
+     ROADMAP
+═══════════════════════════════════════════ -->
 <section class="roadmap">
   <h2>The Roadmap to <span>Success</span></h2>
   <p class="subtitle">Your journey from applicant to certified professional.</p>
@@ -675,7 +498,9 @@
   </div>
 </section>
 
-<!-- INTERNS CRAFT -->
+<!-- ═══════════════════════════════════════════
+     INTERNS CRAFT
+═══════════════════════════════════════════ -->
 <section class="intern-craft">
   <h2>Our <span>Interns' Craft</span></h2>
   <p>Peek into the high-quality outputs delivered by our cohorts.</p>
@@ -687,56 +512,9 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="testimonial-card">
-    <div class="stars">
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-    </div>
-    <p class="testimonial-text">"The real-time project at Athenura was the highlight of my resume. It helped me land my dream job at a top tech firm."</p>
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-      <div><h4>Sarah Jenkins</h4><span>Web Dev Intern, '23</span></div>
-    </div>
-  </div>
-  <div class="testimonial-card">
-    <div class="stars">
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-    </div>
-    <p class="testimonial-text">"The mentorship was exceptional. My mentor didn't just teach me code, they taught me the logic behind professional systems."</p>
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-      <div><h4>Marcus Chen</h4><span>Data Science Intern, '24</span></div>
-    </div>
-  </div>
-  <div class="testimonial-card">
-    <div class="stars">
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
-      <svg viewBox="0 0 24 24" class="star half">
-        <defs><linearGradient id="halfGrad"><stop offset="50%" stop-color="#ff8c42"/><stop offset="50%" stop-color="#d1d5db"/></linearGradient></defs>
-        <path fill="url(#halfGrad)" d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/>
-      </svg>
-    </div>
-    <p class="testimonial-text">"Remote flexibility combined with structured modules made it easy to balance with my university classes."</p>
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="">
-      <div><h4>Aisha Khan</h4><span>HR Intern, '23</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS -->
+<!-- ═══════════════════════════════════════════
+     CREDENTIALS / CERTIFICATE
+═══════════════════════════════════════════ -->
 <section class="credentials-section">
   <div class="credentials-container">
     <div class="credentials-left">
@@ -773,39 +551,209 @@
   </div>
 </section>
 
-<!-- PARTNERSHIPS -->
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS (Slider — now placed AFTER credentials)
+═══════════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <h2>Our <span>Testimonials</span></h2>
+    <p class="testimonials-subtitle">Hear what our interns say about their experience with Athenura.</p>
+  </div>
+
+  <div class="testimonials-slider-wrap">
+    <button class="tslider-btn tslider-prev" id="tPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+
+    <div class="testimonials-track-outer">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The real-time project at Athenura was the highlight of my resume. It helped me land my dream job at a top tech firm. The mentors were incredibly supportive throughout."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Jenkins">
+            <div><h4>Sarah Jenkins</h4><span>Web Dev Intern, '23</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The mentorship was exceptional. My mentor didn't just teach me code, they taught me the logic behind professional systems. I grew more in 3 months than in 2 years of college."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Chen">
+            <div><h4>Marcus Chen</h4><span>Data Science Intern, '24</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star half">
+              <defs><linearGradient id="halfGrad"><stop offset="50%" stop-color="#ff8c42"/><stop offset="50%" stop-color="#d1d5db"/></linearGradient></defs>
+              <path fill="url(#halfGrad)" d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"Remote flexibility combined with structured modules made it easy to balance with my university classes. I'd recommend Athenura to every student looking for real experience."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Aisha Khan">
+            <div><h4>Aisha Khan</h4><span>HR Intern, '23</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"Working on live client projects gave me confidence I never had. Athenura's structured feedback helped me understand where I stand professionally and how to improve."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Rohan Verma">
+            <div><h4>Rohan Verma</h4><span>UI/UX Intern, '24</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The certificate I received from Athenura carries real weight. Every interviewer I spoke with recognized the quality of their program. This was the best decision of my career."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Priya Nair">
+            <div><h4>Priya Nair</h4><span>Digital Marketing Intern, '25</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="tslider-btn tslider-next" id="tNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <!-- Dots -->
+  <div class="testimonials-dots" id="testimonialsDots"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PARTNERSHIPS (Infinite Scroll)
+═══════════════════════════════════════════ -->
 <section class="partnerships">
-  <div class="container">
+  <div class="partnerships-inner">
     <h2>Partnerships for <span>Institutions</span></h2>
-    <div class="partnership-cards">
+    <p class="partnerships-subtitle">Collaborating with colleges and universities across India to empower students with industry exposure.</p>
+
+    <div class="partner-cards-grid">
       <div class="p-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-        <p>University MOUs</p>
+        <h4>University MOUs</h4>
+        <p>Formal agreements with 50+ universities enabling structured internship pipelines.</p>
       </div>
       <div class="p-card">
         <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 20h8" stroke="currentColor" stroke-width="2"/><path d="M15 8a3 3 0 010 4" stroke="currentColor" stroke-width="2"/><path d="M17 6a6 6 0 010 8" stroke="currentColor" stroke-width="2"/></svg>
-        <p>Campus Webinars</p>
+        <h4>Campus Webinars</h4>
+        <p>Live webinars and workshops bringing industry experts directly to your students.</p>
       </div>
       <div class="p-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
-        <p>Bulk Enrollment</p>
+        <h4>Bulk Enrollment</h4>
+        <p>Dedicated portals for batch onboarding and tracking of large student cohorts.</p>
       </div>
       <div class="p-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-        <p>Workshops</p>
+        <h4>Workshops & Bootcamps</h4>
+        <p>Intensive hands-on bootcamps on trending tech stacks, designed for college students.</p>
+      </div>
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h4>TPO Collaboration</h4>
+        <p>Dedicated support for Training & Placement Officers to drive placement outcomes.</p>
+      </div>
+      <div class="p-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <h4>Scholarship Programs</h4>
+        <p>Merit-based fee waivers and scholarships for deserving students from partner institutions.</p>
       </div>
     </div>
-    <p class="tpo-text">Training Placement Officer (TPO)? <a href="#">Connect with us for collaboration</a></p>
+
+    <p class="tpo-text">Training Placement Officer (TPO)? <a href="#">Connect with us for collaboration →</a></p>
+  </div>
+
+  <!-- INFINITE LOGO SCROLL -->
+  <div class="partner-logos-section">
+    <p class="logos-label">Trusted by students from leading institutions</p>
+    <div class="logos-track-outer">
+      <div class="logos-track" id="logosTrack">
+        <!-- Original logos -->
+        <div class="logo-item">IIT Delhi</div>
+        <div class="logo-item">NIT Trichy</div>
+        <div class="logo-item">BITS Pilani</div>
+        <div class="logo-item">VIT Vellore</div>
+        <div class="logo-item">Amity University</div>
+        <div class="logo-item">SRM Institute</div>
+        <div class="logo-item">Manipal University</div>
+        <div class="logo-item">Symbiosis Pune</div>
+        <div class="logo-item">KIIT Bhubaneswar</div>
+        <div class="logo-item">Lovely Professional</div>
+        <div class="logo-item">Chandigarh Univ.</div>
+        <div class="logo-item">NMIMS Mumbai</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="logo-item">IIT Delhi</div>
+        <div class="logo-item">NIT Trichy</div>
+        <div class="logo-item">BITS Pilani</div>
+        <div class="logo-item">VIT Vellore</div>
+        <div class="logo-item">Amity University</div>
+        <div class="logo-item">SRM Institute</div>
+        <div class="logo-item">Manipal University</div>
+        <div class="logo-item">Symbiosis Pune</div>
+        <div class="logo-item">KIIT Bhubaneswar</div>
+        <div class="logo-item">Lovely Professional</div>
+        <div class="logo-item">Chandigarh Univ.</div>
+        <div class="logo-item">NMIMS Mumbai</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ═══════════════════════════════════════════
+     CTA
+═══════════════════════════════════════════ -->
 <section class="cta-section">
   <p class="cta-text">Launch Your Digital Career Now</p>
   <a href="apply-now.html" class="cta-btn">Apply Now</a>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
 <footer class="athenura-footer">
   <div class="footer-container">
     <div class="footer-col branding">
@@ -813,9 +761,26 @@
       <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
       <h4 class="follow-us-text">Follow Us</h4>
       <div class="social-links">
-        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-        <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-        <a href="https://x.com/athenura_in?s=20" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
+         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+        </svg>
+        </a>
+        <a href="https://www.instagram.com/athenura.in" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+          </svg>
+        </a>
+        <a href="https://x.com/athenura_in" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+          </svg>
+        </a>
+        <a href="https://athenura.medium.com" class="social-icon">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path>
+        </svg>
+      </a>
       </div>
     </div>
     <div class="footer-col">
@@ -823,32 +788,40 @@
       <ul>
         <li><a href="about.html#about">About Us</a></li>
         <li><a href="program.html">Internship Program</a></li>
-        <li><a href="internship-policy.html">Internship Policy</a></li>
-        <li><a href="certifications.html">Certification & Benefits</a></li>
         <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="collages.html">Collages</a></li>
         <li><a href="why-us.html">Why Us</a></li>
-        <li><a href="#">FAQs</a></li>
+        
       </ul>
     </div>
     <div class="footer-col">
-      <h3>Services</h3>
+      <h3>Resource</h3>
       <ul>
-        <li><a href="#">Custom Software Development</a></li>
-        <li><a href="#">Web Application Development</a></li>
-        <li><a href="#">Website Maintenance</a></li>
-        <li><a href="#">Software Testing & QA</a></li>
-        <li><a href="#">Business Automation Solutions</a></li>
+        <li><a href="internship-policy.html">Internship Policy</a></li>
+        <li><a href="certifications.html">Certification & Benefits</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQs</a></li>
       </ul>
     </div>
+
     <div class="footer-col">
       <h3>Contact Us</h3>
       <div class="info-row">
-        <div class="white-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
-        <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
+        <div class="white-circle email-icon ">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+          </svg>
+        </div>
+        <div class="info-text"><span>EMAIL</span>
+          <a href="mailto:official@athenura.in">official@athenura.in</a></div>
+        
       </div>
       <div class="info-row">
-        <div class="white-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
-        <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
+        <div class="white-circle phone-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1);"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+          </svg>
+        </div>
+        <div class="info-text"><span>PHONE</span>
+          <a href="tel:+919835051934">+91 98350 51934</a></div>
       </div>
     </div>
     <div class="footer-col">
@@ -869,6 +842,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>
