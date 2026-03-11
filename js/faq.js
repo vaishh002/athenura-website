@@ -1,36 +1,4 @@
 (function () {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    function toggleMenu(e) {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-    }
-    function closeMenu() {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-    }
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', toggleMenu);
-        document.querySelectorAll('#navLinks a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-                closeMenu();
-            }
-        });
-    }
-    const navAnchors = document.querySelectorAll('#navLinks a');
-    navAnchors.forEach(link => {
-        link.addEventListener('click', function () {
-            navAnchors.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-        });
-        if (link.getAttribute('href') === '#') {
-            link.addEventListener('click', e => e.preventDefault());
-        }
-    });
     const faqItems = document.querySelectorAll('.faq-item');
     const categoryBtns = document.querySelectorAll('.category-btn');
     const searchInput = document.getElementById('search');
@@ -47,12 +15,15 @@
             }
             if (searchTerm === '') {
                 item.hidden = false;
-            } else {
+            } 
+            else {
                 const questionEl = item.querySelector('.faq-question');
                 const answerEl = item.querySelector('.faq-answer');
                 const questionText = questionEl ? questionEl.innerText.toLowerCase() : '';
                 const answerText = answerEl ? answerEl.innerText.toLowerCase() : '';
-                const matchesSearch = questionText.includes(searchTerm) || answerText.includes(searchTerm);
+                const matchesSearch =
+                    questionText.includes(searchTerm) ||
+                    answerText.includes(searchTerm);
                 item.hidden = !matchesSearch;
             }
             if (item.hidden) {
@@ -60,7 +31,6 @@
             }
         });
     }
-
     categoryBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             categoryBtns.forEach(b => b.classList.remove('active'));
@@ -69,11 +39,9 @@
             filterFAQs();
         });
     });
-
     if (searchInput) {
         searchInput.addEventListener('input', filterFAQs);
     }
-
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
             const item = question.closest('.faq-item');
@@ -85,7 +53,6 @@
             }
         });
     });
-
     filterFAQs();
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -105,9 +72,22 @@
         });
     }
     const directionsBtn = document.getElementById('directionsBtn');
+
     if (directionsBtn) {
         directionsBtn.addEventListener('click', () => {
-            window.open('https://www.google.com/maps/place/Athenura', '_blank');
+            window.open(
+                'https://www.google.com/maps/place/Athenura',
+                '_blank'
+            );
         });
     }
 })();
+window.addEventListener("load", () => {
+  const elements = document.querySelectorAll(".fade-up");
+
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, index * 120);
+  });
+});

@@ -3,15 +3,18 @@
     const navLinks = document.getElementById("navLinks");
     const navAnchors = document.querySelectorAll("#navLinks a");
     const form = document.getElementById("partnershipForm");
+
     function toggleMenu(e) {
         e.stopPropagation();
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("open");
     }
+
     function closeMenu() {
         hamburger.classList.remove("active");
         navLinks.classList.remove("open");
     }
+
     if (hamburger && navLinks) {
         hamburger.addEventListener("click", toggleMenu);
         navAnchors.forEach(link => {
@@ -25,6 +28,7 @@
             }
         });
     }
+
     navAnchors.forEach(link => {
         link.addEventListener("click", function () {
             navAnchors.forEach(l => l.classList.remove("active"));
@@ -34,6 +38,7 @@
             link.addEventListener("click", e => e.preventDefault());
         }
     });
+
     if (form) {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -70,3 +75,18 @@
         });
     }
 })();
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.querySelector('.nav-links');
+        if (nav) nav.classList.remove('open');
+    });
+});
+window.addEventListener("load", () => {
+  const elements = document.querySelectorAll(".fade-up");
+
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, index * 120);
+  });
+});

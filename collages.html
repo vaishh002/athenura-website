@@ -5,38 +5,32 @@
   <meta charset="UTF-8">
   <title>Athenura – institutional partnership</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="college.css">
+  <link rel="stylesheet" href="css/collages.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
   <header class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <img src="https://www.athenura.in/Athenura.png" alt="Athenura">
+        <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
       </a>
       <div class="nav-right">
-        <button class="hamburger" id="hamburger" aria-label="menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+          <span></span><span></span><span></span>
         </button>
         <nav class="nav-links" id="navLinks">
-          <a href="index.html" class="active">Home</a>
-          <a href="internship.html">Internship</a>
-          <a href="about.html">About</a>
-          <a href="Details.html">Projects</a>
-          <a href="why-us.html">Why Us</a>
+          <a href="index.html">Home</a>
+          <a href="program.html">Internship</a>
+          <a href="about.html#about">About</a>
+          <a href="index.html#project">Projects</a>
+          <a href="contact.html">Contact</a>
         </nav>
-        <button class="apply-btn" onclick="window.location.href='apply-now.html'">
-          Apply Now
-        </button>
+        <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
       </div>
     </div>
-
   </header>
 
-  <section class="hero">
+  <section class="hero fade-up">
     <div class="container hero-grid">
       <div class="hero-left">
         <span class="badge">Official Institutional Partnership</span>
@@ -69,7 +63,7 @@
       </div>
       <div class="hero-right">
         <div class="hero-image">
-          <img src="heroimg.png" alt="">
+          <img src="assets\images\heroimg.png" alt="">
           <div class="overlay"></div>
           <div class="stat-card">
             <h2>92%</h2>
@@ -80,7 +74,7 @@
     </div>
   </section>
 
-  <section class="stats">
+  <section class="stats fade-up">
     <div class="container stats-grid">
       <div>
         <h2>150+</h2>
@@ -101,7 +95,7 @@
     </div>
   </section>
 
-  <section class="offerings">
+  <section class="offerings fade-up">
     <div class="container">
       <div class="section-header">
         <h2>Comprehensive Institutional Offerings</h2>
@@ -148,7 +142,7 @@
     </div>
   </section>
 
-  <section class="journey">
+  <section class="journey fade-up">
     <div class="container journey-grid">
       <div class="journey-left">
         <h2>The Partnership Journey</h2>
@@ -187,11 +181,11 @@
       <div class="journey-form" id="formm">
         <h3>Institutional Inquiry</h3>
         <form id="partnershipForm">
-          <input type="text" placeholder="Contact Person Name">
-          <input type="text" placeholder="Designation">
-          <input type="text" placeholder="College Name">
-          <input type="email" placeholder="Work Email">
-          <select>
+          <input type="text" placeholder="Contact Person Name" required>
+          <input type="text" placeholder="Designation" required>
+          <input type="text" placeholder="College Name" required>
+          <input type="email" placeholder="Work Email" required>
+          <select required>
             <option>Select Student Count</option>
             <option>100 - 500</option>
             <option>500 - 1000</option>
@@ -223,22 +217,22 @@
     </div>
   </section>
 
-  <section class="trusted">
+  <section class="trusted fade-up">
     <div class="container">
       <div class="trusted-header">
         <span>Trusted by Premier Institutions</span>
       </div>
       <div class="trusted-logos">
-        <img src="college.png" alt="partner logo">
-        <img src="college1.png" alt="partner logo">
-        <img src="college2.png" alt="partner logo">
-        <img src="college3.png" alt="partner logo">
-        <img src="college4.png" alt="partner logo">
+        <img src="assets\images\college.png" alt="partner logo">
+        <img src="assets\images\college1.png" alt="partner logo">
+        <img src="assets\images\college2.png" alt="partner logo">
+        <img src="assets\images\college3.png" alt="partner logo">
+        <img src="assets\images\college4.png" alt="partner logo">
       </div>
     </div>
   </section>
 
-  <section class="testimonial">
+  <section class="testimonial fade-up">
     <div class="container">
       <div class="testimonial-card">
         <div class="testimonial-left">
@@ -247,7 +241,7 @@
             Their workshops gave our students the edge needed to crack top interviews."
           </h2>
           <div class="author">
-            <img src="rajeshK.png" alt="Dr. Rajesh Khanna">
+            <img src="assets\images\rajeshK.png" alt="Dr. Rajesh Khanna">
             <div>
               <h4>Dr. Rajesh Khanna</h4>
               <p>Head of Training & Placements, CIT</p>
@@ -264,6 +258,7 @@
       </div>
     </div>
   </section>
+
   <footer class="athenura-footer">
     <div class="footer-container">
       <div class="footer-col branding">
@@ -272,26 +267,22 @@
         <h4 class="follow-us-text">Follow Us</h4>
         <div class="social-links">
           <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
               <rect width="4" height="12" x="2" y="9" />
               <circle cx="4" cy="4" r="2" />
             </svg>
           </a>
           <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" target="_blank" class="social-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
             </svg>
           </a>
           <a href="https://x.com/athenura_in?s=20" target="_blank" class="social-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path
-                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
             </svg>
           </a>
         </div>
@@ -300,19 +291,19 @@
       <div class="footer-col">
         <h3>Company</h3>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Career</a></li>
+          <li><a href="about.html#about">About Us</a></li>
           <li><a href="program.html">Internship Program</a></li>
           <li><a href="internship-policy.html">Internship Policy</a></li>
-          <li><a href="college.html">Colleges</a></li>
           <li><a href="certifications.html">Certification & Benefits</a></li>
-          <li><a href="FAQs.html">FAQs</a></li>
-
+          <li><a href="collages.html">Collages</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="why-us.html">why us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Partnerships</h4>
+        <h3>Partnerships</h3>
         <ul>
           <li><a href="#">MOU Process</a></li>
           <li><a href="#">Bulk Enrollment</a></li>
@@ -335,8 +326,7 @@
         <div class="info-row">
           <div class="white-circle phone-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+              <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
             </svg>
           </div>
           <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
@@ -362,7 +352,7 @@
       </div>
     </div>
   </footer>
-  <script src="college.js"></script>
+  <script src="js/collages.js"></script>
 </body>
 
 </html>
