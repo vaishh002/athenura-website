@@ -388,7 +388,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
 /* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
-.athenura-footer { background: #1a5f62; color: #fff; font-family: var(--font-body); padding-top: 60px; }
+.athenura-footer { background: #0ea5a4; color: #fff; font-family: var(--font-body); padding-top: 60px; }
 .footer-container { max-width: 1400px; margin: auto; padding: 0 60px 80px; display: grid; grid-template-columns: 1.6fr 1fr 1.4fr 1.2fr 1.6fr; gap: 50px; align-items: start; }
 .footer-col { min-width: 0; }
 .footer-col h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 26px; letter-spacing: 0.2px; }
@@ -455,6 +455,25 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   /* NAVBAR — identical to main.css */
   .hamburger { display: flex; }
   .apply-btn { display: none; }
+
+   .apply-btn-mobile {
+    display: block !important;
+    background: linear-gradient(135deg, #0ea5a4, #0b9090);
+    color: white !important;
+    padding: 10px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    margin-top: 4px;
+    width: fit-content;
+    box-shadow: 0 4px 14px rgba(14,165,164,0.30);
+    border-radius: 20px; /* matches other nav links */
+  }
+
+  .apply-btn-mobile:hover {
+    background: linear-gradient(135deg, #0b9090, #087878) !important;
+  }
 
   .nav-links {
     display: none;
