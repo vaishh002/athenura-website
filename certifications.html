@@ -15,38 +15,35 @@
 <body>
 
 <!-- ═══════════════════ NAVBAR ═══════════════════ -->
-  <nav class="navbar">
-       <div class="nav-container">
+<header class="navbar" id="navbar">
+  <div class="nav-container">
     <a href="index.html" class="logo">
       <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
     </a>
     <div class="nav-right">
-      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
-        <span></span><span></span><span></span>
+      <!-- Hamburger button — NO inline onclick -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
       <nav class="nav-links" id="navLinks">
         <a href="index.html" class="active">Home</a>
         <a href="program.html#internship">Internship</a>
         <a href="about.html#about">About</a>
         <a href="index.html#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <!-- Apply button shown inside menu on mobile -->
+        <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
       </nav>
+
       <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
     </div>
   </div>
-  </nav>
-
-      <!-- <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button> -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
-  <!-- Mobile nav overlay backdrop -->
+  <!-- Dark backdrop behind drawer -->
   <div class="nav-backdrop" id="navBackdrop"></div>
-</nav>
+</header>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="credentials-hero">
@@ -381,6 +378,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/certifications.js"></script>
 </body>
 </html>

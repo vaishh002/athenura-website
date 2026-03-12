@@ -13,49 +13,34 @@
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar">
+ <header class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo">
       <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
     </a>
     <div class="nav-right">
-      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
-        <span></span><span></span><span></span>
+      <!-- Hamburger button — NO inline onclick -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
       <nav class="nav-links" id="navLinks">
         <a href="index.html" class="active">Home</a>
         <a href="program.html#internship">Internship</a>
         <a href="about.html#about">About</a>
         <a href="index.html#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <!-- Apply button shown inside menu on mobile -->
+        <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
       </nav>
+
       <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
     </div>
   </div>
-
-      <!-- LOGO (put your logo img here) -->
-   <a href="index.html" class="logo">
-    <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
-  </a>
-
-    <!-- nav link -->
-  <div class="nav-right">
-     <button class="hamburger" onclick="toggleMenu()" id="hamburger">
-    <span></span><span></span><span></span>
-  </button>
-   <nav class="nav-links">
-     <a href="index.html">Home</a>
-  <a href="program.html">Internship</a>
-  <a href="about.html">About</a>
-  <a href="project.html">Projects</a>
-   <a href="#contact">Contact</a>
-    
-  </nav>
-      
-<!-- BUTTON -->
-      <button class="apply-btn">Apply Now</button>
-     
-    </div>
+  <!-- Dark backdrop behind drawer -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </header>
 
 <!-- MODAL BACKDROP -->
@@ -585,9 +570,9 @@
   </div>
 
   <div class="testimonials-slider-wrap">
-    <button class="tslider-btn tslider-prev" id="tPrev" aria-label="Previous">
+    <!-- <button class="tslider-btn tslider-prev" id="tPrev" aria-label="Previous">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-    </button>
+    </button> -->
 
     <div class="testimonials-track-outer">
       <div class="testimonials-track" id="testimonialsTrack">
@@ -675,12 +660,96 @@
           </div>
         </div>
 
+        <!-- duplicate cards -->
+         
+         <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The real-time project at Athenura was the highlight of my resume. It helped me land my dream job at a top tech firm. The mentors were incredibly supportive throughout."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Jenkins">
+            <div><h4>Sarah Jenkins</h4><span>Web Dev Intern, '23</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The mentorship was exceptional. My mentor didn't just teach me code, they taught me the logic behind professional systems. I grew more in 3 months than in 2 years of college."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Chen">
+            <div><h4>Marcus Chen</h4><span>Data Science Intern, '24</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star half">
+              <defs><linearGradient id="halfGrad"><stop offset="50%" stop-color="#ff8c42"/><stop offset="50%" stop-color="#d1d5db"/></linearGradient></defs>
+              <path fill="url(#halfGrad)" d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/>
+            </svg>
+          </div>
+          <p class="testimonial-text">"Remote flexibility combined with structured modules made it easy to balance with my university classes. I'd recommend Athenura to every student looking for real experience."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Aisha Khan">
+            <div><h4>Aisha Khan</h4><span>HR Intern, '23</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"Working on live client projects gave me confidence I never had. Athenura's structured feedback helped me understand where I stand professionally and how to improve."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Rohan Verma">
+            <div><h4>Rohan Verma</h4><span>UI/UX Intern, '24</span></div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" class="star full"><path d="M12 2l2.9 6.1 6.7.6-5 4.6 1.5 6.6L12 16.8 5.9 20l1.5-6.6-5-4.6 6.7-.6L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"The certificate I received from Athenura carries real weight. Every interviewer I spoke with recognized the quality of their program. This was the best decision of my career."</p>
+          <div class="profile">
+            <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Priya Nair">
+            <div><h4>Priya Nair</h4><span>Digital Marketing Intern, '25</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <button class="tslider-btn tslider-next" id="tNext" aria-label="Next">
+    <!-- <button class="tslider-btn tslider-next" id="tNext" aria-label="Next">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-    </button>
+    </button> -->
   </div>
 
   <!-- Dots -->
@@ -827,47 +896,7 @@
         <li><a href="faq.html">FAQs</a></li>
       </ul>
     </div>
-    <div class="footer-container">
-        <div class="footer-col branding">
-            <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
-            <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
-            <h4 class="follow-us-text">Follow Us</h4>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
-                </svg></a>
-                <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                </a>
-                <a href="https://x.com/athenura_in?s=20" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-                </a>
-               
-            </div>
-        </div>
-
-        <div class="footer-col">
-            <h3>Company</h3>
-            <ul>
-                <li><a href="about.html#about">About Us</a></li>
-                <li><a href="program.html">Internship Program</a></li>
-                <li><a href="internship-policy.html">Internship Policy</a></li>
-                <li><a href="certifications.html">Certification & Benefits</a></li>
-                <li><a href="collages.html">Collages</a></li>
-                 <li><a href="how-it-works.html">How it works</a></li>
-                 <li><a href="why-us.html">why us</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="#">Custom Software Development</a></li>
-                <li><a href="#">Web Application Development</a></li>
-                <li><a href="#">Website Maintenance</a></li>
-                <li><a href="#">Software Testing & QA</a></li>
-                <li><a href="#">Business Automation Solutions</a></li>
-            </ul>
-        </div>
+        
 
     <div class="footer-col">
       <h3>Contact Us</h3>
