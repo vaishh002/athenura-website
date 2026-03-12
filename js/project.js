@@ -1,11 +1,23 @@
 function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('open');
+    const nav = document.getElementById('navLinks');
+    const btn = document.getElementById('hamburger');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    if (btn) btn.classList.toggle('active');
 }
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('#navLinks a').forEach(link => {
     link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('open');
+        document.getElementById('navLinks').classList.remove('open');
     });
 });
+(function () {
+    const current = location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach(link => {
+        if (link.getAttribute("href") === current) {
+            link.classList.add("active");
+        }
+    });
+})();
 window.addEventListener("load", () => {
     const elements = document.querySelectorAll(".fade-up");
     elements.forEach((el, index) => {

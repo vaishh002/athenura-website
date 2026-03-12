@@ -74,19 +74,23 @@
             }
         });
     }
-})();
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        const nav = document.querySelector('.nav-links');
-        if (nav) nav.classList.remove('open');
-    });
-});
-window.addEventListener("load", () => {
-  const elements = document.querySelectorAll(".fade-up");
 
-  elements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add("show");
-    }, index * 120);
-  });
+    (function setActiveNav() {
+        const current = location.pathname.split("/").pop();
+        document.querySelectorAll("#navLinks a").forEach(link => {
+            if (link.getAttribute("href") === current) {
+                link.classList.add("active");
+            }
+        });
+    })();
+
+})();
+
+window.addEventListener("load", () => {
+    const elements = document.querySelectorAll(".fade-up");
+    elements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, index * 120);
+    });
 });
