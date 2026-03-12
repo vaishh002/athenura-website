@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 
 :root {
@@ -23,26 +23,18 @@ body {
     --fs-h1: clamp(2.2rem, 6vw + 1rem, 4.2rem);
     --fs-h2: clamp(1.8rem, 4.5vw + 0.8rem, 2.8rem);
     --fs-h3: clamp(1.35rem, 3vw + 0.6rem, 1.8rem);
-
     --accent: #2D7D84;
     --accent-light: #46bbc6;
-
     --gray-100: #f3f4f6;
     --gray-600: #4b5563;
-
     --athenura-teal: #23838a;
-
     --primary: #237a85;
     --primary-dark: #1b5e66;
-
     --bg: #f9fafb;
     --card: white;
-
     --text: #1f2937;
     --text-light: #4b5563;
-
     --border: #e5e7eb;
-
     --radius: 10px;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
@@ -56,6 +48,100 @@ body {
 .fade-up.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #E5E7EB;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+    width: 100%;
+    padding: 5px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+    transform: translateY(5px);
+}
+
+.nav-links {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1F2937;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: #E9F3F2;
+    color: #2F7E7A;
+}
+
+.nav-links a.active {
+    background: #0ea5a4;
+    color: white;
+    box-shadow: 0 4px 12px rgba(47, 126, 122, 0.25);
+}
+
+.apply-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 6px 16px rgba(47, 126, 122, 0.25);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.apply-btn:hover {
+    background: #0ea5a4;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(47, 126, 122, 0.35);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #1F2937;
+    border-radius: 2px;
+    transition: all 0.3s;
 }
 
 .hero {
@@ -143,6 +229,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .category-btn:hover,
@@ -208,6 +295,7 @@ body {
 .faq-answer p {
     padding-top: 4px;
     color: var(--text-light);
+    white-space: pre-line;
 }
 
 .contact-section {
@@ -259,12 +347,12 @@ textarea {
     border-radius: 8px;
     font-size: 0.97rem;
     font-family: inherit;
+    background: #fff;
 }
 
 textarea {
     resize: none;
     min-height: 40px;
-    background: #fcfefe;
 }
 
 .btn-primary {
@@ -319,6 +407,7 @@ textarea {
     margin-top: 3px;
 }
 
+/* MAP SECTION */
 .map-section {
     position: relative;
     padding: 100px 0;
@@ -361,154 +450,6 @@ textarea {
     margin-bottom: 1rem;
 }
 
-/* ===== NAVBAR (from Page 1) ===== */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #ffffff;
-    border-bottom: 1px solid #E5E7EB;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.nav-container {
-    width: 100%;
-    padding: 5px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    transform: translateY(5px);
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #1F2937;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 14px;
-    border-radius: 20px;
-    transition: all 0.2s ease;
-}
-
-.nav-links a:hover {
-    background: #E9F3F2;
-    color: #2F7E7A;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-.nav-links a.active {
-    background: #0ea5a4;
-    color: white;
-    box-shadow: 0 4px 12px rgba(47, 126, 122, 0.25);
-}
-
-.apply-btn {
-    background: black;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 15px;
-    box-shadow: 0 6px 16px rgba(47, 126, 122, 0.25);
-    cursor: pointer;
-    transition: all 0.25s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.apply-btn:hover {
-    background: #0ea5a4;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(47, 126, 122, 0.35);
-}
-
-.apply-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: 0.6s;
-}
-
-.apply-btn:hover::before {
-    left: 100%;
-}
-
-.hamburger {
-    display: none;
-}
-
-@media (max-width: 768px) {
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        padding: 6px;
-        background: none;
-        border: none;
-    }
-
-    .hamburger span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: #1F2937;
-        border-radius: 2px;
-        transition: all 0.3s;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 62px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0 30px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
-        z-index: 999;
-        gap: 6px;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-        padding: 10px 24px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .apply-btn {
-        display: none;
-    }
-}
-
 .athenura-footer {
     background: #23838a;
     color: #fff;
@@ -527,16 +468,11 @@ textarea {
     align-items: start;
 }
 
-.footer-col {
-    min-width: 0;
-}
-
 .footer-col h3 {
     font-size: 20px;
     font-weight: 600;
     color: #fff;
     margin-bottom: 28px;
-    letter-spacing: 0.2px;
 }
 
 .footer-logo {
@@ -577,6 +513,7 @@ textarea {
     text-decoration: none;
     flex-shrink: 0;
     transition: transform 0.25s, box-shadow 0.25s;
+    color: inherit;
 }
 
 .social-icon svg {
@@ -619,8 +556,6 @@ textarea {
     color: rgba(255, 255, 255, 0.88);
     text-decoration: none;
     font-size: 15px;
-    font-weight: 400;
-    display: inline-block;
     transition: all 0.25s;
 }
 
@@ -663,10 +598,6 @@ textarea {
     color: #22c55e;
 }
 
-.info-text {
-    line-height: 1.4;
-}
-
 .info-text span {
     display: block;
     font-size: 11px;
@@ -681,17 +612,14 @@ textarea {
     font-weight: 600;
     color: #fff;
     text-decoration: none;
-    transition: 0.3s;
 }
 
 .info-row:hover a {
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .info-row:hover .white-circle {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .footer-col iframe {
@@ -699,7 +627,6 @@ textarea {
     height: 160px;
     border: none;
     border-radius: 10px;
-    display: block;
     margin-top: 4px;
 }
 
@@ -717,7 +644,6 @@ textarea {
     content: "📍";
     font-size: 13px;
     flex-shrink: 0;
-    margin-top: 1px;
 }
 
 .footer-bottom-bar {
@@ -744,23 +670,88 @@ textarea {
 .legal-links a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 14px;
 }
 
-@media (max-width: 1200px) {
-
-    .footer-container {
-        grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr 1.4fr;
-        gap: 36px;
-        padding: 0 40px 70px;
+@media (max-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .bottom-content {
-        padding: 18px 40px 44px;
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 0 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
     }
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 30px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+        z-index: 999;
+        gap: 6px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 24px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .apply-btn {
+        display: none;
+    }
+
+    .main-layout {
+        padding: 40px 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .map-overlay {
+        max-width: 90%;
+        padding: 30px 20px;
+    }
+
+    .map-overlay i {
+        font-size: 2.5rem;
+    }
+
+    .hero .description {
+        font-size: 1rem;
+    }
+
+    .search-wrapper input {
+        padding: 14px 16px 14px 46px;
+        font-size: 1rem;
+    }
 
     .footer-container {
         grid-template-columns: 1fr 1fr;
@@ -781,12 +772,38 @@ textarea {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-question {
+        padding: 14px 18px;
+        font-size: 1rem;
+    }
+
+    .contact-card,
+    .info-card>div {
+        padding: 24px 20px;
+    }
 
     .footer-container {
         grid-template-columns: 1fr;
         gap: 32px;
-        padding: 0 20px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 0 40px;
+    }
+
+    .map-overlay {
+        padding: 24px 16px;
     }
 
     .bottom-content {
@@ -795,9 +812,7 @@ textarea {
 
     .legal-links {
         gap: 16px;
-    }
-
-    .legal-links a {
-        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
