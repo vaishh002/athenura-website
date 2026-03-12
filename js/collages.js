@@ -1,4 +1,71 @@
 (function () {
+
+     var hamburger   = document.getElementById('hamburger');
+  var navLinks    = document.getElementById('navLinks');
+  var navBackdrop = document.getElementById('navBackdrop');
+  var navbar      = document.getElementById('navbar');
+
+  function openNav() {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    if (navBackdrop) navBackdrop.classList.add('visible');
+    document.body.classList.add('nav-open');
+  }
+
+  function closeNav() {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    if (navBackdrop) navBackdrop.classList.remove('visible');
+    document.body.classList.remove('nav-open');
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navLinks.classList.contains('open') ? closeNav() : openNav();
+    });
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeNav);
+  }
+
+  if (navLinks) {
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) closeNav();
+  });
+
+  /* ─────────────────────────────────────────
+     2. NAVBAR SCROLL SHADOW
+  ───────────────────────────────────────── */
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      navbar.classList.toggle('scrolled', window.scrollY > 12);
+    }, { passive: true });
+  }
+
+  /* ─────────────────────────────────────────
+     3. NAV ACTIVE LINK
+  ───────────────────────────────────────── */
+  var current = location.pathname.split('/').pop();
+  document.querySelectorAll('nav a').forEach(function (link) {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
     const navAnchors = document.querySelectorAll("#navLinks a");

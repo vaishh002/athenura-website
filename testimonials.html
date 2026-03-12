@@ -1,198 +1,558 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success Stories - Athenura</title>
-    <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/testimonials-footer.css">
-    
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Athenura</title>
+  <link rel="stylesheet" href="css/testimonial.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <img src="assets/images/athenura-logo.png" alt="Athenura" class="logo-img">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Courses</a></li>
-                <li><a href="testimonials.html">Wall of Love</a></li>
-                <li><a href="testimonials.html">Success Stories</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="btn-login">Login</button>
-                <button class="btn-free-learning">Free Learning</button>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>Real Stories, <span class="highlight">Real Success</span></h1>
-        <p>Join 1,200+ students who transformed their careers with Athenura. From career switches to senior promotions, our wall of love tells it all.</p>
+<!-- NAVBAR -->
 
-        <!-- Stats Card -->
-        <div class="stats-card">
-            <div class="rating-section">
-                <div class="rating-score">
-                    <h2>4.9/5</h2>
-                    <div class="stars">★★★★★</div>
-                    <p>Overall rating</p>
-                </div>
-                <div class="student-avatars">
-                    <div class="avatars">
-                        <div class="avatar"></div>
-                        <div class="avatar"></div>
-                        <div class="avatar"></div>
-                    </div>
-                    <div class="verified-text">
-                        <strong>Verified Students</strong>
-                        <small>Based on 1,200+ reviews</small>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-share">Share Your Story</button>
+ <header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+    </a>
+    <div class="nav-right">
+      <!-- Hamburger button — NO inline onclick -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html">Internship</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <!-- Apply button shown inside menu on mobile -->
+        <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
+      </nav>
+
+      <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+    </div>
+  </div>
+  <!-- Dark backdrop behind drawer -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</header>
+<!-- HERO -->
+<section class="t-hero">
+  <h1>Real Stories, <span>Real Success</span></h1>
+  <p>Join 1,200+ students who transformed their careers with Athenura. From career switches to senior promotions, our wall of love tells it all.</p>
+
+  <div class="t-rating-bar">
+    <div class="t-rating-score">
+      <div class="score">4.9/5</div>
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="label">Overall Rating</div>
+    </div>
+    <div class="t-divider"></div>
+    <div class="t-avatars">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""/>
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""/>
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt=""/>
+      <div class="t-avatar-count">+k</div>
+    </div>
+    <div class="t-verified">
+      <strong>Verified Students</strong>
+      <span>Reviews from Top Tech Companies</span>
+    </div>
+    <div class="t-divider"></div>
+    <button class="share-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+      Share Your Story
+    </button>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<div class="t-filters">
+  <button class="t-filter-btn active" data-filter="all">All Stories</button>
+  <button class="t-filter-btn" data-filter="data-science">Data Science</button>
+  <button class="t-filter-btn" data-filter="ux-design">UX Design</button>
+  <button class="t-filter-btn" data-filter="leadership">Leadership</button>
+  <button class="t-filter-btn" data-filter="marketing">Marketing</button>
+</div>
+
+<!-- GRID -->
+<div class="t-grid-wrap">
+  <div class="t-grid" id="tGrid">
+
+    <!-- Card 1 -->
+    <div class="t-card" data-cat="ux-design">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Jenkins"/>
+          <div class="t-profile-info">
+            <strong>Sarah Jenkins</strong>
+            <span>Senior UX Designer at Google</span>
+          </div>
         </div>
-
-        <!-- Filter Tabs -->
-        <div class="filter-tabs">
-            <button class="tab-btn active" data-filter="all">All Stories</button>
-            <button class="tab-btn" data-filter="data-science">Data Science</button>
-            <button class="tab-btn" data-filter="ux-design">UI/UX Design</button>
-            <button class="tab-btn" data-filter="leadership">Leadership</button>
-            <button class="tab-btn" data-filter="marketing">Marketing</button>
-        </div>
-    </section>
-
-    <!-- Testimonials Grid -->
-    <div class="testimonials-container">
-        <div class="testimonials-grid" id="testimonialsGrid">
-            <!-- Testimonial cards will be inserted here by JavaScript -->
-        </div>
-
-        <div class="load-more">
-            <button class="btn-load-more" id="loadMoreBtn">Load More Stories →</button>
-        </div>
+       
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"A career-defining experience."</div>
+      <div class="t-card-text">Athenura helped me bridge the gap between junior and senior roles. The technical depth and direct mentorship from industry leaders was world-class. I landed my role at Google just three months after finishing the UX Advanced track.</div>
+      <div class="t-tags"><span class="t-tag">Advanced UX Design</span></div>
     </div>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Ready to write your success<br>story?</h2>
-        <p>Join thousands of students who are already learning the skills they need to land their dream jobs.</p>
-        <div class="cta-buttons">
-            <button class="btn-secondary">Explore Courses</button>
-            <button class="btn-outline">Talk to an Advisor</button>
+    <!-- Card 2 -->
+    <div class="t-card" data-cat="leadership">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Elena Rodriguez"/>
+          <div class="t-profile-info">
+            <strong>Elena Rodriguez</strong>
+            <span>Product Lead at Meta</span>
+          </div>
         </div>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem;">No credit card required • Start your free learning journey</p>
-    </section>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">Transitioned from Marketing to Product in 6 months.</div>
+      <div class="t-card-text">I spent years feeling stuck in specialized marketing roles. Athenura's Leadership and Product tracks gave me the vocabulary and the confidence to pivot. The case studies were real-world problems from companies like Stripe and Netflix.</div>
+      <div class="t-tags"><span class="t-tag">Leadership</span><span class="t-tag">Product Mgmt</span></div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="athenura-footer">
-        <div class="footer-container">
-            <div class="footer-col branding">
-                <div class="footer-logo-text">Athenura</div>
-                <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
-                <h4 class="follow-us-text">Follow Us</h4>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <defs>
-                                <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#FD5949;stop-opacity:1" />
-                                    <stop offset="50%" style="stop-color:#D6249F;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#285AEB;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    <a href="https://x.com/athenura_in?s=20" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="program.html">Internship Program</a></li>
-                    <li><a href="internship-policy.html">Internship Policy</a></li>
-                    <li><a href="collages.html">Colleges</a></li>
-                    <li><a href="certifications.html">Certification & Benefits</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Custom Software Development</a></li>
-                    <li><a href="#">Web Application Development</a></li>
-                    <li><a href="#">Website Maintenance</a></li>
-                    <li><a href="#">Software Testing & QA</a></li>
-                    <li><a href="#">Business Automation Solutions</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="5" width="18" height="14" rx="2"/>
-                            <path d="M3 7l9 6 9-6"/>
-                        </svg>
-                    </div>
-                    <div class="contact-text">
-                        <span class="contact-label">EMAIL</span>
-                        <strong>official@athenura.in</strong>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-text">
-                        <span class="contact-label">PHONE</span>
-                        <strong>+91 98350 51934</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Location</h3>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="100" loading="lazy" style="border:0; border-radius: 6px;"></iframe>
-                    <a href="https://maps.google.com/?q=Athenura+Sector+62+Noida" target="_blank" class="maps-link">
-                        Maps <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                    </a>
-                </div>
-                <p class="address">📍 Sector 62, Noida, Uttar Pradesh</p>
-            </div>
+    <!-- Card 3 -->
+    <div class="t-card" data-cat="ux-design">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="James Wilson"/>
+          <div class="t-profile-info">
+            <strong>James Wilson</strong>
+            <span>Tech Lead at Stripe</span>
+          </div>
         </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#e2e8f0"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"No fluff, just real engineering."</div>
+      <div class="t-card-text">The technical depth provided in the advanced modules is exactly what I needed for my promotion. No fluff, just hard engineering principles applied to real systems. Highly recommend for senior devs.</div>
+    </div>
 
-        <div class="footer-bottom-bar">
-            <div class="bottom-content">
-                <p>© 2026 Athenura. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms-conditions.html">Terms of Service</a>
-                </div>
-            </div>
+    <!-- Card 4 -->
+    <div class="t-card" data-cat="data-science">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Chen"/>
+          <div class="t-profile-info">
+            <strong>Marcus Chen</strong>
+            <span>Data Scientist at Amazon</span>
+          </div>
         </div>
-    </footer>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"Most comprehensive ROI I've seen."</div>
+      <div class="t-card-text">The Data Science track is the most comprehensive ROI I've seen in online education. The curriculum is practical and immediately applicable. Within weeks I was applying concepts directly at work.</div>
+      <div class="t-tags"><span class="t-tag">Data Science Track</span></div>
+    </div>
 
+    <!-- Card 5 -->
+    <div class="t-card" data-cat="ux-design">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Chloe Kim"/>
+          <div class="t-profile-info">
+            <strong>Chloe Kim</strong>
+            <span>Founder at Nexus AI</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"Foundation in record time."</div>
+      <div class="t-card-text">As a founder, I needed to understand every part of the stack. Athenura gave me that foundation in record time. The full-stack curriculum is exactly what early-stage founders need to build confidently.</div>
+    </div>
 
-    <script src="js/testimonials.js"></script>
+    <!-- Card 6 -->
+    <div class="t-card" data-cat="leadership">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="David Park"/>
+          <div class="t-profile-info">
+            <strong>David Park</strong>
+            <span>Full Stack Dev at Vercel</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"Community that actually supports you."</div>
+      <div class="t-card-text">The community and career support are what set Athenura apart from other platforms. I've never felt more supported in my learning journey. The peer reviews alone were worth the entire program fee.</div>
+    </div>
+
+    <!-- Card 7 — hidden -->
+    <div class="t-card t-extra" data-cat="leadership">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Liam O'Neill"/>
+          <div class="t-profile-info">
+            <strong>Liam O'Neill</strong>
+            <span>Product Designer at Airbnb</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"A complete mindset shift."</div>
+      <div class="t-card-text">Beyond the skills, it's the mindset shift. I stopped thinking like a designer and started thinking like a business owner. Best investment in myself yet. Would recommend to anyone serious about growth.</div>
+    </div>
+
+    <!-- Card 8 — hidden -->
+    <div class="t-card t-extra" data-cat="marketing">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Aisha Khan"/>
+          <div class="t-profile-info">
+            <strong>Aisha Khan</strong>
+            <span>Marketing Director at Netflix</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"I landed my dream job at Netflix."</div>
+      <div class="t-card-text">I landed my dream job at Netflix thanks to the Leadership Track. The strategic frameworks were pure gold. My interviewing skills improved 10x after the mock sessions with their mentors.</div>
+      <div class="t-tags"><span class="t-tag">Marketing Leadership</span></div>
+    </div>
+
+    <!-- Card 9 — hidden -->
+    <div class="t-card t-extra" data-cat="data-science">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Rohan Verma"/>
+          <div class="t-profile-info">
+            <strong>Rohan Verma</strong>
+            <span>ML Engineer at Microsoft</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"Zero to production ML in 3 months."</div>
+      <div class="t-card-text">The ML curriculum at Athenura is unmatched. I went from zero to production-ready models in 3 months. Now leading ML initiatives at Microsoft. The instructors are actual practitioners, not just teachers.</div>
+      <div class="t-tags"><span class="t-tag">Machine Learning</span></div>
+    </div>
+
+    <!-- Card 10 — hidden -->
+    <div class="t-card t-extra" data-cat="marketing">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Priya Sharma"/>
+          <div class="t-profile-info">
+            <strong>Priya Sharma</strong>
+            <span>Growth Lead at Razorpay</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#e2e8f0"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"Changed how I think about growth."</div>
+      <div class="t-card-text">Athenura's marketing track completely changed how I think about growth. The frameworks are practical and directly applicable to real campaigns. My team's conversion rate went up 40% after implementing what I learned.</div>
+      <div class="t-tags"><span class="t-tag">Growth Marketing</span></div>
+    </div>
+
+    <!-- Card 11 — hidden -->
+    <div class="t-card t-extra" data-cat="data-science">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Arjun Mehta"/>
+          <div class="t-profile-info">
+            <strong>Arjun Mehta</strong>
+            <span>Data Analyst at Flipkart</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"From Excel to advanced analytics."</div>
+      <div class="t-card-text">I started with just Excel knowledge. After Athenura's data track, I'm now building end-to-end analytics pipelines at Flipkart. The structured curriculum made the jump from beginner to professional feel natural.</div>
+      <div class="t-tags"><span class="t-tag">Data Analytics</span></div>
+    </div>
+
+    <!-- Card 12 — hidden -->
+    <div class="t-card t-extra" data-cat="ux-design">
+      <div class="t-card-top">
+        <div class="t-profile">
+          <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Nina Patel"/>
+          <div class="t-profile-info">
+            <strong>Nina Patel</strong>
+            <span>UX Lead at Swiggy</span>
+          </div>
+        </div>
+      </div>
+      <div class="t-card-stars">
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </div>
+      <div class="t-card-quote">"Promoted within 2 months of graduating."</div>
+      <div class="t-card-text">The UX research methodologies I learned at Athenura directly contributed to my promotion. I was able to run independent user studies and present findings to leadership. Got promoted within 2 months of graduating.</div>
+      <div class="t-tags"><span class="t-tag">UX Research</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LOAD MORE -->
+<div class="t-load-wrap">
+  <button class="t-load-btn" id="loadMoreBtn">
+    Load More Stories
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </button>
+  <button class="t-load-btn t-show-less" id="showLessBtn" style="display:none;">
+    Show Less
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+</div>
+
+<!-- CTA -->
+<div class="t-cta" id="contact">
+  <h2>Ready to write your success story?</h2>
+  <p>Join thousands of students who are already learning the skills they need to land their dream jobs.</p>
+  <div class="t-cta-btns">
+    <button class="t-cta-primary" onclick="window.location.href='program.html'">Explore Courses</button>
+    <button class="t-cta-secondary" onclick="window.location.href='apply-now.html'">Talk to an Advisor</button>
+  </div>
+  <p class="t-cta-note">No credit card required to start your first free lesson.</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="athenura-footer">
+  <div class="footer-container">
+    <div class="footer-col branding">
+      <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
+      <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
+      <h4 class="follow-us-text">Follow Us</h4>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/athenura.in" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        </a>
+        <a href="https://x.com/athenura_in" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+        </a>
+        <a href="https://athenura.medium.com" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="program.html">Internship Program</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="collages.html">Collages</a></li>
+        <li><a href="why-us.html">Why Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Resource</h3>
+      <ul>
+        <li><a href="internship-policy.html">Internship Policy</a></li>
+        <li><a href="certifications.html">Certification & Benefits</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <div class="info-row">
+        <div class="white-circle email-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+        </div>
+        <div class="info-text">
+          <span>EMAIL</span>
+          <a href="mailto:official@athenura.in">official@athenura.in</a>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="white-circle phone-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" style="transform:scaleX(-1)"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+        </div>
+        <div class="info-text">
+          <span>PHONE</span>
+          <a href="tel:+919835051934">+91 98350 51934</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
+      <p class="address">Sector 62, Noida, Uttar Pradesh</p>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <div class="bottom-content">
+      <p>© 2026 Athenura. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms-condition.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+ 
+
+  // Navbar hamburger
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  navBackdrop.style.display = isOpen ? 'block' : 'none';
+  setTimeout(() => navBackdrop.classList.toggle('visible', isOpen), 10);
+});
+
+navBackdrop.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', false);
+  navBackdrop.classList.remove('visible');
+  setTimeout(() => navBackdrop.style.display = 'none', 300);
+});
+
+// Navbar scroll shadow
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+  // Filter
+  const filterBtns = document.querySelectorAll('.t-filter-btn');
+  const allCards = document.querySelectorAll('.t-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      allCards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.style.display = match && !card.classList.contains('t-extra-hidden') ? 'flex' : 'none';
+      });
+    });
+  });
+
+  // Load More / Show Less
+  const extraCards = document.querySelectorAll('.t-extra');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const showLessBtn = document.getElementById('showLessBtn');
+
+  // Hide extra cards initially
+  extraCards.forEach(card => {
+    card.style.display = 'none';
+    card.classList.add('t-extra-hidden');
+  });
+
+  loadMoreBtn.addEventListener('click', () => {
+    extraCards.forEach(card => {
+      card.style.display = 'flex';
+      card.classList.remove('t-extra-hidden');
+      card.style.animation = 'fadeCard 0.4s ease both';
+    });
+    loadMoreBtn.style.display = 'none';
+    showLessBtn.style.display = 'inline-flex';
+  });
+
+  showLessBtn.addEventListener('click', () => {
+    extraCards.forEach(card => {
+      card.style.display = 'none';
+      card.classList.add('t-extra-hidden');
+    });
+    showLessBtn.style.display = 'none';
+    loadMoreBtn.style.display = 'inline-flex';
+    document.querySelector('.t-grid-wrap').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>
+

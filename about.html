@@ -1,18 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>athenura-websites</title>
+  <title>Athenura — Internship Programs</title>
   <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/about.css"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
+  <link rel="stylesheet" href="css/about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
+ <!-- NAVBAR -->
+<header class="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo">
       <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
@@ -21,14 +24,16 @@
       <button class="hamburger" onclick="toggleMenu()" id="hamburger">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="program.html">Internship</a>
         <a href="about.html" class="active">About</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Projects</a>
+        <a href="contact.html">Contact</a>
+         <!-- Apply button shown inside menu on mobile -->
+        <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
       </nav>
-      <button class="apply-btn">Apply Now</button>
+      <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
     </div>
   </div>
 </header>
@@ -41,21 +46,146 @@
   </div>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-ring hiw-ring-1"></div>
-    <div class="hero-ring hiw-ring-2"></div>
-    <div class="hero-glow-bl"></div>
+<section class="hero">
+  <div class="hero-ring hiw-ring-1"></div>
+  <div class="hero-ring hiw-ring-2"></div>
+  <div class="hero-glow-bl"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-circle-tr"></div>
+  
+
+  <div class="hero-split">
+
+    <!-- LEFT: Neon Icons -->
+   <div class="hero-icons-side">
+
+  <!-- GEAR top-left -->
+  <div class="hicon hicon-gear">
+    <svg viewBox="0 0 100 100" fill="none">
+      <path stroke="#5eead4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+        fill="rgba(94,234,212,0.05)"
+        d="M43 18 L40.5 12 L59.5 12 L57 18
+           A24 24 0 0 1 68 24 L74 21 L86 36 L80 39
+           A24 24 0 0 1 82 50 A24 24 0 0 1 80 61
+           L86 64 L74 79 L68 76
+           A24 24 0 0 1 57 82 L59.5 88 L40.5 88 L43 82
+           A24 24 0 0 1 32 76 L26 79 L14 64 L20 61
+           A24 24 0 0 1 18 50 A24 24 0 0 1 20 39
+           L14 36 L26 21 L32 24 A24 24 0 0 1 43 18 Z"/>
+      <circle cx="50" cy="50" r="13" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.06)"/>
+    </svg>
+  </div>
+
+  <!-- BULB top-center -->
+  <div class="hicon hicon-bulb">
+    <svg viewBox="0 0 80 105" fill="none">
+      <path stroke="#5eead4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+        fill="rgba(94,234,212,0.05)"
+        d="M40 8C24.5 8 12 20.5 12 36c0 9.8 5.2 18.4 13 23.3V68a2.5 2.5 0 0 0 2.5 2.5h25A2.5 2.5 0 0 0 55 68v-8.7C62.8 54.4 68 45.8 68 36 68 20.5 55.5 8 40 8Z"/>
+      <line x1="27" y1="74" x2="53" y2="74" stroke="#5eead4" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="30" y1="83" x2="50" y2="83" stroke="#5eead4" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="40" y1="8"  x2="40" y2="2"  stroke="#5eead4" stroke-width="2.8" stroke-linecap="round" stroke-opacity="0.6"/>
+      <line x1="16" y1="18" x2="11" y2="13" stroke="#5eead4" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.5"/>
+      <line x1="64" y1="18" x2="69" y2="13" stroke="#5eead4" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.5"/>
+      <line x1="9"  y1="36" x2="3"  y2="36" stroke="#5eead4" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.5"/>
+      <line x1="71" y1="36" x2="77" y2="36" stroke="#5eead4" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- PIE CHART top-right -->
+  <div class="hicon hicon-pie1">
+    <svg viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="38" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.04)"/>
+      <path stroke="#5eead4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"
+        fill="rgba(94,234,212,0.1)"
+        d="M50 50 L50 12 A38 38 0 0 1 83 69 Z"/>
+      <line x1="50" y1="50" x2="50" y2="12" stroke="#5eead4" stroke-width="3.5" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="83" y2="69" stroke="#5eead4" stroke-width="3.5" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- TARGET / BULLSEYE mid-left -->
+  <div class="hicon hicon-target">
+    <svg viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="40" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.03)"/>
+      <circle cx="50" cy="50" r="27" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.05)"/>
+      <circle cx="50" cy="50" r="14" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.09)"/>
+      <!-- Arrow pointing to center -->
+      <line x1="78" y1="22" x2="56" y2="44" stroke="#5eead4" stroke-width="3.2" stroke-linecap="round"/>
+      <polyline points="70,20 80,20 80,30" stroke="#5eead4" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- BIG PIE center -->
+  <div class="hicon hicon-pie3">
+    <svg viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="50" stroke="#5eead4" stroke-width="4" fill="rgba(94,234,212,0.04)"/>
+      <path stroke="#5eead4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+        fill="rgba(94,234,212,0.09)"
+        d="M60 60 L60 10 A50 50 0 1 1 17 85 Z"/>
+      <line x1="60" y1="60" x2="60" y2="10" stroke="#5eead4" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="60" x2="17" y2="85" stroke="#5eead4" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- BAR CHART mid-right -->
+  <div class="hicon hicon-bar1">
+    <svg viewBox="0 0 100 80" fill="none">
+      <rect x="5"  y="44" width="16" height="30" rx="3" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.07)"/>
+      <rect x="29" y="28" width="16" height="46" rx="3" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.07)"/>
+      <rect x="53" y="12" width="16" height="62" rx="3" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.10)"/>
+      <rect x="77" y="32" width="16" height="42" rx="3" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.07)"/>
+      <line x1="2" y1="77" x2="98" y2="77" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.55"/>
+    </svg>
+  </div>
+
+  <!-- LINE / TREND CHART bottom-left -->
+  <div class="hicon hicon-bar2">
+    <svg viewBox="0 0 100 80" fill="none">
+      <!-- Axes -->
+      <line x1="10" y1="10" x2="10" y2="68" stroke="#5eead4" stroke-width="3" stroke-linecap="round"/>
+      <line x1="10" y1="68" x2="95" y2="68" stroke="#5eead4" stroke-width="3" stroke-linecap="round"/>
+      <!-- Trend line -->
+      <polyline points="10,60 28,50 45,54 62,32 78,24 95,12"
+        stroke="#5eead4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- Dots on line -->
+      <circle cx="10"  cy="60" r="4" fill="#5eead4" stroke-opacity="0"/>
+      <circle cx="28"  cy="50" r="4" fill="#5eead4"/>
+      <circle cx="45"  cy="54" r="4" fill="#5eead4"/>
+      <circle cx="62"  cy="32" r="4" fill="#5eead4"/>
+      <circle cx="78"  cy="24" r="4" fill="#5eead4"/>
+      <circle cx="95"  cy="12" r="4" fill="#5eead4"/>
+    </svg>
+  </div>
+
+  <!-- ID CARD bottom-center -->
+  <div class="hicon hicon-id">
+    <svg viewBox="0 0 130 88" fill="none">
+      <rect x="3" y="3" width="124" height="82" rx="10" stroke="#5eead4" stroke-width="3.5" fill="rgba(94,234,212,0.05)"/>
+      <rect x="16" y="11" width="20" height="14" rx="4" stroke="#5eead4" stroke-width="2.8" fill="rgba(94,234,212,0.08)"/>
+      <circle cx="38" cy="46" r="12" stroke="#5eead4" stroke-width="3.2" fill="rgba(94,234,212,0.07)"/>
+      <path d="M16 82 C16 68 24 60 38 60 C52 60 60 68 60 82"
+        stroke="#5eead4" stroke-width="3.2" stroke-linecap="round" fill="rgba(94,234,212,0.05)"/>
+      <line x1="72" y1="28" x2="116" y2="28" stroke="#5eead4" stroke-width="3"   stroke-linecap="round"/>
+      <line x1="72" y1="43" x2="110" y2="43" stroke="#5eead4" stroke-width="2.8" stroke-linecap="round" stroke-opacity="0.75"/>
+      <line x1="72" y1="57" x2="114" y2="57" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.55"/>
+      <line x1="72" y1="70" x2="100" y2="70" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.38"/>
+    </svg>
+  </div>
+
+</div>
+    <!-- RIGHT: Content -->
     <div class="hero-content" data-reveal>
       <span class="hiw-pill">About Athenura</span>
       <h1 class="hiw-title">Who We <span class="hiw-accent" id="accentWord">Are</span></h1>
       <p class="hiw-desc">Athenura's impact on the industry is defined by over a decade of innovation and excellence in corporate solutions. We bridge the gap between complex technology and human-centric business strategies.</p>
-      
       <div class="hiw-header-btns">
         <button class="hiw-btn-primary" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Our Story</button>
-<button class="hiw-btn-secondary" onclick="document.getElementById('values').scrollIntoView({behavior:'smooth'})">Our Values →</button>
+        <button class="hiw-btn-secondary" onclick="document.getElementById('values').scrollIntoView({behavior:'smooth'})">Our Values →</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- MISSION & VISION -->
   <section class="mv-section">
@@ -348,74 +478,105 @@
       <h2 class="hiw-cta-title">Want to be part of our story?</h2>
       <p class="hiw-cta-desc">We're always looking for talented individuals who share our values and passion for innovation.</p>
       <div class="hiw-cta-btns">
-        <button class="hiw-cta-primary">Explore Careers</button>
+        <button class="hiw-cta-primary" onclick="window.location.href='program.html'">Explore Careers</button>
         <button class="hiw-cta-secondary">Contact Us →</button>
       </div>
     </div>
   </section>
 
-  <footer class="athenura-footer">
+<footer class="athenura-footer">
   <div class="footer-container">
+
     <div class="footer-col branding">
       <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
       <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
       <h4 class="follow-us-text">Follow Us</h4>
       <div class="social-links">
-        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-        <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-        <a href="https://x.com/athenura_in?s=20" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/athenura.in" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+          </svg>
+        </a>
+        <a href="https://x.com/athenura_in" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+          </svg>
+        </a>
+        <a href="https://athenura.medium.com" class="social-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path>
+          </svg>
+        </a>
       </div>
     </div>
 
     <div class="footer-col">
       <h3>Company</h3>
       <ul>
+
        <li><a href="about.html#about">About Us</a></li>
                 <li><a href="program.html">Internship Program</a></li>
-                <li><a href="internship-policy.html">Internship Policy</a></li>
-                <li><a href="certifications.html">Certification & Benefits</a></li>
-                 <li><a href="how-it-works.html">How it works</a></li>
-                 <li><a href="why-us.html">why us</a></li>
-                <li><a href="#">FAQs</a></li>
+                <li><a href="collages.html">Collages</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="why-us.html">why us</a></li>
+                
       </ul>
     </div>
 
     <div class="footer-col">
-      <h3>Services</h3>
+      <h3>Resource</h3>
       <ul>
-        <li><a href="#">Custom Software Development</a></li>
-        <li><a href="#">Web Application Development</a></li>
-        <li><a href="#">Website Maintenance</a></li>
-        <li><a href="#">Software Testing & QA</a></li>
-        <li><a href="#">Business Automation Solutions</a></li>
+        <li><a href="internship-policy.html">Internship Policy</a></li>
+        <li><a href="certifications.html">Certification & Benefits</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faq.html">FAQs</a></li>
       </ul>
     </div>
 
- <div class="footer-col">
-  <h3>Contact Us</h3>
-  <div class="info-row">
-    <div class="white-circle email-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
-    <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
-  </div>
-  <div class="info-row">
-    <div class="white-circle phone-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
-    <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
-  </div>
-</div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <div class="info-row">
+        <div class="white-circle email-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span>EMAIL</span>
+          <a href="mailto:official@athenura.in">official@athenura.in</a>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="white-circle phone-icon">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1);">
+            <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span>PHONE</span>
+          <a href="tel:+919835051934">+91 98350 51934</a>
+        </div>
+      </div>
+    </div>
 
     <div class="footer-col">
       <h3>Location</h3>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
       <p class="address">Sector 62, Noida, Uttar Pradesh</p>
     </div>
-  </div>
 
+  </div>
   <div class="footer-bottom-bar">
     <div class="bottom-content">
       <p>© 2026 Athenura. All rights reserved.</p>
       <div class="legal-links">
         <a href="privacy.html">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="terms-condition.html">Terms of Service</a>
       </div>
     </div>
   </div>
@@ -493,6 +654,24 @@
     updateLine();
 
   });
+
+  function toggleMenu() {
+  const nav = document.getElementById('navLinks');
+  const btn = document.getElementById('hamburger');
+  if (!nav) return;
+  nav.classList.toggle('open');
+  if (btn) btn.classList.toggle('active');
+}
+
+(function () {
+  const current = location.pathname.split("/").pop();
+  document.querySelectorAll("nav a").forEach(link => {
+    if (link.getAttribute("href") === current) {
+      link.classList.add("active");
+    }
+  });
+})();
+
 </script>
 
 <style>
@@ -502,4 +681,5 @@
   }
 </style>
 </body>
+>>>>>>> 468ddfe (updated code)
 </html>
