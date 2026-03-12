@@ -6,32 +6,47 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/faq.css">
 </head>
 <body>
-    <header class="navbar">
+    <div class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+            <a href="#" class="logo">
+                <img src="https://www.athenura.in/Athenura.png" alt="Athenura">
             </a>
             <div class="nav-right">
+<<<<<<< HEAD
                 <button class="hamburger" onclick="toggleMenu()" id="hamburger" aria-label="Menu">
                     <span></span><span></span><span></span>
+=======
+                <button class="hamburger" id="hamburger" aria-label="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
                 </button>
                 <nav class="nav-links" id="navLinks">
-                    <a href="index.html">Home</a>
-                    <a href="program.html">Internship</a>
-                    <a href="about.html#about">About</a>
-                    <a href="project.html">Projects</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Internship</a>
+                    <a href="#">About</a>
+                    <a href="Details.html">Projects</a>
+                    <a href="#">Why Us</a>
                 </nav>
-                <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+                <button class="apply-btn" onclick="window.location.href='apply-now.html'">
+                    Apply Now
+                </button>
             </div>
         </div>
-    </header>
+    </div>
 
+<<<<<<< HEAD
     <section class="hero fade-up">
+=======
+    <header class="hero">
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
         <div class="container">
             <h1>FAQs</h1>
             <p class="description">Find answers to common internship questions or get in touch with our team.</p>
@@ -43,11 +58,12 @@
         </div>
     </section>
 
-    <main class="container main-layout fade-up">
+    <main class="container main-layout">
         <aside class="sidebar">
             <h2>Frequently Asked Questions</h2>
             <p>Quick answers about our internship program, roles and benefits.</p>
             <nav class="category-list">
+<<<<<<< HEAD
                 <button class="category-btn active" data-category="general"><i class="fa-solid fa-circle-info"></i>
                     INTERNSHIP OVERVIEW</button>
                 <button class="category-btn" data-category="application"><i class="fa-solid fa-file-lines"></i>
@@ -56,12 +72,24 @@
                     RESPONSIBILITIES</button>
                 <button class="category-btn" data-category="privacy"><i class="fa-solid fa-shield-halved"></i> DATA
                     PRIVACY & SECURITY</button>
+=======
+                <button class="category-btn active" data-category="general">
+                    <i class="fa-solid fa-circle-info"></i> General Info
+                </button>
+                <button class="category-btn" data-category="application">
+                    <i class="fa-solid fa-file-lines"></i> Application Process
+                </button>
+                <button class="category-btn" data-category="benefits">
+                    <i class="fa-solid fa-wallet"></i> Stipend & Benefits
+                </button>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
             </nav>
         </aside>
 
         <section class="faq-area" id="faqContainer">
             <div class="accordion">
                 <div class="faq-item" data-category="general">
+<<<<<<< HEAD
                     <button class="faq-question">Is the internship paid? <i
                             class="fa-solid fa-chevron-down"></i></button>
                     <div class="faq-answer">
@@ -185,12 +213,50 @@
                         <p>We implement encrypted systems, restricted access controls, and secure storage protocols to
                             safeguard user data. While we follow industry‑standard security practices, no electronic
                             transmission or storage system can be guaranteed to be 100% secure.</p>
+=======
+                    <button class="faq-question">
+                        What are the internship eligibility requirements?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We look for current students or recent graduates with strong passion for innovation.
+                            Requirements vary by role but we prefer a minimum GPA of 3.0.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-category="general">
+                    <button class="faq-question">
+                        Is prior work experience required?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No — we value potential, personal projects and learning ability more than formal experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item" data-category="application">
+                    <button class="faq-question">
+                        How long does the application process take?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Usually 3–5 weeks from submission to final decision.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-category="benefits">
+                    <button class="faq-question">
+                        Do interns receive a stipend or benefits?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes — competitive monthly stipend, free lunches, health coverage, personal learning budget
+                            and performance bonus.</p>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="contact-section fade-up">
+        <div class="contact-section">
             <div class="contact-card">
                 <h2>Send us a message</h2>
                 <form id="contactForm">
@@ -221,6 +287,7 @@
                     <button type="submit" class="btn-primary">Send Message</button>
                 </form>
             </div>
+<<<<<<< HEAD
             <div class="info-card">
                 <div>
                     <h3>Connect with us</h3>
@@ -239,10 +306,25 @@
                 </div>
                 <div>
                     <h3>Our Office</h3>
+=======
+
+            <div class="info-card">
+                <div class="social-card">
+                    <h3>Connect with us</h3>
+                    <p>Follow our Social media channels for updates.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="offices-card">
+                    <h3>Our Offices</h3>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
                     <div class="office">
                         <i class="fa-solid fa-location-dot"></i>
                         <div>
-                            <strong>Noida HQ</strong>
+                            <strong>London HQ</strong>
                             <p>123 Tech Corridor, Shoreditch</p>
                         </div>
                     </div>
@@ -251,10 +333,10 @@
         </div>
     </main>
 
-    <section class="map-section fade-up">
+    <section class="map-section">
         <iframe class="map-bg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin"
-            loading="lazy"></iframe>
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin"
+    loading="lazy"></iframe>
         <div class="map-overlay">
             <i class="fa-solid fa-map-location-dot"></i>
             <h2>Find us in person</h2>
@@ -272,6 +354,7 @@
                 <span class="follow-us-text">Follow Us</span>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank"
+<<<<<<< HEAD
                         class="social-icon">
                         <svg stroke="currentColor" fill="currentColor" viewBox="0 0 448 512">
                             <path
@@ -292,48 +375,58 @@
                                 </path>
                             </svg>
                         </a>
+=======
+                        class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" target="_blank"
+                        class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg></a>
+                    <a href="https://x.com/athenura_in?s=20" target="_blank" class="social-icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg></a>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
                 </div>
             </div>
+
             <div class="footer-col">
                 <h3>Company</h3>
                 <ul>
-                    <li>
-                        <a href="about.html#about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="program.html">Internship Program</a>
-                    </li>
-                    <li>
-                        <a href="how-it-works.html">How it works</a>
-                    </li>
-                    <li>
-                        <a href="collages.html">Collages</a>
-                    </li>
-                    <li>
-                        <a href="why-us.html">Why Us</a>
-                    </li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="program.html">Internship Program</a></li>
+                    <li><a href="internship-policy.html">Internship Policy</a></li>
+                    <li><a href="college.html">Colleges</a></li>
+                    <li><a href="certifications.html">Certification & Benefits</a></li>
+                    <li><a href="Details.html">Projects</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h3>Resource</h3>
+                <h3>Services</h3>
                 <ul>
-                    <li>
-                        <a href="internship-policy.html">Internship Policy</a>
-                    </li>
-                    <li>
-                        <a href="certifications.html">Certification & Benefits</a>
-                    </li>
-                    <li>
-                        <a href="testimonials.html">Testimonials</a>
-                    </li>
-                    <li>
-                        <a href="faq.html">FAQs</a>
-                    </li>
+                    <li><a href="#">Custom Software Development</a></li>
+                    <li><a href="#">Web Application Development</a></li>
+                    <li><a href="#">Website Maintenance</a></li>
+                    <li><a href="#">Software Testing & QA</a></li>
+                    <li><a href="#">Business Automation Solutions</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h3>Contact Us</h3>
                 <div class="info-row">
+<<<<<<< HEAD
                     <div class="white-circle email-icon"><svg viewBox="0 0 512 512">
                             <path
                                 d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
@@ -349,12 +442,32 @@
                             </path>
                         </svg></div>
                     <div class="info-text"><span>PHONE</span><a href="tel:+919835051934">+91 98350 51934</a></div>
+=======
+                    <div class="white-circle email-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                        </svg></div>
+                    <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
+                </div>
+                <div class="info-row">
+                    <div class="white-circle phone-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                        </svg></div>
+                    <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
                 </div>
             </div>
             <div class="footer-col">
                 <h3>Location</h3><iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin"
+<<<<<<< HEAD
                     loading="lazy"></iframe>
+=======
+                    loading="lazy" style="border:0;"></iframe>
+>>>>>>> 924c5a4696fae0c7eb2de56bccfc4e560b7a53ba
                 <p class="address">Sector 62, Noida, Uttar Pradesh</p>
             </div>
         </div>
@@ -365,7 +478,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/faq.js"></script>
+    <script src="FAQs.js"></script>
 </body>
 
 </html>

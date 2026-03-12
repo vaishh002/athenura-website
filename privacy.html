@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>athenura — Internship Programs</title>
+  <title>athenura-websites</title>
   <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
@@ -13,6 +13,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <a href="index.html" class="logo">
     <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
@@ -25,16 +26,9 @@
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="program.html">Internship</a>
-    <a href="about.html" class="mobile-only">About</a>
+    <a href="about.html">About</a>
     <a href="index.html#projects">Projects</a>
-    <a href="why-us.html">Why Us</a>
-    <a href="#contact" class="mobile-only mobile-contact-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-      Contact Us
-    </a>
+    <a href="index.html#why">Why Us</a>
   </div>
 
   <div class="nav-right">
@@ -45,432 +39,253 @@
       </svg>
       Contact Us
     </a>
+    <button class="signin">Sign In</button>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero-wrapper">
-  <section class="hero" id="page-top">
-    <div class="hero-overlay"></div>
-    <div class="hero-particles">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-    </div>
-    <div class="hero-text">
-      <nav class="breadcrumb">
-        <a href="#">Home</a>
-        <span>›</span>
-        <span>Privacy Policy</span>
-      </nav>
-      <h1 class="hero-title">Privacy Policy</h1>
-      <p class="hero-sub">Last Updated: January 25, 2026. This policy describes how Athenura collects, uses, and protects your personal information.</p>
-      <div class="hero-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Encrypted &nbsp;·&nbsp; Secure Authentication &nbsp;·&nbsp; No Cookies
+  <!-- HERO -->
+  <div class="hero-wrapper">
+    <section class="hero" id="page-top">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="shield-ring">
-        <div class="shield-core">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="orbit-dot d1"></div>
-        <div class="orbit-dot d2"></div>
-        <div class="orbit-dot d3"></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- MAIN CONTENT -->
-<div id="pdf-content">
-  <div class="main-wrapper">
-    <div class="layout-box">
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <p class="toc-label">TABLE OF CONTENTS</p>
-        <nav class="toc-nav">
-          <a href="#intro" class="toc-link active" data-section="intro">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-            <span class="toc-text">Introduction</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#scope" class="toc-link" data-section="scope">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-            <span class="toc-text">Scope</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#collect" class="toc-link" data-section="collect">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
-            <span class="toc-text">Personal Information</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#technical" class="toc-link" data-section="technical">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-            <span class="toc-text">Technical Information</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#cookies" class="toc-link" data-section="cookies">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></span>
-            <span class="toc-text">No Cookies or Tracking</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#use" class="toc-link" data-section="use">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></span>
-            <span class="toc-text">Purpose of Collection</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#sharing" class="toc-link" data-section="sharing">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>
-            <span class="toc-text">Information Sharing</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#security" class="toc-link" data-section="security">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-            <span class="toc-text">Data Security</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#retention" class="toc-link" data-section="retention">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-            <span class="toc-text">Data Retention</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#rights" class="toc-link" data-section="rights">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-            <span class="toc-text">Your Rights</span>
-            <span class="toc-arrow">›</span>
-          </a>
-          <a href="#consent" class="toc-link" data-section="consent">
-            <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-            <span class="toc-text">Consent</span>
-            <span class="toc-arrow">›</span>
-          </a>
-         
+      <div class="hero-text">
+        <nav class="breadcrumb">
+          <a href="#">Home</a>
+          <span>›</span>
+          <span>Privacy Policy</span>
         </nav>
-      </aside>
-
-      <!-- CONTENT -->
-      <main class="content">
-
-        <!-- 1. INTRODUCTION -->
-        <section class="sec fade-up" id="intro">
-          <h2 class="sec-plain-title">Introduction</h2>
-          <p>Athenura values the privacy of individuals and is committed to protecting the personal information shared with us. This Privacy Policy explains the internet privacy practices and policies adopted by Athenura in relation to the collection, use, storage, disclosure, and protection of information obtained through our website, programs, services, and communications.</p>
-          <p>Athenura reserves the right to amend, update, or modify this Privacy Policy at any time without prior notice. Any changes will become effective immediately upon publication on this page. Continued use of the website or services constitutes acceptance of the revised Privacy Policy.</p>
-        </section>
-
-        <!-- 2. SCOPE -->
-        <section class="sec fade-up" id="scope">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </div>
-            <h2>Scope of This Privacy Policy</h2>
+        <h1 class="hero-title">Privacy Policy</h1>
+        <p class="hero-sub">Last Updated: January 25, 2026. This policy describes how Athenura collects, uses, and protects your personal information.</p>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          GDPR Compliant &nbsp;·&nbsp; AES-256 Encrypted &nbsp;·&nbsp; MFA Protected
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="shield-ring">
+          <div class="shield-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <p class="sec-sub">This Privacy Policy applies to all individuals who access the Athenura website or interact with Athenura in any manner, including visitors, clients, prospective clients, partners, vendors, applicants, interns, employees, and consultants. This policy applies to information collected through online platforms, direct communications, applications, and business operations.</p>
-        </section>
-
-        <!-- 3. PERSONAL INFORMATION WE COLLECT -->
-        <section class="sec fade-up" id="collect">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-            <h2>Personal Information We Collect</h2>
-          </div>
-          <p class="sec-sub">Athenura does not collect personal information unless it is voluntarily and knowingly provided by an individual — such as when you contact us, submit inquiries, apply for internships, employment, programs, or otherwise communicate with us.</p>
-          <div class="cards-grid">
-            <div class="info-card">
-              <h4>Identity & Contact</h4>
-              <ul>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Full legal name</li>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Email address & phone number</li>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Nationality or geographic location</li>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Educational institution or organization</li>
-              </ul>
-            </div>
-            <div class="info-card">
-              <h4>Professional & Academic</h4>
-              <ul>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Resumes, CVs, and portfolios</li>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Employment history</li>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Educational background</li>
-                <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Medical / accessibility needs (if applicable)</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- 4. TECHNICAL INFORMATION -->
-        <section class="sec fade-up" id="technical">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <h2>Technical Information We Collect</h2>
-          </div>
-          <div class="blockquote-box">
-            <blockquote>"Athenura does not collect, store, or process technical information such as IP addresses, browser details, device information, operating systems, access timestamps, or pages visited through any automated means."</blockquote>
-            <p>The Athenura website is designed to function without monitoring user activity, tracking access behavior, or logging technical identifiers. No such information is used for website administration, performance analysis, operational monitoring, analytics, or security profiling.</p>
-          </div>
-        </section>
-
-        <!-- 5. NO COOKIES OR TRACKING -->
-        <section class="sec fade-up" id="cookies">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-            </div>
-            <h2>No Cookies or Tracking Technologies</h2>
-          </div>
-          <div class="rights-grid">
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>No cookies used</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>No tracking pixels</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>No behavioral tracking tools</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>No cookie preferences needed</div>
-          </div>
-          <p class="sec-sub" style="margin-top: 20px;">Visitors may access and browse the website without any cookies being placed on their devices. No personal information is collected through cookie-based or tracking-based mechanisms, and website functionality is not affected by cookie acceptance or rejection.</p>
-        </section>
-
-        <!-- 6. PURPOSE OF COLLECTION -->
-        <section class="sec fade-up" id="use">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            </div>
-            <h2>Purpose of Information Collection</h2>
-          </div>
-          <p class="sec-sub">Athenura collects and processes personal information solely for legitimate business and operational purposes. Personal information is not collected or processed beyond what is necessary for these purposes.</p>
-          <ol class="num-list">
-            <li>
-              <span class="num">01.</span>
-              <div><strong>Responding to Inquiries & Applications</strong><p>Evaluating eligibility for internships, employment, programs, or services and placing participants in suitable roles.</p></div>
-            </li>
-            <li>
-              <span class="num">02.</span>
-              <div><strong>Delivering Programs & Services</strong><p>Managing professional relationships, ensuring effective communication, and delivering the services you have requested.</p></div>
-            </li>
-            <li>
-              <span class="num">03.</span>
-              <div><strong>Legal & Operational Compliance</strong><p>Maintaining website functionality, ensuring security, complying with legal and regulatory obligations, and supporting internal planning and improvement activities.</p></div>
-            </li>
-          </ol>
-        </section>
-
-        <!-- 7. INFORMATION SHARING -->
-        <section class="sec fade-up" id="sharing">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            </div>
-            <h2>Information Sharing and Disclosure</h2>
-          </div>
-          <p class="sec-sub">Athenura uses personal information primarily to fulfill requests, respond to communications, manage applications, and deliver services. We do not sell or share your personal information for commercial purposes.</p>
-          <ol class="num-list">
-            <li>
-              <span class="num">01.</span>
-              <div><strong>Partner Organizations & Host Companies</strong><p>Personal information may be shared with partners or service companies strictly to confirm placements, deliver services, or fulfill contractual obligations — only after confirmation by all relevant parties.</p></div>
-            </li>
-            <li>
-              <span class="num">02.</span>
-              <div><strong>Educational Institutions</strong><p>If you are currently or recently enrolled in an educational institution, Athenura may contact that institution for academic coordination, reporting, insurance compliance, or application of institutional benefits.</p></div>
-            </li>
-            <li>
-              <span class="num">03.</span>
-              <div><strong>Legal Requirements</strong><p>Athenura does not share personal information with third parties unless required by law, regulation, legal process, or government authority, or unless you have explicitly provided consent.</p></div>
-            </li>
-            <li>
-              <span class="num">04.</span>
-              <div><strong>Aggregated Data</strong><p>Non-personally identifiable and aggregated information may be shared with third parties for research, analytics, or marketing insights without identifying any individual.</p></div>
-            </li>
-          </ol>
-        </section>
-
-        <!-- 8. DATA SECURITY -->
-        <section class="sec fade-up" id="security">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h2>Data Protection and Security Measures</h2>
-          </div>
-          <div class="blockquote-box">
-            <blockquote>"While we take reasonable steps to protect personal information, no method of electronic transmission or storage is completely secure, and absolute security cannot be guaranteed."</blockquote>
-            <p>Athenura implements reasonable administrative, technical, and organizational safeguards to protect information from loss, misuse, unauthorized access, disclosure, or alteration. In our primary software systems, sensitive information is encrypted both at rest and during transmission. Administrative access is restricted and protected through strong authentication controls, including two-factor authentication where applicable.</p>
-          </div>
-        </section>
-
-        <!-- 9. DATA RETENTION -->
-        <section class="sec fade-up" id="retention">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <h2>Data Retention</h2>
-          </div>
-          <ol class="num-list">
-            <li>
-              <span class="num">01.</span>
-              <div><strong>Retention Period</strong><p>Athenura retains personal information only for as long as necessary to fulfill the purposes described in this Privacy Policy, comply with legal or regulatory requirements, maintain business records, or protect legitimate business interests.</p></div>
-            </li>
-            <li>
-              <span class="num">02.</span>
-              <div><strong>Alumni & Program Participants</strong><p>As part of certain programs or services, participants may receive ongoing or lifetime access to alumni networks or professional communities. For this reason, participant information may not be automatically deleted after a fixed period.</p></div>
-            </li>
-            <li>
-              <span class="num">03.</span>
-              <div><strong>Application Data</strong><p>Application data is retained unless and until an individual requests its removal, subject to applicable legal or contractual obligations.</p></div>
-            </li>
-          </ol>
-        </section>
-
-        <!-- 10. YOUR RIGHTS -->
-        <section class="sec fade-up" id="rights">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h2>Your Rights</h2>
-          </div>
-          <p class="sec-sub">Depending on your location, you may have the following data protection rights:</p>
-          <div class="rights-grid">
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Right to be Informed</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Right of Access</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Right of Rectification</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>Right to Erasure</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>Right to Restrict Processing</div>
-            <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>Right to Opt Out of Marketing</div>
-          </div>
-        </section>
-
-        <!-- 11. CONSENT -->
-        <section class="sec fade-up" id="consent">
-          <div class="sec-header">
-            <div class="sec-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h2>Consent</h2>
-          </div>
-          <div class="blockquote-box">
-            <blockquote>"By accessing, browsing, or using the Athenura website, services, or communications, you acknowledge that you have read, understood, and consent to this Privacy Policy."</blockquote>
-            <p>You consent to the collection and use of information as described herein. Continued use of the website or services after any updates to this policy constitutes acceptance of the revised terms.</p>
-          </div>
-        </section>
-
-        
-
-      </main>
-    </div>
+          <div class="orbit-dot d1"></div>
+          <div class="orbit-dot d2"></div>
+          <div class="orbit-dot d3"></div>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-wrapper" id="contact">
-    <div class="cta-box fade-up">
-      <div class="cta-text">
-        <h3>Have Privacy Concerns?</h3>
-        <p>If you have any questions about this Privacy Policy, please contact our data protection officer.</p>
-      </div>
-      <div class="cta-btns">
-        <a href="mailto:official@athenura.in" class="btn btn-teal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email Privacy Team
-        </a>
-        <button class="btn btn-dark" id="download-pdf">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          Download PDF
-        </button>
+  <!-- MAIN CONTENT -->
+  <div id="pdf-content">
+
+    <div class="main-wrapper">
+      <div class="layout-box">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <p class="toc-label">TABLE OF CONTENTS</p>
+          <nav class="toc-nav">
+            <a href="#intro" class="toc-link active" data-section="intro">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
+              <span class="toc-text">Introduction</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#collect" class="toc-link" data-section="collect">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+              <span class="toc-text">Information We Collect</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#use" class="toc-link" data-section="use">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></span>
+              <span class="toc-text">How We Use Data</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#security" class="toc-link" data-section="security">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              <span class="toc-text">Data Security</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#rights" class="toc-link" data-section="rights">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <span class="toc-text">Your Rights</span>
+              <span class="toc-arrow">›</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+          <!-- INTRODUCTION -->
+          <section class="sec fade-up" id="intro">
+            <h2 class="sec-plain-title">Introduction</h2>
+            <p>At Athenura, your privacy is our top priority. We believe in transparency and want you to understand how we handle your information. This Privacy Policy explains our practices regarding the collection, use, and disclosure of personal information we receive from users of our platform and services.</p>
+            <p>By using our services, you agree to the collection and use of information in accordance with this policy. We regularly review and update our privacy practices to ensure they meet the highest standards of data protection.</p>
+          </section>
+
+          <!-- INFORMATION WE COLLECT -->
+          <section class="sec fade-up" id="collect">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h2>Information We Collect</h2>
+            </div>
+            <p class="sec-sub">We collect several types of information to provide and improve our service to you:</p>
+            <div class="cards-grid">
+              <div class="info-card">
+                <h4>Personal Data</h4>
+                <ul>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Name and contact details</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Billing and payment info</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Professional profile data</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <h4>Usage Data</h4>
+                <ul>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>IP addresses and browser types</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Pages visited and time spent</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Device identifiers</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- HOW WE USE DATA -->
+          <section class="sec fade-up" id="use">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+              </div>
+              <h2>How We Use Your Data</h2>
+            </div>
+            <p class="sec-sub">Athenura uses the collected data for various purposes, all aimed at enhancing your experience and maintaining our service quality:</p>
+            <ol class="num-list">
+              <li>
+                <span class="num">01.</span>
+                <div><strong>To provide and maintain our Service</strong><p>Ensuring the platform functions smoothly and handling user support requests effectively.</p></div>
+              </li>
+              <li>
+                <span class="num">02.</span>
+                <div><strong>To notify you about changes</strong><p>Keeping you informed about updates to our services, terms, or privacy policy.</p></div>
+              </li>
+              <li>
+                <span class="num">03.</span>
+                <div><strong>To provide customer care and support</strong><p>Helping you resolve technical issues and answering questions about your account.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- DATA SECURITY -->
+          <section class="sec fade-up" id="security">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h2>Data Security</h2>
+            </div>
+            <div class="blockquote-box">
+              <blockquote>"The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure."</blockquote>
+              <p>We use industry-standard encryption (AES-256), secure socket layer (SSL) technology, and multi-factor authentication (MFA) to protect your information. Our security protocols are audited annually by independent third-party experts.</p>
+            </div>
+          </section>
+
+          <!-- YOUR RIGHTS -->
+          <section class="sec fade-up" id="rights">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h2>Your Rights</h2>
+            </div>
+            <p class="sec-sub">Depending on your location, you may have the following data protection rights:</p>
+            <div class="rights-grid">
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Right of access</div>
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Right of rectification</div>
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>Right to erasure</div>
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>Right to restrict processing</div>
+            </div>
+          </section>
+
+        </main>
       </div>
     </div>
-  </div>
 
-</div><!-- end #pdf-content -->
+    <!-- CTA -->
+    <div class="cta-wrapper" id="contact">
+      <div class="cta-box fade-up">
+        <div class="cta-text">
+          <h3>Have Privacy Concerns?</h3>
+          <p>If you have any questions about this Privacy Policy, please contact our data protection officer.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="mailto:privacy@athenura.com" class="btn btn-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Privacy Team
+          </a>
+          <button class="btn btn-dark" id="download-pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Download PDF
+          </button>
+        </div>
+      </div>
+    </div>
 
+  </div><!-- end #pdf-content -->
 
 <footer class="athenura-footer">
   <div class="footer-container">
-
     <div class="footer-col branding">
       <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
       <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
       <h4 class="follow-us-text">Follow Us</h4>
       <div class="social-links">
-        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/athenura.in" class="social-icon">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-          </svg>
-        </a>
-        <a href="https://x.com/athenura_in" class="social-icon">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-          </svg>
-        </a>
-        <a href="https://athenura.medium.com" class="social-icon">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"></path>
-          </svg>
-        </a>
+        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        <a href="https://x.com/athenura_in?s=20" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
       </div>
     </div>
-
     <div class="footer-col">
       <h3>Company</h3>
       <ul>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="program.html">Internship Program</a></li>
-        <li><a href="how-it-works.html">How it works</a></li>
-        <li><a href="collages.html">Collages</a></li>
-        <li><a href="why-us.html">Why Us</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Resource</h3>
-      <ul>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Internship Program</a></li>
         <li><a href="internship-policy.html">Internship Policy</a></li>
         <li><a href="certifications.html">Certification & Benefits</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
       </ul>
     </div>
-
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Custom Software Development</a></li>
+        <li><a href="#">Web Application Development</a></li>
+        <li><a href="#">Website Maintenance</a></li>
+        <li><a href="#">Software Testing & QA</a></li>
+        <li><a href="#">Business Automation Solutions</a></li>
+      </ul>
+    </div>
     <div class="footer-col">
       <h3>Contact Us</h3>
       <div class="info-row">
-        <div class="white-circle email-icon">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
-          </svg>
-        </div>
-        <div class="info-text">
-          <span>EMAIL</span>
-          <a href="mailto:official@athenura.in">official@athenura.in</a>
-        </div>
+        <div class="white-circle email-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+        <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
       </div>
       <div class="info-row">
-        <div class="white-circle phone-icon">
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1);">
-            <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
-          </svg>
-        </div>
-        <div class="info-text">
-          <span>PHONE</span>
-          <a href="tel:+919835051934">+91 98350 51934</a>
-        </div>
+        <div class="white-circle phone-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
+        <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
       </div>
     </div>
-
     <div class="footer-col">
       <h3>Location</h3>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
       <p class="address">Sector 62, Noida, Uttar Pradesh</p>
     </div>
-
   </div>
   <div class="footer-bottom-bar">
     <div class="bottom-content">
@@ -482,7 +297,6 @@
     </div>
   </div>
 </footer>
-
 
 <script>
   function toggleMenu() {
