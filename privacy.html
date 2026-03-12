@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>athenura-websites</title>
+  <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
+  <link rel="stylesheet" href="css/privacy.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+  </a>
+
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="program.html">Internship</a>
+    <a href="about.html">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#why">Why Us</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="#contact" class="contact-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      Contact Us
+    </a>
+    <button class="signin">Sign In</button>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <div class="hero-wrapper">
+    <section class="hero" id="page-top">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-text">
+        <nav class="breadcrumb">
+          <a href="#">Home</a>
+          <span>›</span>
+          <span>Privacy Policy</span>
+        </nav>
+        <h1 class="hero-title">Privacy Policy</h1>
+        <p class="hero-sub">Last Updated: January 25, 2026. This policy describes how Athenura collects, uses, and protects your personal information.</p>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          GDPR Compliant &nbsp;·&nbsp; AES-256 Encrypted &nbsp;·&nbsp; MFA Protected
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="shield-ring">
+          <div class="shield-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="orbit-dot d1"></div>
+          <div class="orbit-dot d2"></div>
+          <div class="orbit-dot d3"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="pdf-content">
+
+    <div class="main-wrapper">
+      <div class="layout-box">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <p class="toc-label">TABLE OF CONTENTS</p>
+          <nav class="toc-nav">
+            <a href="#intro" class="toc-link active" data-section="intro">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
+              <span class="toc-text">Introduction</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#collect" class="toc-link" data-section="collect">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
+              <span class="toc-text">Information We Collect</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#use" class="toc-link" data-section="use">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></span>
+              <span class="toc-text">How We Use Data</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#security" class="toc-link" data-section="security">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              <span class="toc-text">Data Security</span>
+              <span class="toc-arrow">›</span>
+            </a>
+            <a href="#rights" class="toc-link" data-section="rights">
+              <span class="toc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <span class="toc-text">Your Rights</span>
+              <span class="toc-arrow">›</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+          <!-- INTRODUCTION -->
+          <section class="sec fade-up" id="intro">
+            <h2 class="sec-plain-title">Introduction</h2>
+            <p>At Athenura, your privacy is our top priority. We believe in transparency and want you to understand how we handle your information. This Privacy Policy explains our practices regarding the collection, use, and disclosure of personal information we receive from users of our platform and services.</p>
+            <p>By using our services, you agree to the collection and use of information in accordance with this policy. We regularly review and update our privacy practices to ensure they meet the highest standards of data protection.</p>
+          </section>
+
+          <!-- INFORMATION WE COLLECT -->
+          <section class="sec fade-up" id="collect">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h2>Information We Collect</h2>
+            </div>
+            <p class="sec-sub">We collect several types of information to provide and improve our service to you:</p>
+            <div class="cards-grid">
+              <div class="info-card">
+                <h4>Personal Data</h4>
+                <ul>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Name and contact details</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Billing and payment info</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Professional profile data</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <h4>Usage Data</h4>
+                <ul>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>IP addresses and browser types</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Pages visited and time spent</li>
+                  <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Device identifiers</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- HOW WE USE DATA -->
+          <section class="sec fade-up" id="use">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+              </div>
+              <h2>How We Use Your Data</h2>
+            </div>
+            <p class="sec-sub">Athenura uses the collected data for various purposes, all aimed at enhancing your experience and maintaining our service quality:</p>
+            <ol class="num-list">
+              <li>
+                <span class="num">01.</span>
+                <div><strong>To provide and maintain our Service</strong><p>Ensuring the platform functions smoothly and handling user support requests effectively.</p></div>
+              </li>
+              <li>
+                <span class="num">02.</span>
+                <div><strong>To notify you about changes</strong><p>Keeping you informed about updates to our services, terms, or privacy policy.</p></div>
+              </li>
+              <li>
+                <span class="num">03.</span>
+                <div><strong>To provide customer care and support</strong><p>Helping you resolve technical issues and answering questions about your account.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- DATA SECURITY -->
+          <section class="sec fade-up" id="security">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h2>Data Security</h2>
+            </div>
+            <div class="blockquote-box">
+              <blockquote>"The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure."</blockquote>
+              <p>We use industry-standard encryption (AES-256), secure socket layer (SSL) technology, and multi-factor authentication (MFA) to protect your information. Our security protocols are audited annually by independent third-party experts.</p>
+            </div>
+          </section>
+
+          <!-- YOUR RIGHTS -->
+          <section class="sec fade-up" id="rights">
+            <div class="sec-header">
+              <div class="sec-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h2>Your Rights</h2>
+            </div>
+            <p class="sec-sub">Depending on your location, you may have the following data protection rights:</p>
+            <div class="rights-grid">
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Right of access</div>
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>Right of rectification</div>
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>Right to erasure</div>
+              <div class="right-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>Right to restrict processing</div>
+            </div>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-wrapper" id="contact">
+      <div class="cta-box fade-up">
+        <div class="cta-text">
+          <h3>Have Privacy Concerns?</h3>
+          <p>If you have any questions about this Privacy Policy, please contact our data protection officer.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="mailto:privacy@athenura.com" class="btn btn-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Privacy Team
+          </a>
+          <button class="btn btn-dark" id="download-pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Download PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end #pdf-content -->
+
+<footer class="athenura-footer">
+  <div class="footer-container">
+    <div class="footer-col branding">
+      <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
+      <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
+      <h4 class="follow-us-text">Follow Us</h4>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+        <a href="https://x.com/athenura_in?s=20" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Internship Program</a></li>
+        <li><a href="internship-policy.html">Internship Policy</a></li>
+        <li><a href="certifications.html">Certification & Benefits</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Custom Software Development</a></li>
+        <li><a href="#">Web Application Development</a></li>
+        <li><a href="#">Website Maintenance</a></li>
+        <li><a href="#">Software Testing & QA</a></li>
+        <li><a href="#">Business Automation Solutions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <div class="info-row">
+        <div class="white-circle email-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+        <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
+      </div>
+      <div class="info-row">
+        <div class="white-circle phone-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
+        <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
+      <p class="address">Sector 62, Noida, Uttar Pradesh</p>
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+    <div class="bottom-content">
+      <p>© 2026 Athenura. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    const btn = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('active');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const secs = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.toc-link');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 160) cur = s.id; });
+    links.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+    });
+  }, { passive: true });
+
+  document.getElementById('download-pdf').addEventListener('click', function () {
+    window.print();
+  });
+</script>
+
+</body>
+</html>

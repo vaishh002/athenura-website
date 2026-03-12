@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Athenura</title>
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/testimonials-footer.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/images/athenura-logo.png" alt="Athenura" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Courses</a></li>
+                <li><a href="testimonials.html">Wall of Love</a></li>
+                <li><a href="testimonials.html">Success Stories</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-login">Login</button>
+                <button class="btn-free-learning">Free Learning</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Real Stories, <span class="highlight">Real Success</span></h1>
+        <p>Join 1,200+ students who transformed their careers with Athenura. From career switches to senior promotions, our wall of love tells it all.</p>
+
+        <!-- Stats Card -->
+        <div class="stats-card">
+            <div class="rating-section">
+                <div class="rating-score">
+                    <h2>4.9/5</h2>
+                    <div class="stars">★★★★★</div>
+                    <p>Overall rating</p>
+                </div>
+                <div class="student-avatars">
+                    <div class="avatars">
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                    </div>
+                    <div class="verified-text">
+                        <strong>Verified Students</strong>
+                        <small>Based on 1,200+ reviews</small>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-share">Share Your Story</button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">All Stories</button>
+            <button class="tab-btn" data-filter="data-science">Data Science</button>
+            <button class="tab-btn" data-filter="ux-design">UI/UX Design</button>
+            <button class="tab-btn" data-filter="leadership">Leadership</button>
+            <button class="tab-btn" data-filter="marketing">Marketing</button>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid -->
+    <div class="testimonials-container">
+        <div class="testimonials-grid" id="testimonialsGrid">
+            <!-- Testimonial cards will be inserted here by JavaScript -->
+        </div>
+
+        <div class="load-more">
+            <button class="btn-load-more" id="loadMoreBtn">Load More Stories →</button>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to write your success<br>story?</h2>
+        <p>Join thousands of students who are already learning the skills they need to land their dream jobs.</p>
+        <div class="cta-buttons">
+            <button class="btn-secondary">Explore Courses</button>
+            <button class="btn-outline">Talk to an Advisor</button>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem;">No credit card required • Start your free learning journey</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="athenura-footer">
+        <div class="footer-container">
+            <div class="footer-col branding">
+                <div class="footer-logo-text">Athenura</div>
+                <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
+                <h4 class="follow-us-text">Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <defs>
+                                <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FD5949;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#D6249F;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#285AEB;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/athenura_in?s=20" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="program.html">Internship Program</a></li>
+                    <li><a href="internship-policy.html">Internship Policy</a></li>
+                    <li><a href="collages.html">Colleges</a></li>
+                    <li><a href="certifications.html">Certification & Benefits</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Custom Software Development</a></li>
+                    <li><a href="#">Web Application Development</a></li>
+                    <li><a href="#">Website Maintenance</a></li>
+                    <li><a href="#">Software Testing & QA</a></li>
+                    <li><a href="#">Business Automation Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 7l9 6 9-6"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-label">EMAIL</span>
+                        <strong>official@athenura.in</strong>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <span class="contact-label">PHONE</span>
+                        <strong>+91 98350 51934</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="100" loading="lazy" style="border:0; border-radius: 6px;"></iframe>
+                    <a href="https://maps.google.com/?q=Athenura+Sector+62+Noida" target="_blank" class="maps-link">
+                        Maps <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                    </a>
+                </div>
+                <p class="address">📍 Sector 62, Noida, Uttar Pradesh</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="bottom-content">
+                <p>© 2026 Athenura. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/testimonials.js"></script>
+</body>
+</html>

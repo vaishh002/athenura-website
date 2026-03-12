@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>athenura-websites</title>
+  <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
+  <link rel="stylesheet" href="css/program.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+    </a>
+    <div class="nav-right">
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="program.html" class="active">Internship</a>
+        <a href="about.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="contact">Contact</a>
+      </nav>
+     <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+    </div>
+  </div>
+</header>
+
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+<div class="modal" id="modal">
+  <button class="modal-close" onclick="closeModal()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="modal-inner" id="modalInner"></div>
+</div>
+
+<section class="domain-section">
+
+<div class="hero">
+
+  <!-- Background image -->
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-grad"></div>
+  <div class="hero-dots"></div>
+
+  <!-- LEFT TEXT -->
+  <div class="hero-text">
+
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      500+ Internships Available
+    </div>
+
+    <h1 class="hero-title">
+      Explore Our <br>
+      <span class="hero-accent">Internship</span><br>
+      <span class="hero-accent">Program.</span>
+    </h1>
+
+    <p class="hero-desc">
+      Explore top internship opportunities across India. Find roles that match your skills, build real experience, and kickstart your professional journey today.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Internships</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">200+</span>
+        <span class="stat-label">Companies</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">10k+</span>
+        <span class="stat-label">Students Placed</span>
+      </div>
+    </div>
+
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.querySelector('.filter-section').scrollIntoView({behavior:'smooth'})">
+        Explore Internships &rarr;
+      </button>
+      <button class="btn-secondary" onclick="window.location.href='apply-now.html'">Apply Now</button>
+    </div>
+
+    <!-- ✅ TRUST BADGES -->
+    <div class="hero-trust">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span>Verified Companies</span>
+      </div>
+      <div class="trust-dot"></div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+        </svg>
+        <span>Certificate on Completion</span>
+      </div>
+      <div class="trust-dot"></div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Flexible Duration</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="hero-right">
+
+    <!-- ✅ CENTER IMAGE FRAME with hover -->
+    <div class="hero-img-frame">
+      <img
+        src="https://i.pinimg.com/736x/93/92/f2/9392f2ed429ee85de25e9d5bd5fa122f.jpg"
+        alt="Internship"
+        class="hero-img"
+      />
+      <div class="hero-img-shimmer"></div>
+      <div class="hero-img-glow"></div>
+    </div>
+
+    <!-- Pill tags -->
+    <div class="htag htag-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      </svg>
+      HTML / CSS
+    </div>
+
+    <div class="htag htag-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="20" x2="18" y2="10"/>
+        <line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/>
+      </svg>
+      Data Science
+    </div>
+
+    <div class="htag htag-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+      UI / UX
+    </div>
+
+    <div class="htag htag-4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+        <polyline points="16 7 22 7 22 13"/>
+      </svg>
+      Marketing
+    </div>
+
+    <!-- Language Icons -->
+    <!-- Python -->
+    <div class="lang-icon lang-py" title="Python">
+      <svg viewBox="0 0 128 128">
+        <linearGradient id="pyA" x1="70.252" y1="1237.476" x2="170.659" y2="1098.827" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/>
+        </linearGradient>
+        <linearGradient id="pyB" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/>
+        </linearGradient>
+        <path fill="url(#pyA)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69 0-2.604 2.073-4.721 4.633-4.721z"/>
+        <path fill="url(#pyB)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/>
+      </svg>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="lang-icon lang-js" title="JavaScript">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#F7DF1E"/>
+        <path d="M67.1 75.8c1.2 2 2.9 3.5 5.8 3.5 2.4 0 4-.9 4-2.9 0-2-.8-2.7-4.5-4.3l-1.5-.7c-5.7-2.4-9.5-5.5-9.5-12 0-6 4.5-10.5 11.5-10.5 5 0 8.6 1.7 11.2 6.3l-6.1 3.9c-1.4-2.4-2.8-3.3-5.1-3.3s-3.7 1.3-3.7 3c0 2.1.9 2.9 4.4 4.3l1.5.7c6.7 2.9 10.5 5.8 10.5 12.4 0 7.1-5.6 11.1-13.1 11.1-7.3 0-12-3.5-14.3-8l6.4-3.5zm-26 .6c.9 1.5 1.7 2.8 3.5 2.8 1.8 0 2.9-.7 2.9-3.3V49.1h7.9V76c0 5.5-3.2 8-7.9 8-4.2 0-6.7-2.2-7.9-4.8l1.5-.8z" fill="#000"/>
+      </svg>
+    </div>
+
+    <!-- C++ -->
+    <div class="lang-icon lang-cpp" title="C++">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#00599C"/>
+        <path fill="#fff" d="M64 8C33.6 8 8 33.6 8 64s25.6 56 56 56 56-25.6 56-56S94.4 8 64 8zm-7.5 79c-12.1 0-21.9-9.8-21.9-21.9S44.4 43.2 56.5 43.2c6.9 0 13.2 3.2 17.4 8.2l-7.2 7.2C64.5 55.7 60.6 54 56.5 54c-6.1 0-11 5-11 11s4.9 11 11 11c4.1 0 7.8-1.7 10.4-4.5l7.2 7.2C70 83.8 63.4 87 56.5 87zm42-23h-5v5h-5v-5h-5v-5h5v-5h5v5h5v5zm16 0h-5v5h-5v-5h-5v-5h5v-5h5v5h5v5z"/>
+      </svg>
+    </div>
+
+    <!-- React -->
+    <div class="lang-icon lang-react" title="React">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#20232a"/>
+        <circle cx="64" cy="64" r="11.4" fill="#61DAFB"/>
+        <g fill="none" stroke="#61DAFB" stroke-width="5">
+          <ellipse cx="64" cy="64" rx="51" ry="19.5"/>
+          <ellipse cx="64" cy="64" rx="51" ry="19.5" transform="rotate(60 64 64)"/>
+          <ellipse cx="64" cy="64" rx="51" ry="19.5" transform="rotate(120 64 64)"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Git -->
+   <!-- <div class="lang-icon lang-git" title="Git">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#F05133"/>
+        <path fill="#fff" d="M119.8 57.9L70.1 8.2a8.4 8.4 0 00-11.8 0L46.9 19.6l14.9 14.9a9.9 9.9 0 0112.6 12.6l14.3 14.4a9.9 9.9 0 11-5.9 5.9l-13.4-13.4v35.2a9.9 9.9 0 11-8.1 0V52.8A9.9 9.9 0 0153.9 40L39.2 25.3l-31 31a8.4 8.4 0 000 11.9l49.7 49.7a8.4 8.4 0 0011.8 0l49.8-49.7a8.4 8.4 0 00.3-11.3z"/>
+      </svg>
+    </div>  -->
+
+    <!-- Node.js -->
+    <div class="lang-icon lang-node" title="Node.js">
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#fff"/>
+        <path fill="#83CD29" d="M64 8.3L11.3 39.2v61.6L64 131.7l52.7-30.9V39.2z"/>
+        <path fill="#fff" d="M64 21.7l39.5 23v46L64 113.7 24.5 90.7v-46z"/>
+        <path fill="#83CD29" d="M64 40.8v46.4L90.5 72V57.2z"/>
+        <path fill="#404137" d="M64 40.8L37.5 57.2V72L64 87.2z"/>
+      </svg>
+    </div>
+
+  </div>
+</div>
+
+<div class="features-section">
+
+  <!-- Background decoration -->
+  <div class="fs-bg-circle fs-bg-circle-1"></div>
+  <div class="fs-bg-circle fs-bg-circle-2"></div>
+
+  <!-- Section Header -->
+  <div class="fs-header">
+    <h2 class="fs-title">An Internship That<br><span class="fs-title-accent">Builds Careers.</span></h2>
+    <p class="fs-subtitle">Master the software development lifecycle, from architecture to deployment, over a comprehensive 3-8 month journey.</p>
+  </div>
+
+  <!-- Main Row: Big Card + Side Cards -->
+  <div class="fs-main-row">
+
+    <!-- LEFT: Big Feature Card -->
+    <div class="fs-big-card fs-reveal">
+      <div class="fs-big-top">
+        <div class="fs-terminal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        </div>
+        <span class="fs-live-badge">
+          <span class="fs-live-dot"></span>
+          LIVE PRODUCTION
+        </span>
+      </div>
+
+      <!-- Code window floating -->
+      <div class="fs-code-window">
+        <div class="fs-code-header">
+          <span class="fs-code-file">pipeline.yaml</span>
+          <span class="fs-code-branch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+            master
+          </span>
+        </div>
+        <div class="fs-code-body">
+          <div class="fs-code-line">
+            <span class="fs-dot-green"></span>
+            <span class="fs-code-label">Build_Frontend...</span>
+            <span class="fs-code-status success">Success</span>
+          </div>
+          <div class="fs-code-line fs-code-line-2">
+            <span class="fs-dot-green"></span>
+            <span class="fs-code-label">Tests...</span>
+            <span class="fs-code-status success">Passed (14/14)</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="fs-big-title">Industrial-Grade Project Work</h3>
+      <p class="fs-big-desc">
+        You won't build "Toy Apps". You will architect scalable solutions.
+        Focus on <span class="fs-highlight">System Design</span>,
+        <span class="fs-highlight">Security</span>, and
+        <span class="fs-highlight">Optimization</span>.
+      </p>
+
+      <ul class="fs-checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>CI/CD Pipeline Implementation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Microservices Architecture</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Agile &amp; Jira Workflows</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: Stacked side cards -->
+    <div class="fs-side-stack">
+
+      <!-- Duration Card -->
+      <div class="fs-duration-card fs-reveal fs-reveal-delay-1">
+        <div class="fs-dur-top">
+          <div class="fs-dur-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="fs-dur-label">DURATION</span>
+        </div>
+        <div class="fs-dur-number">3 - 8 Months</div>
+        <p class="fs-dur-desc">Deep-dive mastery. Remote/Hybrid flexible options.</p>
+        <div class="fs-dur-bar">
+          <div class="fs-dur-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- LOR Card -->
+      <div class="fs-lor-card fs-reveal fs-reveal-delay-2">
+        <div class="fs-lor-top">
+          <h4 class="fs-lor-title">Performance LOR</h4>
+          <div class="fs-lor-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+        </div>
+        <p class="fs-lor-sub">Signed by CEO</p>
+        <p class="fs-lor-desc">A detailed letter validating your specific contributions, not a generic template.</p>
+        <div class="fs-lor-progress">
+          <div class="fs-lor-progress-fill"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Career Acceleration Dark Banner -->
+  <div class="fs-career-banner fs-reveal fs-reveal-delay-3">
+    <div class="fs-career-left">
+      <div class="fs-career-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <div>
+        <h4 class="fs-career-title">Career Acceleration Module</h4>
+        <p class="fs-career-desc">We prepare you for the job market. While we don't guarantee a job, we guarantee you'll be ready for one.</p>
+      </div>
+    </div>
+    <div class="fs-career-tags">
+      <span class="fs-career-tag">ATS Resume Building</span>
+      <span class="fs-career-tag">Mock Tech Interviews</span>
+      <span class="fs-career-tag">GitHub Portfolio Polish</span>
+    </div>
+  </div>
+
+  <!-- Bottom 4-icon row -->
+  <div class="fs-perks-row fs-reveal fs-reveal-delay-4">
+    <div class="fs-perk">
+      <div class="fs-perk-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+      </div>
+      <span class="fs-perk-title">Modern Stack</span>
+      <span class="fs-perk-sub">Latest tech only</span>
+    </div>
+    <div class="fs-perk">
+      <div class="fs-perk-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <span class="fs-perk-title">Peer Coding</span>
+      <span class="fs-perk-sub">Collab with talent</span>
+    </div>
+    <div class="fs-perk">
+      <div class="fs-perk-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <span class="fs-perk-title">Soft Skills</span>
+      <span class="fs-perk-sub">Leadership training</span>
+    </div>
+    <div class="fs-perk">
+      <div class="fs-perk-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <span class="fs-perk-title">Alumni Club</span>
+      <span class="fs-perk-sub">Lifetime access</span>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="filter-section" id="internships">
+  <div class="filters">
+    <button class="f-btn active" onclick="filterCards('all', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+      </svg>
+      All
+    </button>
+    <button class="f-btn" onclick="filterCards('tech', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+      Tech
+    </button>
+    <button class="f-btn" onclick="filterCards('design', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+        <circle cx="8.5" cy="7.5" r="1" fill="currentColor"/>
+        <circle cx="13.5" cy="6.5" r="1" fill="currentColor"/>
+        <circle cx="17.5" cy="10.5" r="1" fill="currentColor"/>
+        <circle cx="6.5" cy="12.5" r="1" fill="currentColor"/>
+      </svg>
+      Design
+    </button>
+    <button class="f-btn" onclick="filterCards('marketing', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+        <polyline points="16 7 22 7 22 13"/>
+      </svg>
+      Marketing
+    </button>
+    <button class="f-btn" onclick="filterCards('business', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      Business
+    </button>
+  </div>
+</div>
+
+<div class="card-grid" id="cardGrid">
+
+  <!-- WEB DEVELOPMENT -->
+  <article class="card" data-cat="tech" data-dur="3" data-mode="remote" data-diff="beginner"
+    style="--delay:0s; --ic:#0ea5a4; --icbg:rgba(14,165,164,0.10)"
+    data-title="Web Development" data-badge="Tech" data-badge-class="tech"
+    data-duration-label="1–3 Months" data-mode-label="Remote" data-diff-label="Beginner"
+    data-popular=""
+    data-desc="Build real websites, dashboards, and responsive applications using modern tools and frameworks. Work on live projects with industry mentors."
+    data-modules="HTML, CSS, JavaScript Fundamentals|Frontend Framework Basics|Backend Integration Concepts|Database Handling|Git & Version Control|Website Deployment"
+    data-tags="HTML/CSS|JavaScript|Git|Deployment">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(14,165,164,0.16),rgba(14,165,164,0.04))">
+        <div class="card-icon-box" style="color:#0ea5a4;border-color:rgba(14,165,164,0.25)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#0a7070;background:rgba(14,165,164,0.12);border-color:rgba(14,165,164,0.25)">WEB DEV</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Web Development</h3>
+        <p class="card-desc">Build real websites, dashboards, and responsive applications using modern tools and frameworks.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>1–3 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+          <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DIGITAL MARKETING -->
+  <article class="card" data-cat="marketing" data-dur="3" data-mode="remote" data-diff="beginner"
+    style="--delay:.06s; --ic:#f472b6; --icbg:rgba(244,114,182,0.10)"
+    data-title="Digital Marketing" data-badge="Marketing" data-badge-class="marketing"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+    data-desc="Drive brand growth through data-driven campaigns, SEO strategies, and performance analytics on real client projects."
+    data-modules="Search Engine Optimization (SEO)|Social Media Marketing|Content Strategy|Lead Generation|Google Tools & Analytics|Campaign Planning"
+    data-tags="SEO|Analytics|Campaign Mgmt">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(244,114,182,0.18),rgba(244,114,182,0.04))">
+        <div class="card-icon-box" style="color:#f472b6;border-color:rgba(244,114,182,0.25)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#c2410c;background:rgba(251,146,60,0.12);border-color:rgba(251,146,60,0.25)">MARKETING</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Digital Marketing</h3>
+        <p class="card-desc">Drive brand growth through data-driven campaigns, SEO strategies, and performance analytics.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+          <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- HR & RECRUITMENT -->
+  <article class="card" data-cat="business" data-dur="3" data-mode="offline" data-diff="beginner"
+    style="--delay:.12s; --ic:#f0c040; --icbg:rgba(240,192,64,0.10)"
+    data-title="HR & Recruitment" data-badge="HR" data-badge-class="business"
+    data-duration-label="3 / 6 Months" data-mode-label="In-Office" data-diff-label="Beginner"
+    data-desc="Gain hands-on exposure to real-world HR practices including recruitment, candidate coordination, and employee engagement."
+    data-modules="Candidate Sourcing|Interview Coordination|Internship Lifecycle Management|HR Documentation|Employer Branding"
+    data-tags="Communication|Organization|Confidentiality">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(240,192,64,0.18),rgba(240,192,64,0.04))">
+        <div class="card-icon-box" style="color:#d97706;border-color:rgba(240,192,64,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#854d0e;background:rgba(234,179,8,0.12);border-color:rgba(234,179,8,0.28)">HR</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">HR &amp; Recruitment</h3>
+        <p class="card-desc">Gain hands-on exposure to real-world HR practices including recruitment and employee engagement.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>In-Office</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+         <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- GRAPHIC DESIGN -->
+  <article class="card" data-cat="design" data-dur="3" data-mode="remote" data-diff="beginner"
+    style="--delay:.18s; --ic:#c084fc; --icbg:rgba(192,132,252,0.10)"
+    data-title="Graphic Design" data-badge="Design" data-badge-class="design"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+    data-desc="Shape the visual identity of a brand by creating compelling designs for social media, campaigns, and branding kits using Photoshop, Illustrator, Canva and Figma."
+    data-modules="Social Media Creatives|Branding Kits|Posters & Banners|UI Mockups|Marketing Visuals"
+    data-tags="Photoshop|Illustrator|Canva|Figma">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(192,132,252,0.18),rgba(192,132,252,0.04))">
+        <div class="card-icon-box" style="color:#9333ea;border-color:rgba(192,132,252,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#7e22ce;background:rgba(192,132,252,0.12);border-color:rgba(192,132,252,0.28)">DESIGN</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Graphic Design</h3>
+        <p class="card-desc">Shape the visual identity of a brand by creating compelling designs for social media and campaigns.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+         <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- DATA SCIENCE -->
+  <article class="card" data-cat="tech" data-dur="4" data-mode="remote" data-diff="advanced"
+    style="--delay:.24s; --ic:#60a5fa; --icbg:rgba(96,165,250,0.10)"
+    data-title="Data Science & Analytics" data-badge="Tech" data-badge-class="tech"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Advanced"
+    data-desc="Transform raw data into actionable insights using Python and visualization tools. Work on real datasets and build dashboards for business decisions."
+    data-modules="Python for Data Analysis|Data Cleaning|Visualization|Basic Machine Learning|Dashboard Creation"
+    data-tags="Python|Visualization|ML Basics">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(96,165,250,0.18),rgba(96,165,250,0.04))">
+        <div class="card-icon-box" style="color:#2563eb;border-color:rgba(96,165,250,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#1d4ed8;background:rgba(96,165,250,0.12);border-color:rgba(96,165,250,0.28)">DATA SCIENCE</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Data Science &amp; Analytics</h3>
+        <p class="card-desc">Transform raw data into actionable insights to support strategic business decision-making.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Advanced</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+        <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- UI/UX DESIGN -->
+  <article class="card" data-cat="design" data-dur="3" data-mode="remote" data-diff="beginner"
+    style="--delay:.30s; --ic:#38bdf8; --icbg:rgba(56,189,248,0.10)"
+    data-title="UI / UX Design" data-badge="UI/UX" data-badge-class="design"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+    data-desc="Design intuitive and user-centered digital experiences through wireframing, prototyping, and user research using Figma and Adobe XD."
+    data-modules="Wireframing & Prototyping|User Research & Testing|Figma / Adobe XD|Information Architecture|Interaction Design"
+    data-tags="Figma|Prototyping|User Research|Interaction Design">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(56,189,248,0.18),rgba(56,189,248,0.04))">
+        <div class="card-icon-box" style="color:#0284c7;border-color:rgba(56,189,248,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#0284c7;background:rgba(56,189,248,0.12);border-color:rgba(56,189,248,0.28)">UI/UX DESIGN</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">UI / UX Design</h3>
+        <p class="card-desc">Design intuitive and user-centered digital experiences through wireframing, prototyping, and user research.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+          <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- FRONTEND DEVELOPMENT -->
+  <article class="card extra-card" data-cat="tech" data-dur="3" data-mode="remote" data-diff="pro"
+    style="--delay:.36s; --ic:#4ade80; --icbg:rgba(74,222,128,0.10)"
+    data-title="Frontend Development" data-badge="Tech" data-badge-class="tech"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Pro"
+    data-desc="Build visually engaging and high-performance user interfaces using modern web technologies like React and Tailwind CSS."
+    data-modules="HTML, CSS Advanced|JavaScript ES6+|React.js Fundamentals|Tailwind CSS|Responsive Design"
+    data-tags="React.js|Tailwind CSS|JavaScript">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(74,222,128,0.18),rgba(74,222,128,0.04))">
+        <div class="card-icon-box" style="color:#16a34a;border-color:rgba(74,222,128,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#15803d;background:rgba(74,222,128,0.12);border-color:rgba(74,222,128,0.28)">WEB DEV</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Frontend Development</h3>
+        <p class="card-desc">Build visually engaging and high-performance user interfaces using modern web technologies like React.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Pro</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+         <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- BACKEND DEVELOPMENT -->
+  <article class="card extra-card" data-cat="tech" data-dur="6" data-mode="remote" data-diff="pro"
+    style="--delay:.42s; --ic:#fb923c; --icbg:rgba(251,146,60,0.10)"
+    data-title="Backend Development" data-badge="Tech" data-badge-class="tech"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Pro"
+    data-desc="Power digital applications by building robust server-side logic, REST APIs, and managing secure databases using Node.js and Express."
+    data-modules="Node.js & Express|REST API Development|MongoDB & SQL Databases|Authentication & Security|Server Deployment"
+    data-tags="Node.js|Express.js|MongoDB/SQL">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(251,146,60,0.18),rgba(251,146,60,0.04))">
+        <div class="card-icon-box" style="color:#ea580c;border-color:rgba(251,146,60,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#c2410c;background:rgba(251,146,60,0.12);border-color:rgba(251,146,60,0.28)">BACKEND</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Backend Development</h3>
+        <p class="card-desc">Power digital applications by building robust server-side logic, APIs, and managing secure databases.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Pro</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+        <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- FULL STACK -->
+  <article class="card extra-card" data-cat="tech" data-dur="6" data-mode="remote" data-diff="advanced"
+    style="--delay:.48s; --ic:#a78bfa; --icbg:rgba(167,139,250,0.10)"
+    data-title="Full Stack Development" data-badge="Tech" data-badge-class="tech"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Advanced"
+    data-desc="Master the entire web development lifecycle — client-side interfaces and server-side logic. Deploy complete full-stack applications from scratch."
+    data-modules="Frontend with React|Backend with Node & Express|Database Design|API Integration|Full Project Deployment"
+    data-tags="Frontend|Backend|Database Mgmt">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(167,139,250,0.18),rgba(167,139,250,0.04))">
+        <div class="card-icon-box" style="color:#7c3aed;border-color:rgba(167,139,250,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#7c3aed;background:rgba(167,139,250,0.12);border-color:rgba(167,139,250,0.28)">FULL STACK</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Full Stack Development</h3>
+        <p class="card-desc">Master the entire web development lifecycle — client-side interfaces and server-side logic both.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Advanced</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+         <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- MERN STACK -->
+  <article class="card extra-card" data-cat="tech" data-dur="6" data-mode="remote" data-diff="pro"
+    style="--delay:.54s; --ic:#34d399; --icbg:rgba(52,211,153,0.10)"
+    data-title="MERN Stack Development" data-badge="Tech" data-badge-class="tech"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Pro"
+    data-desc="Specialize in full-stack JavaScript development using MongoDB, Express, React, and Node.js. Build complete JS-powered applications from scratch."
+    data-modules="MongoDB & Mongoose|Express REST APIs|React State Management|Node.js Backend|Full App Deployment"
+    data-tags="MongoDB|Express|React|Node">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(52,211,153,0.18),rgba(52,211,153,0.04))">
+        <div class="card-icon-box" style="color:#059669;border-color:rgba(52,211,153,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#065f46;background:rgba(52,211,153,0.12);border-color:rgba(52,211,153,0.28)">MERN</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">MERN Stack Development</h3>
+        <p class="card-desc">Specialize in full-stack JavaScript development using MongoDB, Express, React, and Node.js.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Pro</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+          <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- SOCIAL MEDIA -->
+  <article class="card extra-card" data-cat="marketing" data-dur="3" data-mode="remote" data-diff="beginner"
+    style="--delay:.60s; --ic:#fb7185; --icbg:rgba(251,113,133,0.10)"
+    data-title="Social Media Management" data-badge="Marketing" data-badge-class="marketing"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+    data-desc="Build online communities and manage brand presence through engaging content, community management, and strategic planning on Instagram, LinkedIn."
+    data-modules="Platform Strategy (Instagram, LinkedIn)|Content Calendar Planning|Community Engagement|Analytics & Reporting|Brand Voice Development"
+    data-tags="Content Planning|Community Mgmt|Copywriting">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(251,113,133,0.18),rgba(251,113,133,0.04))">
+        <div class="card-icon-box" style="color:#e11d48;border-color:rgba(251,113,133,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#be123c;background:rgba(251,113,133,0.12);border-color:rgba(251,113,133,0.28)">MARKETING</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Social Media Mgmt</h3>
+        <p class="card-desc">Build online communities and manage brand presence through engaging content and strategic planning.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+       <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CONTENT WRITING -->
+  <article class="card extra-card" data-cat="marketing" data-dur="3" data-mode="remote" data-diff="beginner"
+    style="--delay:.66s; --ic:#fbbf24; --icbg:rgba(251,191,36,0.10)"
+    data-title="Content Writing" data-badge="Marketing" data-badge-class="marketing"
+    data-duration-label="3 / 6 Months" data-mode-label="Remote" data-diff-label="Beginner"
+    data-desc="Craft value-driven content including blogs, articles, and marketing copy that aligns with brand voice. Work on real client briefs from day one."
+    data-modules="Blog & Article Writing|SEO Content Strategy|Copywriting Techniques|Research & Fact-Checking|Brand Voice Alignment"
+    data-tags="Storytelling|SEO Writing|Research">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(251,191,36,0.18),rgba(251,191,36,0.04))">
+        <div class="card-icon-box" style="color:#d97706;border-color:rgba(251,191,36,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#92400e;background:rgba(251,191,36,0.12);border-color:rgba(251,191,36,0.28)">CONTENT</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Content Writing</h3>
+        <p class="card-desc">Craft value-driven content including blogs, articles, and marketing copy that aligns with brand voice.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 / 6 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Beginner</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+      <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- VIDEO EDITING -->
+  <article class="card extra-card" data-cat="design" data-dur="3" data-mode="remote" data-diff="pro"
+    style="--delay:.72s; --ic:#f87171; --icbg:rgba(248,113,113,0.10)"
+    data-title="Video Editing" data-badge="Design" data-badge-class="design"
+    data-duration-label="3 Months" data-mode-label="Remote" data-diff-label="Pro"
+    data-desc="Produce high-quality video content for marketing and storytelling using Premiere Pro and DaVinci Resolve. Build a professional video portfolio."
+    data-modules="Premiere Pro / DaVinci Resolve|Video Storytelling|Color Grading Techniques|Motion Graphics Basics|Social Media Video Formats"
+    data-tags="Premiere Pro|DaVinci Resolve|Color Grading">
+    <div class="card-inner-clip">
+      <div class="card-banner" style="background:linear-gradient(135deg,rgba(248,113,113,0.18),rgba(248,113,113,0.04))">
+        <div class="card-icon-box" style="color:#dc2626;border-color:rgba(248,113,113,0.28)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </div>
+        <span class="badge-pill" style="color:#b91c1c;background:rgba(248,113,113,0.12);border-color:rgba(248,113,113,0.28)">VIDEO</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Video Editing</h3>
+        <p class="card-desc">Produce high-quality video content for marketing and storytelling that captures audience attention.</p>
+        <div class="card-info-row">
+          <div class="card-meta-left">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>3 Months</span>
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Pro</span>
+          </div>
+          <div class="card-meta-right">
+            <span class="info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remote</span>
+            <span class="info-item certified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>Certified</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-view-detail" onclick="openModal(this.closest('.card'))">View Details</button>
+        <button class="btn-apply-now" onclick="window.location.href='apply-now.html'">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</div>
+</div>
+
+<div class="load-wrap">
+  <button class="explore-btn" id="exploreBtn" onclick="showMore()">
+    Explore More Programs
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </button>
+  <button class="explore-btn secondary" id="showLessBtn" onclick="showLess()" style="display:none">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Show Less
+  </button>
+</div>
+
+</section>
+
+<footer class="athenura-footer">
+  <div class="footer-container">
+    <div class="footer-col branding">
+      <img src="https://www.athenura.in/White.png" alt="Athenura" class="footer-logo">
+      <p>Next-gen software engineering for the modern enterprise. We build the systems that drive the world.</p>
+      <h4 class="follow-us-text">Follow Us</h4>
+        <div class="social-links">
+                <a href="https://www.linkedin.com/company/athenura/posts/?feedView=all" target="_blank" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+                </svg></a>
+                <a href="https://www.instagram.com/athenura.in?igsh=MWt5bzJsMGhiMXE0OA==" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="https://x.com/athenura_in?s=20" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                </a>
+               
+            </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+         <li><a href="about.html#about">About Us</a></li>
+                <li><a href="program.html">Internship Program</a></li>
+                <li><a href="internship-policy.html">Internship Policy</a></li>
+                <li><a href="certifications.html">Certification & Benefits</a></li>
+                 <li><a href="how-it-works.html">How it works</a></li>
+                 <li><a href="why-us.html">why us</a></li>
+                <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Custom Software Development</a></li>
+        <li><a href="#">Web Application Development</a></li>
+        <li><a href="#">Website Maintenance</a></li>
+        <li><a href="#">Software Testing & QA</a></li>
+        <li><a href="#">Business Automation Solutions</a></li>
+      </ul>
+    </div>
+
+ <div class="footer-col">
+  <h3>Contact Us</h3>
+  <div class="info-row">
+    <div class="white-circle email-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+    <div class="info-text"><span>EMAIL</span><strong>official@athenura.in</strong></div>
+  </div>
+  <div class="info-row">
+    <div class="white-circle phone-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></div>
+    <div class="info-text"><span>PHONE</span><strong>+91 98350 51934</strong></div>
+  </div>
+</div>
+
+    <div class="footer-col">
+      <h3>Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.378777777823!2d77.3614601942478!3d28.618407722875563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cb70326146a27db%3A0x39227c4340f97501!2sAthenura!5e0!3m2!1sen!2sin!4v1770454010754!5m2!1sen!2sin" width="100%" height="160" loading="lazy" style="border:0;"></iframe>
+      <p class="address">Sector 62, Noida, Uttar Pradesh</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom-bar">
+    <div class="bottom-content">
+      <p>© 2026 Athenura. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const INITIAL = 6;
+  let allExpanded = false;
+  let currentCat = 'all';
+  let activeFilters = { duration: 'all', mode: 'all', difficulty: 'all' };
+
+  function init() {
+    document.querySelectorAll('.card').forEach((c, i) => {
+      if (i >= INITIAL) { c.style.display = 'none'; }
+    });
+    observeCards();
+  }
+
+  function observeCards() {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.card').forEach(c => obs.observe(c));
+  }
+
+  function showMore() {
+    allExpanded = true;
+    let delay = 0;
+    document.querySelectorAll('.card').forEach((card, i) => {
+      if (i >= INITIAL && matchesFilters(card)) {
+        card.style.display = '';
+        card.style.setProperty('--delay', delay + 's');
+        delay += 0.07;
+        setTimeout(() => card.classList.add('visible'), 50);
+      }
+    });
+    updateLoadBtns();
+  }
+
+  function showLess() {
+    allExpanded = false;
+    document.querySelectorAll('.card').forEach((card, i) => {
+      if (i >= INITIAL) { card.style.display = 'none'; card.classList.remove('visible'); }
+    });
+    updateLoadBtns();
+    window.scrollTo({ top: document.querySelector('.filter-section').offsetTop - 20, behavior: 'smooth' });
+  }
+
+  function updateLoadBtns() {
+    const all = [...document.querySelectorAll('.card')].filter(matchesFilters);
+    const shown = all.filter(c => c.style.display !== 'none').length;
+    document.getElementById('exploreBtn').style.display = (shown < all.length) ? '' : 'none';
+    document.getElementById('showLessBtn').style.display = (allExpanded && shown >= all.length && all.length > INITIAL) ? '' : 'none';
+  }
+
+  function matchesFilters(card) {
+    const catOk = currentCat === 'all' || card.dataset.cat === currentCat;
+    const durOk = activeFilters.duration === 'all' || card.dataset.dur === activeFilters.duration;
+    const modeOk = activeFilters.mode === 'all' || card.dataset.mode === activeFilters.mode;
+    const diffOk = activeFilters.difficulty === 'all' || card.dataset.diff === activeFilters.difficulty;
+    return catOk && durOk && modeOk && diffOk;
+  }
+
+  function applyAllFilters() {
+    allExpanded = false;
+    closeModal();
+    const cards = document.querySelectorAll('.card');
+    let shown = 0;
+    cards.forEach(card => {
+      card.classList.remove('visible');
+      if (matchesFilters(card) && shown < INITIAL) {
+        card.style.display = '';
+        shown++;
+        const idx = shown;
+        setTimeout(() => card.classList.add('visible'), idx * 70);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    updateLoadBtns();
+    renderChips();
+  }
+
+  function filterCards(cat, btn) {
+    currentCat = cat;
+    document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyAllFilters();
+  }
+
+  function toggleDrop(id) {
+    document.querySelectorAll('.dropdown-wrap').forEach(w => { if (w.id !== id) w.classList.remove('open'); });
+    document.getElementById(id).classList.toggle('open');
+  }
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.dropdown-wrap')) {
+      document.querySelectorAll('.dropdown-wrap').forEach(w => w.classList.remove('open'));
+    }
+  });
+
+  function pickFilter(type, val, label, labelId, wrapId) {
+    activeFilters[type] = val;
+    document.getElementById(labelId).textContent = label;
+    document.getElementById(wrapId).classList.remove('open');
+    applyAllFilters();
+  }
+
+  function renderChips() {
+    const row = document.getElementById('chipsRow');
+    row.innerHTML = '';
+    const map = {
+      duration: { val: activeFilters.duration, label: 'Duration', labelId: 'durLabel' },
+      mode:     { val: activeFilters.mode,     label: 'Mode',     labelId: 'modeLabel' },
+      difficulty:{ val: activeFilters.difficulty, label: 'Difficulty', labelId: 'diffLabel' }
+    };
+    Object.entries(map).forEach(([key, cfg]) => {
+      if (cfg.val !== 'all') {
+        const chip = document.createElement('span');
+        chip.className = 'filter-chip';
+        chip.innerHTML = `${cfg.label}: ${document.getElementById(cfg.labelId).textContent} <button onclick="clearChip('${key}','${cfg.label}','${cfg.labelId}')">&#10005;</button>`;
+        row.appendChild(chip);
+      }
+    });
+  }
+
+  function clearChip(type, label, labelId) {
+    activeFilters[type] = 'all';
+    document.getElementById(labelId).textContent = label;
+    applyAllFilters();
+  }
+
+  function openModal(card) {
+    const ic = getComputedStyle(card).getPropertyValue('--ic').trim();
+    const icbg = getComputedStyle(card).getPropertyValue('--icbg').trim();
+    const modules = card.dataset.modules.split('|');
+    const tags = card.dataset.tags.split('|');
+
+    const modulesHTML = modules.map(m => `
+      <li>
+        <span class="m-arrow" style="color:${ic}">&#9658;</span>
+        <span>${m}</span>
+      </li>`).join('');
+
+    const tagsHTML = tags.map(t => `<span class="m-tag">${t}</span>`).join('');
+
+    document.getElementById('modalInner').innerHTML = `
+      <div class="m-header">
+        <div class="m-icon" style="background:${icbg};border:1.5px solid ${ic}33;color:${ic}">
+          ${card.querySelector('.card-icon-box').innerHTML}
+        </div>
+        <div>
+          <span class="m-cat ${card.dataset.badgeClass}">${card.dataset.badge}</span>
+          <h2 class="m-title">${card.dataset.title}</h2>
+          <p class="m-sub">&#9201; ${card.dataset.durationLabel} &nbsp;&middot;&nbsp; ${card.dataset.modeLabel} &nbsp;&middot;&nbsp; ${card.dataset.diffLabel}</p>
+        </div>
+      </div>
+      <p class="m-desc">${card.dataset.desc}</p>
+      <div class="m-modules">
+        <p class="m-section-label" style="color:${ic}">Learning Modules</p>
+        <ul class="m-module-list">${modulesHTML}</ul>
+      </div>
+      <div class="m-tags">${tagsHTML}</div>
+      <button class="m-apply" style="background:${ic}" onclick="window.location.href='apply-now.html'">Apply Now &#8594;</button>
+    `;
+
+    document.getElementById('modalBackdrop').classList.add('active');
+    document.getElementById('modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.querySelectorAll('.card').forEach(c => c.classList.add('blurred'));
+  }
+
+  function closeModal() {
+    document.getElementById('modalBackdrop').classList.remove('active');
+    document.getElementById('modal').classList.remove('active');
+    document.body.style.overflow = '';
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('blurred'));
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  init();
+
+  // ============================================================
+// FEATURES SECTION — Scroll Reveal JS
+// Add this inside your existing <script> tag, before init();
+// ============================================================
+
+// Scroll reveal for features section
+function initFsReveal() {
+  const els = document.querySelectorAll('.fs-reveal');
+  if (!els.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('fs-visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => obs.observe(el));
+}
+
+// Also trigger code line animations when visible
+function initCodeLines() {
+  const codeWindow = document.querySelector('.fs-code-window');
+  if (!codeWindow) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const lines = e.target.querySelectorAll('.fs-code-line');
+        lines.forEach((line, i) => {
+          line.style.animationDelay = (i * 0.5) + 's';
+        });
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  obs.observe(codeWindow);
+}
+
+initFsReveal();
+initCodeLines();
+
+</script>
+</body>
+</html>
+
