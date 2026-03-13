@@ -1,55 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects · Athenura</title>
-  <link rel="stylesheet" href="css/project.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
+<title>Athenura — website</title>
+<link rel="stylesheet" href="css/project.css">
 </head>
 <body>
-  <div class="floating ball"></div>
-  <div class="floating circle"></div>
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <img src="https://www.athenura.in/Athenura.png" alt="Athenura">
-      </a>
-      <div class="nav-right">
-        <button class="hamburger" id="hamburger" aria-label="menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="nav-links" id="navLinks">
-          <a href="#" class="active">Home</a>
-          <a href="#">Internship</a>
-          <a href="#">About</a>
-          <a href="Details.html">Projects</a>
-          <a href="#">Why Us</a>
-        </nav>
-        <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+  
+    <!-- NAVBAR -->
+ <header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
+    </a>
+    <div class="nav-right">
+      <!-- Hamburger button — NO inline onclick -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html">Internship</a>
+        <a href="about.html">About</a>
+        <a href="project.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <!-- Apply button shown inside menu on mobile -->
+        <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
+      </nav>
+
+      <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+    </div>
+  </div>
+  <!-- Dark backdrop behind drawer -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</header>
+
+<!-- MODAL BACKDROP -->
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <button class="modal-close" onclick="closeModal()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <div id="modalInner"></div>
+</div>
+
+
+  <section class="hero">
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="tech-orb"></div>
+      <div class="light-streak"></div>
+      <div class="light-streak light-streak-2"></div>
+      <div class="glass-panel"></div>
+    </div>
+    <div class="grid-overlay"></div>
+    <div class="hero-content">
+      <h1>Empowering the <br class="hide-mob"><span class="highlight-gradient">Next Generation</span></h1>
+      <p class="subhead">Explore high-impact projects designed and developed by our talented intern cohorts.<br> From
+        cutting-edge web platforms to sophisticated data visualization dashboards.</p>
+      <div class="btn-wrapper">
+        <a href="#projects-filter" class="cta-button">Explore Projects →</a>
       </div>
     </div>
-  </header>
-  <main class="container">
-    <section class="hero-section">
-      <h1>Empowering the <span class="highlight">Next Generation</span></h1>
-      <p class="description">
-        Explore high-impact projects designed and developed by our talented intern cohorts.
-        From cutting-edge web platforms to sophisticated data visualization dashboards.
-      </p>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Work</button>
-        <button class="filter-btn" data-filter="web">Web Development</button>
-        <button class="filter-btn" data-filter="uiux">UI/UX Dashboards</button>
-        <button class="filter-btn" data-filter="marketing">Marketing Campaigns</button>
-      </div>
-    </section>
-    <section class="projects-section">
+  </section>
+
+  <div class="container" id="projects-filter">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="uiux">UI/UX Dashboards</button>
+      <button class="filter-btn" data-filter="marketing">Marketing Campaigns</button>
+    </div>
+
+    <section class="projects-section fade-up">
       <div class="projects-grid">
         <article class="project-card" data-category="web">
-          <div class="card-image">
-            <img src="FinTech.png" alt="FinTech Landing Page" loading="lazy" />
+          <div class="card-image"><img src="assets/images/FinTech.png" alt="FinTech Landing Page" loading="lazy" />
           </div>
           <div class="card-content">
             <div class="card-category">Web Development</div>
@@ -58,9 +97,8 @@
           </div>
         </article>
         <article class="project-card" data-category="uiux">
-          <div class="card-image">
-            <img src="Analytic-suit.png" alt="Analytics Suite Dashboard" loading="lazy" />
-          </div>
+          <div class="card-image"><img src="assets/images/Analytic-suit.png" alt="Analytics Suite Dashboard"
+              loading="lazy" /></div>
           <div class="card-content">
             <div class="card-category">UI/UX Dashboard</div>
             <h3 class="card-title">Analytics Suite</h3>
@@ -68,9 +106,8 @@
           </div>
         </article>
         <article class="project-card" data-category="marketing">
-          <div class="card-image">
-            <img src="green-earth.png" alt="Green Earth Marketing Campaign" loading="lazy" />
-          </div>
+          <div class="card-image"><img src="assets/images/green-earth.png" alt="Green Earth Marketing Campaign"
+              loading="lazy" /></div>
           <div class="card-content">
             <div class="card-category">Marketing Campaign</div>
             <h3 class="card-title">Green-Earth Strategy</h3>
@@ -78,9 +115,8 @@
           </div>
         </article>
         <article class="project-card" data-category="uiux">
-          <div class="card-image">
-            <img src="AiControlPannel.png" alt="AI Control Panel Dashboard" loading="lazy" />
-          </div>
+          <div class="card-image"><img src="assets/images/AiControlPannel.png" alt="AI Control Panel Dashboard"
+              loading="lazy" /></div>
           <div class="card-content">
             <div class="card-category">UI/UX Dashboard</div>
             <h3 class="card-title">AI Control Panel</h3>
@@ -88,9 +124,8 @@
           </div>
         </article>
         <article class="project-card" data-category="web">
-          <div class="card-image">
-            <img src="NeoBankMobileWeb.png" alt="NeoBank Mobile Web App" loading="lazy" />
-          </div>
+          <div class="card-image"><img src="assets/images/NeoBankMobileWeb.png" alt="NeoBank Mobile Web App"
+              loading="lazy" /></div>
           <div class="card-content">
             <div class="card-category">Web Development</div>
             <h3 class="card-title">NeoBank Mobile Web</h3>
@@ -98,9 +133,8 @@
           </div>
         </article>
         <article class="project-card" data-category="marketing">
-          <div class="card-image">
-            <img src="CloudSaaSWeb.png" alt="Cloud SaaS Launch Campaign" loading="lazy" />
-          </div>
+          <div class="card-image"><img src="assets/images/CloudSaaSWeb.png" alt="Cloud SaaS Launch Campaign"
+              loading="lazy" /></div>
           <div class="card-content">
             <div class="card-category">Marketing Campaign</div>
             <h3 class="card-title">CloudSaaS Launch</h3>
@@ -109,23 +143,21 @@
         </article>
       </div>
     </section>
-<section class="cta-section">
-  <h2>Want to build something great?</h2>
-  <p>
-    Whether you're a potential intern looking for high-impact experience
-    or a company seeking fresh talent for your next project —
-    we’re ready to collaborate.
-  </p>
-  <div class="cta-buttons">
-    <a onclick="window.location.href='apply-now.html'" class="primary-btn large">
-      Apply Now
-    </a>
-    <a href="#" class="outline-btn large">
-      Partner With Us
-    </a>
+
+    <section class="cta-section fade-up">
+      <h2>Want to build something great?</h2>
+      <p>Whether you're a potential intern looking for high-impact experience or a company seeking fresh talent for your
+        next project — we’re ready to collaborate.</p>
+      <div class="cta-buttons">
+        <a href="apply-now.html" class="primary-btn large">Apply Now</a>
+        <a href="#" class="outline-btn large">Partner With Us</a>
+      </div>
+    </section>
   </div>
-</section>
-</main>
+
+  <!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
 <footer class="athenura-footer">
   <div class="footer-container">
     <div class="footer-col branding">
@@ -213,6 +245,117 @@
     </div>
   </div>
 </footer>
-  <script src="js/project.js"></script>
+
+  <script>
+
+/* ─────────────────────────────────────────
+   HAMBURGER
+───────────────────────────────────────── */
+var fix = document.createElement('style');
+fix.innerHTML =
+  '.nav-backdrop { display: none; }' +
+  '.nav-backdrop.visible { display: block; opacity: 1; }';
+document.head.appendChild(fix);
+
+var hamburger   = document.getElementById('hamburger');
+var navLinks    = document.getElementById('navLinks');
+var navBackdrop = document.getElementById('navBackdrop');
+var navbar      = document.getElementById('navbar');
+
+function openNav() {
+  if (!navLinks || !hamburger) return;
+  navLinks.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  if (navBackdrop) navBackdrop.classList.add('visible');
+  document.body.classList.add('nav-open');
+}
+
+function closeNav() {
+  if (!navLinks || !hamburger) return;
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  if (navBackdrop) navBackdrop.classList.remove('visible');
+  document.body.classList.remove('nav-open');
+}
+
+if (hamburger) {
+  hamburger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    navLinks.classList.contains('open') ? closeNav() : openNav();
+  });
+}
+
+if (navBackdrop) navBackdrop.addEventListener('click', closeNav);
+
+if (navLinks) {
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeNav);
+  });
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeNav();
+});
+
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 900) closeNav();
+});
+
+/* ─────────────────────────────────────────
+   NAVBAR SCROLL SHADOW
+───────────────────────────────────────── */
+if (navbar) {
+  window.addEventListener('scroll', function () {
+    navbar.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive: true });
+}
+
+/* ─────────────────────────────────────────
+   NAV ACTIVE LINK
+───────────────────────────────────────── */
+var current = location.pathname.split('/').pop();
+document.querySelectorAll('nav a').forEach(function (link) {
+  if (link.getAttribute('href') === current) {
+    link.classList.add('active');
+  }
+});
+
+window.addEventListener("load", () => {
+    const elements = document.querySelectorAll(".fade-up");
+    elements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, index * 120);
+    });
+});
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+function filterProjects(category) {
+    projectCards.forEach(card => {
+        const cardCategory = card.dataset.category;
+        if (category === "all" || cardCategory === category) {
+            card.classList.remove("hidden");
+        } else {
+            card.classList.add("hidden");
+        }
+    });
+}
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", function () {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        this.classList.add("active");
+        filterProjects(this.getAttribute("data-filter"));
+    });
+});
+
+filterProjects("all");
+
+  </script>
 </body>
+
 </html>

@@ -417,7 +417,7 @@ body {
 .tc-cta-btn:hover { background: var(--teal-dark); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(14,165,164,0.45); }
 
 /* ═══════════════ FOOTER ═══════════════ */
-.athenura-footer { background: #23838a; color: #fff; font-family: 'Inter', sans-serif; padding-top: 60px; }
+.athenura-footer { background: #0ea5a4; color: #fff; font-family: 'Inter', sans-serif; padding-top: 60px; }
 
 .footer-container {
   max-width: 1400px; margin: auto; padding: 0 60px 80px;

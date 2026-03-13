@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Athenura — Internship Programs</title>
+  <title>Athenura — website</title>
   <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
@@ -28,7 +28,7 @@
         <a href="index.html">Home</a>
         <a href="program.html">Internship</a>
         <a href="about.html" class="active">About</a>
-        <a href="index.html">Projects</a>
+        <a href="project.html">Projects</a>
         <a href="contact.html">Contact</a>
          <!-- Apply button shown inside menu on mobile -->
         <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
@@ -479,7 +479,7 @@
       <p class="hiw-cta-desc">We're always looking for talented individuals who share our values and passion for innovation.</p>
       <div class="hiw-cta-btns">
         <button class="hiw-cta-primary" onclick="window.location.href='program.html'">Explore Careers</button>
-        <button class="hiw-cta-secondary">Contact Us →</button>
+       <button class="hiw-cta-secondary" onclick="window.location.href='contact.html'">Contact Us →</button>
       </div>
     </div>
   </section>
@@ -655,22 +655,81 @@
 
   });
 
-  function toggleMenu() {
-  const nav = document.getElementById('navLinks');
-  const btn = document.getElementById('hamburger');
-  if (!nav) return;
-  nav.classList.toggle('open');
-  if (btn) btn.classList.toggle('active');
+  /* ─────────────────────────────────────────
+   HAMBURGER
+───────────────────────────────────────── */
+var fix = document.createElement('style');
+fix.innerHTML =
+  '.nav-backdrop { display: none; }' +
+  '.nav-backdrop.visible { display: block; opacity: 1; }';
+document.head.appendChild(fix);
+
+var hamburger   = document.getElementById('hamburger');
+var navLinks    = document.getElementById('navLinks');
+var navBackdrop = document.getElementById('navBackdrop');
+var navbar      = document.getElementById('navbar');
+
+function openNav() {
+  if (!navLinks || !hamburger) return;
+  navLinks.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  if (navBackdrop) navBackdrop.classList.add('visible');
+  document.body.classList.add('nav-open');
 }
 
-(function () {
-  const current = location.pathname.split("/").pop();
-  document.querySelectorAll("nav a").forEach(link => {
-    if (link.getAttribute("href") === current) {
-      link.classList.add("active");
-    }
+function closeNav() {
+  if (!navLinks || !hamburger) return;
+  navLinks.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  if (navBackdrop) navBackdrop.classList.remove('visible');
+  document.body.classList.remove('nav-open');
+}
+
+if (hamburger) {
+  hamburger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    navLinks.classList.contains('open') ? closeNav() : openNav();
   });
-})();
+}
+
+if (navBackdrop) navBackdrop.addEventListener('click', closeNav);
+
+if (navLinks) {
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeNav);
+  });
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeNav();
+});
+
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 900) closeNav();
+});
+
+/* ─────────────────────────────────────────
+   NAVBAR SCROLL SHADOW
+───────────────────────────────────────── */
+if (navbar) {
+  window.addEventListener('scroll', function () {
+    navbar.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive: true });
+}
+
+/* ─────────────────────────────────────────
+   NAV ACTIVE LINK
+───────────────────────────────────────── */
+var current = location.pathname.split('/').pop();
+document.querySelectorAll('nav a').forEach(function (link) {
+  if (link.getAttribute('href') === current) {
+    link.classList.add('active');
+  }
+});
+
+  
 
 </script>
 
