@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Athenura- website</title>
+  <title> Athenura- Internship Programs</title>
   <link rel="stylesheet" href="css/how-it-works.css" />
   <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
- <header class="navbar" id="navbar">
+ <!-- NAVBAR -->
+<header class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo">
       <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
     </a>
     <div class="nav-right">
-      <!-- Hamburger button — NO inline onclick -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -28,14 +28,12 @@
         <a href="about.html">About</a>
         <a href="project.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <!-- Apply button shown inside menu on mobile -->
         <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
       </nav>
 
       <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
     </div>
   </div>
-  <!-- Dark backdrop behind drawer -->
   <div class="nav-backdrop" id="navBackdrop"></div>
 </header>
 
@@ -100,8 +98,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="hero-content" data-reveal>
-      <span class="hero-pill">PROCESS OVERVIEW</span>
+    <div class="hero-content" data-reveal>   
       <h1 class="hero-title">
   Your Path to <span class="hero-title-accent" id="heroAccent">Exceptional Growth</span>
 </h1>
@@ -637,7 +634,18 @@
 
   <script>
 
-      var hamburger   = document.getElementById('hamburger');
+     (function () {
+  'use strict';
+
+  /* Backdrop fix */
+  var fix = document.createElement('style');
+  fix.innerHTML =
+    '.nav-backdrop { display: none; opacity: 0; transition: opacity 0.4s ease; }' +
+    '.nav-backdrop.visible { display: block; opacity: 1; }';
+  document.head.appendChild(fix);
+
+  /* DOM Elements */
+  var hamburger   = document.getElementById('hamburger');
   var navLinks    = document.getElementById('navLinks');
   var navBackdrop = document.getElementById('navBackdrop');
   var navbar      = document.getElementById('navbar');
@@ -647,7 +655,12 @@
     navLinks.classList.add('open');
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
-    if (navBackdrop) navBackdrop.classList.add('visible');
+    if (navBackdrop) {
+      navBackdrop.style.display = 'block';
+      setTimeout(function () {
+        navBackdrop.classList.add('visible');
+      }, 10);
+    }
     document.body.classList.add('nav-open');
   }
 
@@ -656,10 +669,18 @@
     navLinks.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    if (navBackdrop) navBackdrop.classList.remove('visible');
+    if (navBackdrop) {
+      navBackdrop.classList.remove('visible');
+      setTimeout(function () {
+        if (!navBackdrop.classList.contains('visible')) {
+          navBackdrop.style.display = 'none';
+        }
+      }, 400);
+    }
     document.body.classList.remove('nav-open');
   }
 
+  /* Hamburger toggle */
   if (hamburger) {
     hamburger.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -667,42 +688,44 @@
     });
   }
 
+  /* Close on backdrop click */
   if (navBackdrop) {
     navBackdrop.addEventListener('click', closeNav);
   }
 
+  /* Close on nav link click */
   if (navLinks) {
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeNav);
+    navLinks.addEventListener('click', function () {
+      if (navLinks.classList.contains('open')) closeNav();
     });
   }
 
+  /* Close on Escape key */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeNav();
   });
 
+  /* Close on resize to desktop */
   window.addEventListener('resize', function () {
     if (window.innerWidth > 900) closeNav();
   });
 
-  /* ─────────────────────────────────────────
-     2. NAVBAR SCROLL SHADOW
-  ───────────────────────────────────────── */
+  /* Scroll shadow on navbar */
   if (navbar) {
     window.addEventListener('scroll', function () {
       navbar.classList.toggle('scrolled', window.scrollY > 12);
     }, { passive: true });
   }
 
-  /* ─────────────────────────────────────────
-     3. NAV ACTIVE LINK
-  ───────────────────────────────────────── */
+  /* Active link highlight */
   var current = location.pathname.split('/').pop();
   document.querySelectorAll('nav a').forEach(function (link) {
     if (link.getAttribute('href') === current) {
       link.classList.add('active');
     }
   });
+
+})();
 
     /* FAQ Toggle */
     function toggleFaq(btn) {

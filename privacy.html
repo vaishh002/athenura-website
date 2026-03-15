@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>athenura — website</title>
+  <title>athenura — Internship Programs</title>
   <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="https://www.athenura.in/AthenuraCircle.png">
@@ -14,40 +13,33 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <a href="index.html" class="logo">
-    <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
-  </a>
-
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
-
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="program.html">Internship</a>
-    <a href="about.html" class="mobile-only">About</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="why-us.html">Why us</a>
-    <a href="#contact" class="mobile-only mobile-contact-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-      Contact Us
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
     </a>
-  </div>
+    <div class="nav-right">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  <div class="nav-right">
-    <a href="contact.html" class="contact-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-      Contact Us
-    </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="program.html">Internship</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
+      </nav>
+
+      <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
+    </div>
   </div>
-</nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</header>
 
 <!-- HERO -->
 <div class="hero-wrapper">
@@ -373,10 +365,10 @@
         <p>If you have any questions about this Privacy Policy, please contact our data protection officer.</p>
       </div>
       <div class="cta-btns">
-        <a href="mailto:official@athenura.in" class="btn btn-teal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email Privacy Team
-        </a>
+        <a href="https://mail.google.com/mail/?view=cm&to=official@athenura.in&subject=Privacy%20Concern%20-%20Athenura" target="_blank" class="btn btn-teal">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  Email Privacy Team
+</a>
         <button class="btn btn-dark" id="download-pdf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           Download PDF
@@ -486,12 +478,99 @@
 
 
 <script>
-  function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    const btn = document.getElementById('hamburger');
-    nav.classList.toggle('open');
-    btn.classList.toggle('active');
+  
+(function () {
+  'use strict';
+
+  /* Backdrop fix */
+  var fix = document.createElement('style');
+  fix.innerHTML =
+    '.nav-backdrop { display: none; opacity: 0; transition: opacity 0.4s ease; }' +
+    '.nav-backdrop.visible { display: block; opacity: 1; }';
+  document.head.appendChild(fix);
+
+  /* DOM Elements */
+  var hamburger   = document.getElementById('hamburger');
+  var navLinks    = document.getElementById('navLinks');
+  var navBackdrop = document.getElementById('navBackdrop');
+  var navbar      = document.getElementById('navbar');
+
+  function openNav() {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    if (navBackdrop) {
+      navBackdrop.style.display = 'block';
+      setTimeout(function () {
+        navBackdrop.classList.add('visible');
+      }, 10);
+    }
+    document.body.classList.add('nav-open');
   }
+
+  function closeNav() {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    if (navBackdrop) {
+      navBackdrop.classList.remove('visible');
+      setTimeout(function () {
+        if (!navBackdrop.classList.contains('visible')) {
+          navBackdrop.style.display = 'none';
+        }
+      }, 400);
+    }
+    document.body.classList.remove('nav-open');
+  }
+
+  /* Hamburger toggle */
+  if (hamburger) {
+    hamburger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navLinks.classList.contains('open') ? closeNav() : openNav();
+    });
+  }
+
+  /* Close on backdrop click */
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeNav);
+  }
+
+  /* Close on nav link click */
+  if (navLinks) {
+    navLinks.addEventListener('click', function () {
+      if (navLinks.classList.contains('open')) closeNav();
+    });
+  }
+
+  /* Close on Escape key */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  /* Close on resize to desktop */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) closeNav();
+  });
+
+  /* Scroll shadow on navbar */
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      navbar.classList.toggle('scrolled', window.scrollY > 12);
+    }, { passive: true });
+  }
+
+  /* Active link highlight */
+  var current = location.pathname.split('/').pop();
+  document.querySelectorAll('nav a').forEach(function (link) {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
+
+})();
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {

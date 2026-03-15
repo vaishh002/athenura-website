@@ -6,16 +6,16 @@
   'use strict';
 
   /* ─────────────────────────────────────────
-     FIX: backdrop display
+     FIX: backdrop display & fade animations
   ───────────────────────────────────────── */
   var fix = document.createElement('style');
   fix.innerHTML =
-    '.nav-backdrop { display: none; }' +
+    '.nav-backdrop { display: none; opacity: 0; transition: opacity 0.4s ease; }' +
     '.nav-backdrop.visible { display: block; opacity: 1; }';
   document.head.appendChild(fix);
 
   /* ─────────────────────────────────────────
-     1. HAMBURGER
+     1. HAMBURGER & NAVIGATION
   ───────────────────────────────────────── */
   var hamburger   = document.getElementById('hamburger');
   var navLinks    = document.getElementById('navLinks');
@@ -27,7 +27,14 @@
     navLinks.classList.add('open');
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
-    if (navBackdrop) navBackdrop.classList.add('visible');
+    
+    if (navBackdrop) {
+      navBackdrop.style.display = 'block';
+      // Small timeout to allow display:block to register before adding opacity
+      setTimeout(function() {
+        navBackdrop.classList.add('visible');
+      }, 10);
+    }
     document.body.classList.add('nav-open');
   }
 
@@ -36,10 +43,20 @@
     navLinks.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    if (navBackdrop) navBackdrop.classList.remove('visible');
+    
+    if (navBackdrop) {
+      navBackdrop.classList.remove('visible');
+      // Wait for fade-out transition to finish before display:none
+      setTimeout(function() {
+        if (!navBackdrop.classList.contains('visible')) {
+          navBackdrop.style.display = 'none';
+        }
+      }, 400);
+    }
     document.body.classList.remove('nav-open');
   }
 
+  // Toggle on hamburger click
   if (hamburger) {
     hamburger.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -47,13 +64,18 @@
     });
   }
 
+  // CLOSE IF: User clicks the backdrop (anywhere outside the menu)
   if (navBackdrop) {
     navBackdrop.addEventListener('click', closeNav);
   }
 
+  // CLOSE IF: User clicks anywhere inside the navLinks area (including links)
   if (navLinks) {
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeNav);
+    navLinks.addEventListener('click', function(e) {
+      // We check if it's open to avoid unnecessary calls
+      if (navLinks.classList.contains('open')) {
+        closeNav();
+      }
     });
   }
 
@@ -292,5 +314,14 @@
       tab.classList.add('active');
     });
   });
-
+/* ─────────────────────────────────────────
+   PROJECT REDIRECT LOGIC
+───────────────────────────────────────── */
+// This function ensures clicking any project card on the home page 
+// leads directly to the full project gallery.
+document.querySelectorAll('.project-card-link').forEach(card => {
+  card.addEventListener('click', () => {
+    window.location.href = 'project.html';
+  });
+});
 })();

@@ -6,16 +6,16 @@
   'use strict';
 
   /* ─────────────────────────────────────────
-     FIX: backdrop display
+     FIX: backdrop display & fade animations
   ───────────────────────────────────────── */
   var fix = document.createElement('style');
   fix.innerHTML =
-    '.nav-backdrop { display: none; }' +
+    '.nav-backdrop { display: none; opacity: 0; transition: opacity 0.4s ease; }' +
     '.nav-backdrop.visible { display: block; opacity: 1; }';
   document.head.appendChild(fix);
 
   /* ─────────────────────────────────────────
-     1. HAMBURGER
+     1. HAMBURGER & NAVIGATION
   ───────────────────────────────────────── */
   var hamburger   = document.getElementById('hamburger');
   var navLinks    = document.getElementById('navLinks');
@@ -27,7 +27,13 @@
     navLinks.classList.add('open');
     hamburger.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
-    if (navBackdrop) navBackdrop.classList.add('visible');
+    
+    if (navBackdrop) {
+      navBackdrop.style.display = 'block';
+      setTimeout(function() {
+        navBackdrop.classList.add('visible');
+      }, 10);
+    }
     document.body.classList.add('nav-open');
   }
 
@@ -36,7 +42,15 @@
     navLinks.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    if (navBackdrop) navBackdrop.classList.remove('visible');
+    
+    if (navBackdrop) {
+      navBackdrop.classList.remove('visible');
+      setTimeout(function() {
+        if (!navBackdrop.classList.contains('visible')) {
+          navBackdrop.style.display = 'none';
+        }
+      }, 400);
+    }
     document.body.classList.remove('nav-open');
   }
 
@@ -47,13 +61,17 @@
     });
   }
 
+  // CLOSE IF: User clicks the backdrop
   if (navBackdrop) {
     navBackdrop.addEventListener('click', closeNav);
   }
 
+  // CLOSE IF: User clicks anywhere inside the navigation menu area
   if (navLinks) {
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeNav);
+    navLinks.addEventListener('click', function() {
+      if (navLinks.classList.contains('open')) {
+        closeNav();
+      }
     });
   }
 
@@ -85,7 +103,7 @@
   });
 
   /* ─────────────────────────────────────────
-     4. POLICY SIDEBAR NAV LINKS (filter active state)
+     4. POLICY SIDEBAR NAV LINKS (Fixed Sticky & Center)
   ───────────────────────────────────────── */
   var navItems = document.querySelectorAll('.nav-list li');
   if (navItems.length) {
@@ -93,11 +111,33 @@
     navItems[0].classList.add('active');
 
     navItems.forEach(function (item) {
-      item.addEventListener('click', function () {
+      item.addEventListener('click', function (e) {
+        // 1. Manage active state
         navItems.forEach(function (el) { el.classList.remove('active'); });
         this.classList.add('active');
-        /* Scroll active pill into view on mobile */
-        this.scrollIntoView({ inline: 'center', behavior: 'smooth', block: 'nearest' });
+
+        // 2. Center the active pill in horizontal scroll on mobile
+        if (window.innerWidth <= 768) {
+          this.scrollIntoView({ inline: 'center', behavior: 'smooth', block: 'nearest' });
+        }
+
+        // 3. Smooth scroll to the target section with an offset for sticky headers
+        var link = this.querySelector('a');
+        if (link && link.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          var targetId = link.getAttribute('href').substring(1);
+          var targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            // Adjust offset for fixed Navbar (64px) + Sticky Sidebar (~60px)
+            var offset = 130; 
+            var elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+              top: elementPosition - offset,
+              behavior: 'smooth'
+            });
+          }
+        }
       });
     });
   }
@@ -140,7 +180,6 @@
       '.policy-block, .policy-section, .big-card { break-inside: avoid; page-break-inside: avoid; }' +
       'body { background: white !important; }' +
       '.hero img { max-height: 280px; object-fit: cover; }' +
-      '.athenura-footer { break-before: page; }' +
     '}';
   document.head.appendChild(printStyle);
 
