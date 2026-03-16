@@ -100,7 +100,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
 /* ── Logo ── */
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo img { 
-  height: 44px; 
+  height: 56px; 
   transform: translateY(2px); 
   transition: transform 0.4s ease;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.03)); 
@@ -483,7 +483,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   
   /* ── 1. Mobile Navbar Container ── */
   .nav-container { padding: 0 24px; height: 68px; }
-  .logo img { height: 36px; }
+  .logo img { height: 48px; }
   
   /* ── 2. Animated Hamburger (Original Styling) ── */
   .hamburger {

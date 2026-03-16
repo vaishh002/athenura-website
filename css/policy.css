@@ -112,7 +112,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
 /* ── Logo ── */
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo img { 
-  height: 44px; 
+  height: 56px; 
   transform: translateY(2px); 
   transition: transform 0.4s ease;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.03)); 
@@ -601,7 +601,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   
   /* ── 1. Mobile Navbar Container ── */
   .nav-container { padding: 0 10px; height: 64px; }
-  .logo img { height: 38px; }
+  .logo img { height: 48px; }
   
   /* ── 2. Animated Hamburger (Original Logic Preserved) ── */
   .hamburger {
@@ -787,7 +787,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
 ══════════════════════════════════════════ */
 @media (max-width: 480px) {
   .nav-container { padding: 0 16px; } 
-  .logo img { height: 34px; }
+  .logo img { height: 48px; }
   
   .hero img { height: 180px; }
   .hero-text h1 { font-size: 20px; }

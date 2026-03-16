@@ -92,7 +92,7 @@ body.loaded { opacity: 1; }
 
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo img {
-  height: 44px; transform: translateY(2px);
+  height: 56px; transform: translateY(2px);
   transition: transform 0.4s ease;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.03));
 }
@@ -142,7 +142,7 @@ body.loaded { opacity: 1; }
 @media (max-width: 768px) {
 
   .nav-container { padding: 0 20px; height: 64px; }
-  .logo img { height: 38px; }
+  .logo img { height: 48px; }
 
   .hamburger {
     display: flex !important;
