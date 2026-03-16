@@ -165,7 +165,7 @@ document.addEventListener('keydown', (e) => {
 });
 modalForm?.addEventListener('submit', (e) => {
   e.preventDefault();
-  alert('Message sent! 😅 deep backend nahi aata sirr');
+  alert('Message sent!');
   closeModal();
   modalForm.reset();
 });

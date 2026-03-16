@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Athenura- website</title>
+  <title>Athenura — Internship Program</title>
   <link rel="icon" href="https://www.athenura.in/AthenuraCircle.png" type="image/png">
-  <link rel="stylesheet" href="css/terms-condition.css">
+  <link rel="stylesheet" href="css/terms-condition.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
 <!-- NAVBAR -->
-
- <header class="navbar" id="navbar">
+<header class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo">
       <img src="https://www.athenura.in/Athenura.png" alt="Athenura Logo">
     </a>
     <div class="nav-right">
-      <!-- Hamburger button — NO inline onclick -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -31,22 +29,18 @@
         <a href="about.html">About</a>
         <a href="project.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <!-- Apply button shown inside menu on mobile -->
         <a href="apply-now.html" class="apply-btn-mobile">Apply Now</a>
       </nav>
 
       <button class="apply-btn" onclick="window.location.href='apply-now.html'">Apply Now</button>
     </div>
   </div>
-  <!-- Dark backdrop behind drawer -->
   <div class="nav-backdrop" id="navBackdrop"></div>
 </header>
 
 <!-- HERO -->
 <section class="tc-hero">
-  <div class="tc-hero-bg">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
+  <div class="tc-hero-bg"><span></span><span></span><span></span><span></span><span></span></div>
   <div class="tc-hero-content">
     <nav class="tc-breadcrumb">
       <a href="index.html">Home</a>
@@ -67,73 +61,30 @@
   </div>
 </section>
 
-<!-- MAIN LAYOUT -->
-<div class="tc-layout" id="tc-content">
+<!-- QUICK NAV -->
+<div class="tc-quicknav-wrap">
+  <nav class="tc-quicknav">
+    <a href="#intro" class="tc-qnav-btn active">Introduction</a>
+    <a href="#platform" class="tc-qnav-btn">Use of Platform</a>
+    <a href="#ip" class="tc-qnav-btn">Intellectual Property</a>
+    <a href="#liability" class="tc-qnav-btn">Limitation of Liability</a>
+    <a href="#termination" class="tc-qnav-btn">Termination</a>
+    <a href="#law" class="tc-qnav-btn">Governing Law</a>
+    <button class="tc-qnav-print" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      Print Terms
+    </button>
+  </nav>
+</div>
 
-  <!-- SIDEBAR -->
-  <aside class="tc-sidebar">
-    <div class="tc-sidebar-inner">
-      <p class="tc-toc-label">Table of Contents</p>
-      <p class="tc-toc-sub">Quick navigation</p>
-      <nav class="tc-toc">
-        <a href="#intro" class="tc-toc-link active" data-section="intro">
-          <span class="tc-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </span>
-          Introduction
-          <span class="tc-toc-arrow">›</span>
-        </a>
-        <a href="#platform" class="tc-toc-link" data-section="platform">
-          <span class="tc-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </span>
-          Use of Platform
-          <span class="tc-toc-arrow">›</span>
-        </a>
-        <a href="#ip" class="tc-toc-link" data-section="ip">
-          <span class="tc-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </span>
-          Intellectual Property
-          <span class="tc-toc-arrow">›</span>
-        </a>
-        <a href="#liability" class="tc-toc-link" data-section="liability">
-          <span class="tc-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </span>
-          Limitation of Liability
-          <span class="tc-toc-arrow">›</span>
-        </a>
-        <a href="#termination" class="tc-toc-link" data-section="termination">
-          <span class="tc-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-          </span>
-          Termination
-          <span class="tc-toc-arrow">›</span>
-        </a>
-        <a href="#law" class="tc-toc-link" data-section="law">
-          <span class="tc-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </span>
-          Governing Law
-          <span class="tc-toc-arrow">›</span>
-        </a>
-      </nav>
-
-      <button class="tc-print-btn" onclick="window.print()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-          <rect x="6" y="14" width="12" height="8"/>
-        </svg>
-        Print Terms
-      </button>
-    </div>
-  </aside>
-
-  <!-- CONTENT -->
+<!-- CONTENT -->
+<div class="tc-layout">
   <main class="tc-content">
 
-    <!-- 01 Introduction -->
     <section class="tc-sec fade-up" id="intro">
       <div class="tc-sec-num">01.</div>
       <h2 class="tc-sec-title">Introduction</h2>
@@ -141,48 +92,29 @@
       <p>If you do not agree with these terms, you are prohibited from using or accessing this platform or using any other services provided by us. We reserve the right to review and amend any of these terms at our sole discretion.</p>
     </section>
 
-    <!-- 02 Use of Platform -->
     <section class="tc-sec fade-up" id="platform">
       <div class="tc-sec-num">02.</div>
       <h2 class="tc-sec-title">Use of Platform</h2>
       <p>To use Athenura, you must be at least 18 years old or the legal age of majority in your jurisdiction. Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.</p>
-
       <div class="tc-warning-box">
         <div class="tc-warning-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Prohibited Activities
         </div>
         <ul class="tc-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Using the platform for any unlawful purpose.
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Attempting to hack, destabilize, or adapt the platform's infrastructure.
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Posting fraudulent internship opportunities or deceptive resumes.
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Harvesting or collecting user data without explicit consent.
-          </li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Using the platform for any unlawful purpose.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Attempting to hack, destabilize, or adapt the platform infrastructure.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Posting fraudulent internship opportunities or deceptive resumes.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Harvesting or collecting user data without explicit consent.</li>
         </ul>
       </div>
     </section>
 
-    <!-- 03 Intellectual Property -->
     <section class="tc-sec fade-up" id="ip">
       <div class="tc-sec-num">03.</div>
       <h2 class="tc-sec-title">Intellectual Property</h2>
       <p>The intellectual property in the materials contained in this platform are owned by or licensed to Athenura and are protected by applicable copyright and trademark law. We grant our users permission to download one copy of the materials for personal, non-commercial transitory use.</p>
-      <p>This is the grant of a license, not a transfer of title, and under this license you may not modify or copy the materials, use the materials for any commercial purpose, attempt to decompile or reverse engineer any software, or remove any copyright or other proprietary notations from the materials.</p>
-
+      <p>This is the grant of a license, not a transfer of title, and under this license you may not modify or copy the materials, use the materials for any commercial purpose, or attempt to decompile or reverse engineer any software.</p>
       <div class="tc-info-box">
         <div class="tc-info-header">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -191,15 +123,13 @@
       </div>
     </section>
 
-    <!-- 04 Limitation of Liability -->
     <section class="tc-sec fade-up" id="liability">
       <div class="tc-sec-num">04.</div>
       <h2 class="tc-sec-title">Limitation of Liability</h2>
-      <p>Our platform and the materials on our platform are provided on an 'as is' basis. To the extent permitted by law, Athenura makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property, or other violation of rights.</p>
-      <p>In no event shall Athenura or its suppliers be liable for any consequential loss suffered or incurred by you or any third party arising from the use or inability to use this platform or the materials on this platform, even if Athenura or an authorized representative has been notified, orally or in writing, of the possibility of such damage.</p>
+      <p>Our platform and the materials on our platform are provided on an as is basis. To the extent permitted by law, Athenura makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including implied warranties of merchantability or fitness for a particular purpose.</p>
+      <p>In no event shall Athenura or its suppliers be liable for any consequential loss suffered or incurred by you or any third party arising from the use or inability to use this platform.</p>
     </section>
 
-    <!-- 05 Termination -->
     <section class="tc-sec fade-up" id="termination">
       <div class="tc-sec-num">05.</div>
       <h2 class="tc-sec-title">Termination</h2>
@@ -207,28 +137,21 @@
       <p>Upon termination, your right to use the platform will cease immediately. If you wish to terminate your account, you may simply discontinue using the platform or request account deletion via your profile settings.</p>
     </section>
 
-    <!-- 06 Governing Law -->
     <section class="tc-sec fade-up" id="law">
       <div class="tc-sec-num">06.</div>
       <h2 class="tc-sec-title">Governing Law</h2>
       <p>These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction where Athenura operates and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-      <p>Any disputes arising out of or in connection with these terms shall first be attempted to be resolved through good-faith negotiation. If resolution cannot be reached, disputes shall be referred to binding arbitration in accordance with applicable law.</p>
+      <p>Any disputes arising out of or in connection with these terms shall first be attempted to be resolved through good-faith negotiation. If resolution cannot be reached, disputes shall be referred to binding arbitration.</p>
     </section>
 
-    <!-- CTA -->
-    <div class="tc-cta fade-up" id="contact">
+    <div class="tc-cta fade-up">
       <div class="tc-cta-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
       <h3>Have questions about our terms?</h3>
       <p>Our legal team is here to help clarify any points of our service agreement.</p>
       <a href="mailto:official@athenura.in" class="tc-cta-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Contact Legal Support
       </a>
     </div>
@@ -236,6 +159,22 @@
   </main>
 </div>
 
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const qnavBtns = document.querySelectorAll('.tc-qnav-btn');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 160) current = s.id; });
+    qnavBtns.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  }, { passive: true });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 <!-- FOOTER -->
 <footer class="athenura-footer">
   <div class="footer-container">
@@ -316,54 +255,150 @@
 </footer>
 
 <script>
-  // Navbar
-  
- // Navbar hamburger
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-const navBackdrop = document.getElementById('navBackdrop');
 
-hamburger.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  hamburger.classList.toggle('open', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
-  navBackdrop.style.display = isOpen ? 'block' : 'none';
-  setTimeout(() => navBackdrop.classList.toggle('visible', isOpen), 10);
-});
+  (function () {
+  'use strict';
 
-navBackdrop.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  hamburger.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', false);
-  navBackdrop.classList.remove('visible');
-  setTimeout(() => navBackdrop.style.display = 'none', 300);
-});
+  /* Backdrop fix */
+  var fix = document.createElement('style');
+  fix.innerHTML =
+    '.nav-backdrop { display: none; opacity: 0; transition: opacity 0.4s ease; }' +
+    '.nav-backdrop.visible { display: block; opacity: 1; }';
+  document.head.appendChild(fix);
 
-// Navbar scroll shadow
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
-});
+  /* DOM Elements */
+  var hamburger   = document.getElementById('hamburger');
+  var navLinks    = document.getElementById('navLinks');
+  var navBackdrop = document.getElementById('navBackdrop');
+  var navbar      = document.getElementById('navbar');
 
-  // Scroll spy
-  const sections = document.querySelectorAll('section[id]');
-  const tocLinks = document.querySelectorAll('.tc-toc-link');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 160) current = s.id; });
-    tocLinks.forEach(a => {
-      a.classList.remove('active');
-      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  function openNav() {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    if (navBackdrop) {
+      navBackdrop.style.display = 'block';
+      setTimeout(function () {
+        navBackdrop.classList.add('visible');
+      }, 10);
+    }
+    document.body.classList.add('nav-open');
+  }
+
+  function closeNav() {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    if (navBackdrop) {
+      navBackdrop.classList.remove('visible');
+      setTimeout(function () {
+        if (!navBackdrop.classList.contains('visible')) {
+          navBackdrop.style.display = 'none';
+        }
+      }, 400);
+    }
+    document.body.classList.remove('nav-open');
+  }
+
+  /* Hamburger toggle */
+  if (hamburger) {
+    hamburger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      navLinks.classList.contains('open') ? closeNav() : openNav();
     });
-  }, { passive: true });
+  }
 
-  // Fade-up observer
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  /* Close on backdrop click */
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeNav);
+  }
+
+  /* Close on nav link click */
+  if (navLinks) {
+    navLinks.addEventListener('click', function () {
+      if (navLinks.classList.contains('open')) closeNav();
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  }
+
+  /* Close on Escape key */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  /* Close on resize to desktop */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) closeNav();
+  });
+
+  /* Scroll shadow on navbar */
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      navbar.classList.toggle('scrolled', window.scrollY > 12);
+    }, { passive: true });
+  }
+
+  /* Active link highlight */
+  var current = location.pathname.split('/').pop();
+  document.querySelectorAll('nav a').forEach(function (link) {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
+
+})();
+ 
+
+  // Filter
+  const filterBtns = document.querySelectorAll('.t-filter-btn');
+  const allCards = document.querySelectorAll('.t-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      allCards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.style.display = match && !card.classList.contains('t-extra-hidden') ? 'flex' : 'none';
+      });
+    });
+  });
+
+  // Load More / Show Less
+  const extraCards = document.querySelectorAll('.t-extra');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const showLessBtn = document.getElementById('showLessBtn');
+
+  // Hide extra cards initially
+  extraCards.forEach(card => {
+    card.style.display = 'none';
+    card.classList.add('t-extra-hidden');
+  });
+
+  loadMoreBtn.addEventListener('click', () => {
+    extraCards.forEach(card => {
+      card.style.display = 'flex';
+      card.classList.remove('t-extra-hidden');
+      card.style.animation = 'fadeCard 0.4s ease both';
+    });
+    loadMoreBtn.style.display = 'none';
+    showLessBtn.style.display = 'inline-flex';
+  });
+
+  showLessBtn.addEventListener('click', () => {
+    extraCards.forEach(card => {
+      card.style.display = 'none';
+      card.classList.add('t-extra-hidden');
+    });
+    showLessBtn.style.display = 'none';
+    loadMoreBtn.style.display = 'inline-flex';
+    document.querySelector('.t-grid-wrap').scrollIntoView({ behavior: 'smooth' });
+  });
 </script>
 
+</body>
+</html>
 </body>
 </html>
