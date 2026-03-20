@@ -202,11 +202,13 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   }
 }
 
+
+
 /* ═══════════════════════════════════════════
    HERO SECTION
 ═══════════════════════════════════════════ */
 .credentials-hero {
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
   background: #ffffff;
   padding: 72px 32px 0;
@@ -575,18 +577,18 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   .apply-btn { display: none !important; }
   
   /* ── 5. Bottom-Anchored Green Apply Button ── */
-  .apply-btn-mobile {
+   .apply-btn-mobile {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    background: #22c55e !important; /* Green Background */
-    color: #070404 !important; /* White Text */
+    background: #22c55e !important;
+    color: #070404 !important;
     padding: 18px 40px;
     font-weight: 700;
     font-size: 1.15rem;
     text-transform: uppercase;
     border-radius: 12px;
-    margin-top: auto; /* Anchors to bottom of drawer */
+    margin-top: 16px;              /* CHANGED: was margin-top:auto — now 16px so button appears right after nav links */
     width: 100%;
     opacity: 0;
     transform: translateY(20px);
@@ -630,7 +632,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   .cta-buttons { flex-direction: column; align-items: center; }
   .btn-white, .btn-ghost { width: 100%; max-width: 280px; }
 
-  .footer-container { grid-template-columns: 1fr 1fr; gap: 24px; padding: 0 20px 40px; }
+  .footer-container { grid-template-columns: 1fr; gap: 24px; padding: 0 20px 40px; }
   .footer-col.branding { grid-column: 1 / -1; display: block; }
   .branding p { max-width: 100%; }
   .footer-col h3 { font-size: 16px; margin-bottom: 18px; }
@@ -652,8 +654,24 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   .hero-subtext { font-size: 13.5px; }
   .hero-cta-row { gap: 10px; }
   .hero-btn-primary, .hero-btn-ghost { font-size: 13px; padding: 11px 20px; }
-  .hero-tabs-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .tab { font-size: 12.5px; padding: 9px 14px; }
+  .hero-tabs-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .hero-tabs {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .tab {
+    flex: 1;                     /* each tab equal width */
+    text-align: center;
+    font-size: 12.5px;
+    padding: 10px 8px;
+    white-space: nowrap;         /* prevent ugly wrapping */
+  }
 
   .cards-row { gap: 16px; }
   .card { min-height: 240px; }
@@ -697,3 +715,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   .cta-box h2 { font-size: 18px; }
   .btn-white, .btn-ghost { font-size: 13px; padding: 11px 16px; }
 }
+
+.benefits-section { border-top: 14px solid #f0fafa; }
+.alumni-section   { border-top: 14px solid #f0fafa; }
+.cta-section      { border-top: 14px solid #f0fafa; }

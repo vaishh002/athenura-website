@@ -81,6 +81,7 @@
       }
     });
   }, { threshold: 0.2 });
+
   fadeElements.forEach(el => observer.observe(el));
 
   const sendBtn = document.getElementById('sendWA');

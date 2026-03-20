@@ -7,23 +7,21 @@
     const navbar = document.getElementById('navbar');
 
     function openNav() {
-        if (!navLinks || !hamburger) return;
-        navLinks.classList.add('open');
-        hamburger.classList.add('open');
-        hamburger.setAttribute('aria-expanded', 'true');
+        navLinks?.classList.add('open');
+        hamburger?.classList.add('open');
+        hamburger?.setAttribute('aria-expanded', 'true');
 
         if (navBackdrop) {
             navBackdrop.style.display = 'block';
             setTimeout(() => navBackdrop.classList.add('visible'), 10);
         }
+
         document.body.classList.add('nav-open');
     }
-
     function closeNav() {
-        if (!navLinks || !hamburger) return;
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        navLinks?.classList.remove('open');
+        hamburger?.classList.remove('open');
+        hamburger?.setAttribute('aria-expanded', 'false');
 
         if (navBackdrop) {
             navBackdrop.classList.remove('visible');
@@ -33,27 +31,20 @@
                 }
             }, 400);
         }
+
         document.body.classList.remove('nav-open');
     }
 
-    if (hamburger) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navLinks.classList.contains('open') ? closeNav() : openNav();
-        });
-    }
+    hamburger?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.contains('open') ? closeNav() : openNav();
+    });
 
-    if (navBackdrop) {
-        navBackdrop.addEventListener('click', closeNav);
-    }
+    navBackdrop?.addEventListener('click', closeNav);
 
-    if (navLinks) {
-        navLinks.addEventListener('click', (e) => {
-            if (navLinks.classList.contains('open')) {
-                closeNav();
-            }
-        });
-    }
+    navLinks?.addEventListener('click', () => {
+        if (navLinks.classList.contains('open')) closeNav();
+    });
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeNav();
@@ -63,22 +54,22 @@
         if (window.innerWidth > 900) closeNav();
     });
 
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 12);
-        }, { passive: true });
-    }
+    window.addEventListener('scroll', () => {
+        navbar?.classList.toggle('scrolled', window.scrollY > 12);
+    }, { passive: true });
 
-    const current = location.pathname.split('/').pop() || 'index.html';
+    const currentPage = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(link => {
-        if (link.getAttribute('href') === current) {
+        if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
     });
+
 })();
 
 window.addEventListener("load", () => {
     const elements = document.querySelectorAll(".fade-up");
+
     elements.forEach((el, index) => {
         setTimeout(() => {
             el.classList.add("show");
@@ -86,26 +77,31 @@ window.addEventListener("load", () => {
     });
 });
 
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
+(function () {
 
-function filterProjects(category) {
-    projectCards.forEach(card => {
-        const cardCategory = card.dataset.category;
-        if (category === "all" || cardCategory === category) {
-            card.classList.remove("hidden");
-        } else {
-            card.classList.add("hidden");
-        }
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    function filterProjects(category) {
+        projectCards.forEach(card => {
+            const cardCategory = card.dataset.category;
+
+            const show = category === "all" || cardCategory === category;
+            card.classList.toggle("hidden", !show);
+        });
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            filterButtons.forEach(b => b.classList.remove("active"));
+
+            btn.classList.add("active");
+
+            filterProjects(btn.dataset.filter);
+        });
     });
-}
 
-filterButtons.forEach(btn => {
-    btn.addEventListener("click", function () {
-        filterButtons.forEach(b => b.classList.remove("active"));
-        this.classList.add("active");
-        filterProjects(this.getAttribute("data-filter"));
-    });
-});
+    filterProjects("all");
 
-filterProjects("all");
+})();

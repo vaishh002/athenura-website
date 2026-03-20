@@ -339,7 +339,7 @@ body {
 .hero-title-accent {
   display: block;
   text-align: left;
-  color: var(--teal-dark);
+  color: #0ea5a4;
   font-size: clamp(2.2rem, 5vw, 4.4rem);
   line-height: 1.05;
   margin-top: 4px;
@@ -357,7 +357,7 @@ body {
 /* Description */
 .hero-desc {
   font-size: clamp(0.92rem, 1.6vw, 1.05rem);
-  color: var(--teal-mid);
+  color: #030202;
   line-height: 1.80;
   max-width: 480px;
   margin: 0 0 34px;

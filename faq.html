@@ -223,48 +223,51 @@
         </section>
     </main>
 
-   <section class="support-cta">
-  <div class="support-cta-content">
-    <span class="badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-      WE'RE HERE FOR YOU
-    </span>
+    <section class="support-cta">
+        <div class="support-cta-content">
+            <span class="badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                WE'RE HERE FOR YOU
+            </span>
 
-    <h2>Need help? We've got your back</h2>
+            <h2>Need help? We've got your back</h2>
 
-    <p class="description">Questions about applications, deadlines, or roles? Our support team is ready to assist.</p>
+            <p class="description">Questions about applications, deadlines, or roles? Our support team is ready to
+                assist.</p>
 
-    <div class="cta-buttons">
-      <button class="btn-support" id="contactSupportBtn">Contact Support Team</button>
-      <a href="internship-policy.html" class="btn-policy">
-       
-        Internship Policy
-      </a>
-    </div>
+            <div class="cta-buttons">
+                <button class="btn-support" id="contactSupportBtn">Contact Support Team</button>
+                <a href="internship-policy.html" class="btn-policy">
 
-    <p class="response-time">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <polyline points="12 6 12 12 16 14"/>
-      </svg>
-      Usually responds within 24 hours
-    </p>
-  </div>
+                    Internship Policy
+                </a>
+            </div>
 
-  <div class="floating-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-    <div class="shape shape-4"></div>
-  </div>
+            <p class="response-time">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg>
+                Usually responds within 24 hours
+            </p>
+        </div>
 
-  <svg class="curved-lines" viewBox="0 0 200 20" preserveAspectRatio="none">
-    <path d="M0,15 Q50,0 100,15 T200,15" stroke="rgba(14,165,164,0.2)" fill="none" stroke-width="2"/>
-  </svg>
-</section>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+
+        <svg class="curved-lines" viewBox="0 0 200 20" preserveAspectRatio="none">
+            <path d="M0,15 Q50,0 100,15 T200,15" stroke="rgba(14,165,164,0.2)" fill="none" stroke-width="2" />
+        </svg>
+    </section>
 
     <div class="support-modal-overlay" id="supportModalOverlay">
         <div class="support-modal">
@@ -272,12 +275,12 @@
             <h3>Contact Support</h3>
             <p>We'll get back to you within 24h.</p>
             <form id="supportModalForm">
-                <div class="input-field"><i class="fa-regular fa-user"></i><input type="text" placeholder="Full Name"
-                        required></div>
-                <div class="input-field"><i class="fa-regular fa-envelope"></i><input type="email"
+                <div class="input-field"><i class="fa-regular fa-user"></i><input type="text" id="fullName"
+                        placeholder="Full Name" required></div>
+                <div class="input-field"><i class="fa-regular fa-envelope"></i><input type="email" id="emailAddress"
                         placeholder="Email Address" required></div>
                 <div class="input-field"><i class="fa-regular fa-circle-question"></i>
-                    <select required>
+                    <select id="inquiryType" required>
                         <option value="" disabled selected>Inquiry Type</option>
                         <option>Internship Application Status</option>
                         <option>Technical Issue</option>
@@ -285,8 +288,8 @@
                         <option>Other</option>
                     </select>
                 </div>
-                <div class="input-field"><i class="fa-regular fa-message"></i><textarea placeholder="Message" rows="3"
-                        required></textarea></div>
+                <div class="input-field"><i class="fa-regular fa-message"></i><textarea id="messageText"
+                        placeholder="Message" rows="3" required></textarea></div>
                 <button type="submit" class="btn-send">Send Message <i class="fa-regular fa-paper-plane"></i></button>
             </form>
         </div>

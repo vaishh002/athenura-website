@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
   const navBackdrop = document.getElementById('navBackdrop');
@@ -75,45 +76,6 @@
     }
   });
 
-  const form = document.getElementById("partnershipForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      let isValid = true;
-      const inputs = form.querySelectorAll("input[required]");
-      const select = form.querySelector("select");
-      inputs.forEach(el => el.style.border = "1px solid #d1d5db");
-      if (select) select.style.border = "1px solid #d1d5db";
-
-      inputs.forEach(input => {
-        if (!input.value.trim()) {
-          input.style.border = "2px solid red";
-          isValid = false;
-        }
-      });
-
-      if (select && !select.value) {
-        select.style.border = "2px solid red";
-        isValid = false;
-      }
-
-      const emailInput = form.querySelector("input[type='email']");
-      if (emailInput && emailInput.value.trim()) {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-        if (!emailPattern.test(emailInput.value.trim())) {
-          emailInput.style.border = "2px solid red";
-          alert("Please enter a valid email address");
-          isValid = false;
-        }
-      }
-
-      if (isValid) {
-        alert("Partnership Request Submitted Successfully!");
-        form.reset();
-      }
-    });
-  }
-
   const slidesContainer = document.getElementById('testimonialSlides');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -163,4 +125,68 @@
 
     setTimeout(updateSlider, 20);
   }
+
+  const form = document.getElementById("partnershipForm");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let isValid = true;
+      const inputs = form.querySelectorAll("input[required]");
+      const select = form.querySelector("select[required]");
+
+      inputs.forEach(el => el.style.border = "1px solid #d1d5db");
+      if (select) select.style.border = "1px solid #d1d5db";
+
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          input.style.border = "2px solid red";
+          isValid = false;
+        }
+      });
+
+      if (select && !select.value) {
+        select.style.border = "2px solid red";
+        isValid = false;
+      }
+
+      const emailInput = form.querySelector("input[type='email']");
+      if (emailInput && emailInput.value.trim()) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if (!emailPattern.test(emailInput.value.trim())) {
+          emailInput.style.border = "2px solid red";
+          alert("Please enter a valid email address");
+          isValid = false;
+        }
+      }
+
+      if (isValid) {
+        const phone = "919835051934";
+        const message = encodeURIComponent("Hello, I am interested in a partnership with Athenura. Please share more details.");
+        window.location.href = `https://wa.me/${phone}?text=${message}`;
+      }
+    });
+  }
+
+  // ✅ UPDATED: Download & Open button logic
+  const downloadCheckbox = document.querySelector('.download-btn-wrapper .input');
+
+  if (downloadCheckbox) {
+    const pdfPath = 'assets/images/athenura.pdf';
+
+    downloadCheckbox.addEventListener('change', function () {
+      if (this.checked) {
+        // Checkbox checked → "Open" text dikh raha hai → Download karo
+        const link = document.createElement('a');
+        link.href = pdfPath;
+        link.setAttribute('download', 'athenura.pdf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        // Checkbox unchecked → "Download" text dikh raha tha → New tab mein open karo
+        window.open(pdfPath, '_blank');
+      }
+    });
+  }
+
 })();

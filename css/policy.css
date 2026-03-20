@@ -515,7 +515,7 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
 .timeline-item p  { font-size: 14px; color: #6b7280; line-height: 1.6; }
 
 .cta-card {
-  background: linear-gradient(135deg, #0f172a, #0b1220);
+  background: linear-gradient(135deg, #26a5a1, #138484);
   border-radius: 18px; padding: 36px 40px;
   display: flex; justify-content: space-between; align-items: center;
   gap: 24px; flex-wrap: wrap; margin-top: 20px;
@@ -523,13 +523,13 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
 .cta-text h3 { font-size: 20px; color: #ffffff; margin-bottom: 8px; }
 .cta-text p  { font-size: 14px; color: #cbd5e1; max-width: 420px; line-height: 1.6; }
 .cta-btn {
-  background: #0f766e; color: white; border: none;
+  background: #04786e; color: white; border: none;
   padding: 13px 26px; border-radius: 10px; font-weight: 600;
   cursor: pointer; transition: all 0.25s ease;
   box-shadow: 0 4px 14px rgba(15,118,110,0.25);
   white-space: nowrap; flex-shrink: 0;
 }
-.cta-btn:hover { background: #0d6a63; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(15,118,110,0.35); }
+.cta-btn:hover { background: #07413c; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(15,118,110,0.35); }
 
 /* ══════════════════════════════════════════
    FOOTER
@@ -691,18 +691,18 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   .apply-btn { display: none !important; }
   
   /* ── 5. Bottom-Anchored Green Apply Button ── */
-  .apply-btn-mobile {
+    .apply-btn-mobile {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    background: #22c55e !important; /* Proper Green Background */
-    color: #120909 !important; /* Crisp White Text */
+    background: #22c55e !important;
+    color: #120909 !important;
     padding: 18px 40px;
     font-weight: 700;
     font-size: 1.15rem;
     text-transform: uppercase;
     border-radius: 12px;
-    margin-top: auto; /* Pushes to bottom of drawer */
+    margin-top: 16px;              /* CHANGED: was margin-top:auto — now 16px so button appears right after nav links */
     width: 100%;
     opacity: 0;
     transform: translateY(20px);
@@ -816,4 +816,11 @@ section { padding: 100px 80px; position: relative; z-index: 1; }
   .hero-text h1 { font-size: 18px; }
   .policy-block { flex-direction: column; }
   .number-badge { align-self: flex-start; }
+}
+
+#code\ of\ conduct.policy-wrapper,
+#attendance.policy-wrapper,
+#confidentiality.policy-wrapper,
+#evaluation.policy-wrapper {
+  border-top: 14px solid #f3f4f6;
 }
